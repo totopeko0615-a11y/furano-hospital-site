@@ -450,227 +450,144 @@ const doctorData = [
 ];
 
 const departmentData = {
+const departmentData = {
   naika: {
     title: "内科",
-    summary: "発熱、咳、腹痛、生活習慣病、一般内科症状に幅広く対応します。",
-    reception: "原則予約なし可。月〜木午後は1名体制です。",
+    summary: "一般内科、循環器内科、消化器内科、呼吸器内科など幅広い内科症状に対応します。",
+    reception: "原則予約なし可です。ただし月曜日〜木曜日の午後は1名体制で、救急性の高い患者さまを優先します。",
     points: [
-      "月〜木午後も原則受診可能",
-      "混雑時は翌日案内となる場合あり",
-      "専門相談は予約推奨"
+      "月〜木午後は△ 1名体制",
+      "原則予約なし可だが、混雑時は翌日案内の場合あり",
+      "循環器・消化器・呼吸器など専門内科は月〜木午後は予約制中心",
+      "金曜・土曜は通常運用"
     ],
-    doctors: ["鏑木 ろこ", "高本 めぐみ", "五島 健助", "神楽坂 倫太郎", "松前 春香", "早坂 昇", "高木 裕樹"]
+    doctors: ["松前 春香", "高本 めぐみ", "早坂 昇", "鏑木 ろこ", "神楽坂 倫太郎", "高木 裕樹", "五島 健助", "夜乃 くろむ", "白砂 まどか"]
   },
   shonika: {
     title: "小児科",
-    summary: "お子さまの一般診療、継続診療、学校や発達に関する相談に対応します。",
-    reception: "原則予約なし可。月〜木午後は1名体制です。",
+    summary: "一般小児、小児専門、思春期、小児神経、新生児発達、小児糖尿病・内分泌などに対応します。",
+    reception: "原則予約なし可です。ただし月曜日〜木曜日の午後は1名体制です。小児専門は予約制です。",
     points: [
-      "午後は1名体制",
-      "専門外来は予約制",
-      "土曜は比較的受診しやすい体制"
+      "一般小児は月〜木午後△ 1名体制",
+      "小児専門外来は原則予約制",
+      "金曜・土曜は比較的受診しやすい体制",
+      "日曜は縮小運用"
     ],
-    doctors: ["紡木 こかげ", "蝸堂 みかる", "小々波 いるか", "不破 拓海", "星川 輝", "千凛 あゆむ", "角巻 わため", "一ノ瀬 うるは"]
+    doctors: ["星川 輝", "黒井 しば", "一ノ瀬 うるは", "蝸堂 みかる", "五十嵐 菜々", "紡木 こかげ", "千凛 あゆむ", "先斗 寧", "石神 のぞみ", "不破 拓海", "小々波 いるか", "角巻 わため"]
   },
-  seishin: {
-    title: "精神科・児童精神科・心療内科",
-    summary: "こころの不調、睡眠、ストレス、児童思春期の相談に対応します。",
-    reception: "原則予約制です。",
+  nou: {
+    title: "脳神経内科・外科",
+    summary: "脳神経領域の診療、専門外来、神経症状の評価と継続診療に対応します。",
+    reception: "午後は原則予約制です。",
     points: [
-      "初診・継続とも予約推奨",
-      "児童思春期の相談にも対応",
-      "日曜は一部予約枠"
+      "月〜木午後は予 予約制",
+      "専門性の高い診療枠",
+      "救急科と緊密連携"
     ],
-    doctors: ["周央 サンゴ", "夢咲 ネム", "雪村 双葉", "中村 里子", "竹田 康", "小森 明二", "天宮 こころ", "葉加瀬 冬雪", "アンジュ・カトリーナ", "大久保 希美", "風間 トオル", "白砂 まどか", "黒井 しば", "蝶屋 はなび"]
+    doctors: ["澤田 咲"]
+  },
+  seikei: {
+    title: "一般外科・整形外科",
+    summary: "一般外科、整形外科、外傷、骨折、術後フォローに対応します。",
+    reception: "月曜日〜木曜日の午後は原則予約制です。",
+    points: [
+      "月〜木午後は予 予約制",
+      "金曜・土曜は通常運用",
+      "急変時は救急科と連携"
+    ],
+    doctors: ["猪股 隆", "進藤 一生", "栞葉 るり", "辻元 朝子", "不破 拓海", "原 守"]
   },
   sango: {
     title: "産婦人科",
-    summary: "妊娠・出産・婦人科相談・周産期支援に対応します。",
-    reception: "原則予約制です。",
+    summary: "妊娠・出産・婦人科相談・周産期医療に対応します。",
+    reception: "月曜日〜木曜日の午後は原則予約制です。",
     points: [
-      "平日午前と金・土が比較的安定",
-      "週末は週替わり体制あり",
-      "相談・継続受診は予約推奨"
+      "平日午前・金曜・土曜は通常運用",
+      "月〜木午後は予 予約制",
+      "日曜は週替わり縮小運用"
     ],
-    doctors: ["四宮 春樹", "水野 遥", "赤羽 葉雪", "赤羽 祐司", "雲母 たまこ", "菊田 真理恵", "田崎 恵", "木村 彩乃"]
+    doctors: ["四宮 春樹", "菊田 真理恵", "雲母 たまこ", "角巻 わため", "赤羽 祐司", "赤羽 葉雪", "先斗 寧", "木村 彩乃", "田崎 恵"]
   },
-  seikei: {
-    title: "外科・整形外科",
-    summary: "外傷、骨折、術後フォロー、一般外科の相談に対応します。",
-    reception: "月〜木午後は原則予約制です。",
+  seishin: {
+    title: "精神科・児童精神科・心療内科",
+    summary: "精神医学、児童精神科、心療内科、睡眠、こころの専門相談に対応します。",
+    reception: "月曜日〜木曜日の午後は原則予約制です。専門医希望の方は事前予約推奨です。",
     points: [
-      "金・土は比較的受診しやすい体制",
-      "急患は救急科と連携",
-      "整形外科は曜日枠中心"
+      "月〜木午後は予 予約制",
+      "当日枠では専門医以外が担当する場合あり",
+      "専門医希望は受付・看護師へ申し出推奨",
+      "土曜は集中配置日"
     ],
-    doctors: ["猪股 隆", "辻元 朝子", "栞葉 るり", "原 守"]
+    doctors: ["浜川 百合子", "風間 トオル", "夢咲 ネム", "周央 サンゴ", "竹田 康", "天宮 こころ", "小森 明二", "雪村 双葉"]
   },
   kyukyu: {
     title: "救急科",
-    summary: "救急搬送、急変対応、時間外の緊急診療に対応します。",
-    reception: "24時間体制を基本に、重症度に応じて優先対応します。",
+    summary: "24時間体制で救急搬送、夜間診療、急変対応を担うウインターERです。",
+    reception: "24時間対応です。夜間帯は救急科＋各科当番医が主軸となります。",
     points: [
-      "救急搬送・急変対応を優先",
-      "小児救急や山岳救助支援にも対応",
-      "外来各科と連携し重症患者を受け入れ"
+      "夜間診療 17:40〜翌08:20",
+      "24時間主任ラインあり",
+      "小児救急支援・山岳特殊救助支援あり"
     ],
     doctors: ["藍沢 耕作", "進藤 一生", "五条 蓮", "一橋 太郎", "星川 サラ", "神崎 徹", "前澤 優作", "茨城 美紅", "花芽 すみれ", "江田 雄二"]
   },
   hifu: {
     title: "皮膚科・眼科・耳鼻咽喉科",
-    summary: "皮膚、目、耳・鼻・のどの症状に対応します。",
-    reception: "平日午前または予約枠中心です。",
+    summary: "皮膚、眼、耳・鼻・のどの外来症状に対応します。",
+    reception: "月曜日〜木曜日の午後は原則予約制です。日曜は完全休診です。",
     points: [
-      "午後は予約枠中心",
-      "金・土は比較的受診しやすい",
-      "日曜は原則休診"
+      "月〜木午後は予 予約制",
+      "日曜は完全休診",
+      "喫煙外来は予約がない日は休診"
     ],
-    doctors: ["大泉 洋", "山田 義治", "福山 鉄人", "樋口 楓"]
+    doctors: ["緋山 美帆子", "山田 義治", "白石 恵", "福山 鉄人", "大泉 洋", "樋口 楓"]
   },
   sogo: {
     title: "総合診療科",
-    summary: "どの診療科に行くべきか迷う方の相談窓口です。",
-    reception: "曜日により体制が異なります。",
+    summary: "診療科に迷う患者さま、感染症疑惑のある患者さまの総合窓口です。",
+    reception: "曜日により運用が異なります。木曜と日曜は限定運用です。",
     points: [
-      "初診相談の入口として対応",
-      "複数症状の相談にも対応",
-      "日曜縮小外来も支援"
+      "感染症疑惑は別館隔離診察",
+      "木曜は終日1名体制",
+      "日曜も縮小運用",
+      "木曜・日曜は予約受付を停止"
     ],
-    doctors: ["渡邊 トドック", "星川 郁男", "藤原 のりこ", "七瀬 すず菜", "一橋 太郎"]
+    doctors: ["渡邊 トドック", "高木 裕樹", "五島 健助", "星川 郁男", "藤原 のりこ", "七瀬 すず菜", "角巻 わため", "一橋 太郎"]
   },
   kanwa: {
     title: "緩和ケア・遺伝カウンセリング",
-    summary: "痛みや不安の緩和、遺伝相談、専門カウンセリングに対応します。",
-    reception: "原則予約制です。",
+    summary: "緩和ケア、遺伝相談、専門カウンセリングに対応します。",
+    reception: "原則完全予約制です。",
     points: [
-      "専門相談は事前予約制",
-      "ご家族の相談にも対応",
-      "他科と連携し継続支援"
+      "木曜中心の完全予約制",
+      "家族相談にも対応",
+      "緊急手術等で担当変更の可能性あり"
     ],
-    doctors: ["長野 信二", "田沼 譲", "星野 彩乃", "原 守"]
+    doctors: ["長野 信二", "星野 彩乃", "田沼 譲", "原 守"]
   },
   hinyoki: {
     title: "泌尿器科",
-    summary: "排尿の悩みや泌尿器領域の症状に対応します。",
-    reception: "曜日・時間帯により案内が異なります。",
+    summary: "排尿障害や泌尿器領域の相談に対応します。",
+    reception: "曜日・時間帯により予約制または通常運用です。",
     points: [
-      "相談しづらい症状にも丁寧に対応",
-      "必要時は他科と連携",
-      "来院前確認がおすすめ"
+      "月・水は予約中心",
+      "火・木は予約制中心",
+      "金・土は通常運用"
     ],
     doctors: ["北里 りさ", "小森 明二"]
   },
   tomica: {
     title: "トミカにじいろクリニック",
-    summary: "平日中心の分院診療と新設救急科を担います。",
-    reception: "平日中心。土曜一部、日曜午前のみ。",
+    summary: "分院として平日日勤、土曜予約枠、日曜午前、夜間当番、救急補完体制を担います。",
+    reception: "平日中心。土曜は午前一般＋午後予約、日曜は午前のみです。",
     points: [
-      "平日日勤＋一部夜間",
-      "土曜は一部予約診療",
-      "日曜は午前のみ"
+      "平日 08:30〜17:30 日勤運用",
+      "夜間 18:00〜21:30 は当番制",
+      "土曜午後は完全予約",
+      "日曜は午前診療のみ"
     ],
-    doctors: ["加地 秀樹", "奥野 宗一郎", "田崎 恵", "江田 雄二", "山崎 育三", "家長 むぎ", "木村 彩乃", "花芽 すみれ"]
+    doctors: ["加地 秀樹", "奥野 宗一郎", "木村 彩乃", "田崎 恵", "家長 むぎ", "山崎 育三", "江田 雄二", "花芽 すみれ", "夜乃 くろむ", "千凛 あゆむ", "角巻 わため", "紡木 こかげ"]
   }
 };
-
-function initials(name) {
-  return name.replace(/\s/g, "").slice(0, 2);
-}
-
-function renderTodayDate() {
-  const target = document.getElementById("today-title");
-  if (!target) return;
-  const now = new Date();
-  const y = now.getFullYear();
-  const m = now.getMonth() + 1;
-  const d = now.getDate();
-  target.textContent = `本日の休診・代診（${y}年${m}月${d}日）`;
-}
-
-function renderDoctors() {
-  const tableBody = document.getElementById("doctorTableBody");
-  const cards = document.getElementById("doctorCards");
-  const searchInput = document.getElementById("doctorSearch");
-  const categorySelect = document.getElementById("doctorCategory");
-  if (!tableBody || !cards || !searchInput || !categorySelect) return;
-
-  [...new Set(doctorData.map(d => d.category))].forEach(cat => {
-    const option = document.createElement("option");
-    option.value = cat;
-    option.textContent = cat;
-    categorySelect.appendChild(option);
-  });
-
-  function draw() {
-    const q = searchInput.value.trim().toLowerCase();
-    const cat = categorySelect.value;
-    const filtered = doctorData.filter(d => {
-      const t = `${d.category} ${d.name} ${d.role} ${d.comment}`.toLowerCase();
-      return (!q || t.includes(q)) && (!cat || d.category === cat);
-    });
-
-    tableBody.innerHTML = filtered.map(d => `
-      <tr>
-        <td>${d.category}</td>
-        <td>${d.name}</td>
-        <td>${d.role}</td>
-      </tr>
-    `).join("");
-
-    cards.innerHTML = filtered.map(d => `
-      <article class="doctor-card">
-        <p class="doctor-tag">${d.category}</p>
-        <div class="doctor-top">
-          <div class="doctor-photo">${initials(d.name)}</div>
-          <div>
-            <h3>${d.name}</h3>
-            <p class="doctor-role">${d.role}</p>
-          </div>
-        </div>
-        <p class="doctor-comment">「${d.comment}」</p>
-      </article>
-    `).join("");
-  }
-
-  searchInput.addEventListener("input", draw);
-  categorySelect.addEventListener("change", draw);
-  draw();
-}
-
-function renderDepartment() {
-  const title = document.getElementById("departmentTitle");
-  const summary = document.getElementById("departmentSummary");
-  const reception = document.getElementById("departmentReception");
-  const points = document.getElementById("departmentPoints");
-  const doctorList = document.getElementById("departmentDoctors");
-  if (!title || !summary || !reception || !points || !doctorList) return;
-
-  const params = new URLSearchParams(window.location.search);
-  const id = params.get("id") || "naika";
-  const dept = departmentData[id] || departmentData.naika;
-
-  title.textContent = dept.title;
-  summary.textContent = dept.summary;
-  reception.textContent = dept.reception;
-  points.innerHTML = dept.points.map(p => `<li>${p}</li>`).join("");
-
-  const related = doctorData.filter(d => dept.doctors.includes(d.name));
-  doctorList.innerHTML = related.map(d => `
-    <article class="doctor-card">
-      <div class="doctor-top">
-        <div class="doctor-photo">${initials(d.name)}</div>
-        <div>
-          <h3>${d.name}</h3>
-          <p class="doctor-role">${d.role}</p>
-        </div>
-      </div>
-      <p class="doctor-comment">「${d.comment}」</p>
-    </article>
-  `).join("");
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  renderTodayDate();
-  renderDoctors();
   renderDepartment();
 });
