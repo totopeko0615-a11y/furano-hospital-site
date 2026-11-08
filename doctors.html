@@ -4,11 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>医師紹介 | 富良野希望未来病院グループ</title>
-  <p style="margin-top: 12px;"><a href="doctor-comments.html" class="btn btn-secondary">公式医師紹介コメント集を見る</a></p>
-  <meta name="description" content="富良野希望未来病院グループの医師紹介ページです。病院経営陣、各診療科、心理支援、分院・出向・研修医をご案内します。">
+  <meta name="description" content="富良野希望未来病院グループの医師紹介です。診療科別の担当医、幹部医師、救急・小児・精神・泌尿器科・総合診療科などの担当一覧をご案内します。">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="top">
   <header class="site-header">
     <div class="container header-inner">
       <div class="logo">
@@ -33,244 +32,437 @@
         <p class="eyebrow">Doctors</p>
         <h1>医師紹介</h1>
         <p class="page-lead">
-          病院経営陣、各診療科、心理支援、分院・出向・研修医まで、現在の名簿をカテゴリ別にまとめています。
+          診療科別の担当医、幹部医師、救急・小児・精神・総合診療・泌尿器科・トミカ分院の担当体制をご案内します。
         </p>
       </div>
     </section>
 
     <section class="section">
-      <div class="container">
+      <div class="container card-grid cols-2">
         <article class="card">
           <h2>医師検索</h2>
           <p>氏名・役職・担当・診療科名で検索できます。</p>
           <input
             id="doctorSearch"
             type="text"
-            placeholder="例：小児科 / 救急 / 渡邊 / 泌尿器科 / 周央"
+            placeholder="例：小森 / 小児科 / 救急 / 周央 / 総合診療"
             style="width: 100%; padding: 12px 14px; border: 1px solid #d7e1ee; border-radius: 12px; font: inherit;"
           >
           <p id="doctorSearchResult" style="margin-top: 12px; color: #5f6f82;">すべて表示中</p>
+
+          <div style="margin-top: 16px; display: flex; flex-wrap: wrap; gap: 10px;">
+            <a href="doctor-comments.html" class="btn btn-secondary">公式医師紹介コメント集</a>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeExIc--O2srrXXBPToLxZVku8YZY6iQyUkYmHUPeajeuKQOw/viewform?usp=header"
+              class="btn btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >予約フォーム</a>
+            <a href="reservation.html" class="btn btn-secondary">予約案内</a>
+          </div>
+
+          <p style="margin-top: 12px; color: #5f6f82;">
+            詳しい紹介コメントは「公式医師紹介コメント集」、受診予約は「予約フォーム」または「予約案内」をご確認ください。
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>ページ内リンク</h2>
+          <ul class="link-list">
+            <li><a href="#leaders">病院経営陣・外来幹部</a></li>
+            <li><a href="#internal">内科・外科・整形外科</a></li>
+            <li><a href="#pediatrics">小児科・思春期科・周産期</a></li>
+            <li><a href="#emergency">救急科</a></li>
+            <li><a href="#mental">精神科・児童精神科・心療内科・心理支援</a></li>
+            <li><a href="#specialty">皮膚科・眼科・耳鼻咽喉科・緩和ケア・遺伝・喫煙外来</a></li>
+            <li><a href="#general">総合診療科・フォローアップ</a></li>
+            <li><a href="#urology">泌尿器科</a></li>
+            <li><a href="#tomica">トミカ分院</a></li>
+          </ul>
         </article>
       </div>
     </section>
 
-    <section class="section doctor-section">
+    <section id="leaders" class="section alt doctor-section">
       <div class="container">
         <div class="section-head">
-          <h2>病院経営陣</h2>
+          <h2>病院経営陣・外来幹部</h2>
+          <p><a href="#top">ページ上部へ戻る</a></p>
         </div>
-        <div class="table-wrap">
-          <table class="info-table">
-            <thead>
-              <tr><th>氏名</th><th>役職</th></tr>
-            </thead>
-            <tbody>
-              <tr><th>紡木 こかげ</th><td>病院長 / 思春期科・小児科外来医長</td></tr>
-              <tr><th>四宮 春樹</th><td>副病院長 / 産婦人科主任部長</td></tr>
-              <tr><th>鏑木 ろこ</th><td>副病院長 / 内科主任部長（循環器内科）</td></tr>
-              <tr><th>藍沢 耕作</th><td>病院長代理 / 救急科主任部長</td></tr>
-              <tr><th>大泉 洋</th><td>病院長代理 / 耳鼻咽喉科主任部長</td></tr>
-              <tr><th>進藤 一生</th><td>副病院長代理 / 救急科主任係長</td></tr>
-              <tr><th>石神 のぞみ</th><td>副病院長代理 / 思春期科最高統括責任者 / 小児科全般主任部長</td></tr>
-              <tr><th>蝸堂 みかる</th><td>最高顧問 / 別館臨床最高執行責任者（COO） / 小児科全般主任部長</td></tr>
-              <tr><th>先斗 寧</th><td>新病院担当 / 病院改革委員 / 思春期科主任部長 / 小児外科主任部長</td></tr>
-              <tr><th>渡邊 トドック</th><td>外来医長（名誉病院長） / 総合診療科主任部長</td></tr>
-              <tr><th>周央 サンゴ</th><td>精神科・児童精神科外来医長 / 病院意見係</td></tr>
-              <tr><th>黒井 しば</th><td>病院経営改革・病院運営委員会 委員長</td></tr>
-              <tr><th>蝶屋 はなび</th><td>学校連携・行政連携委員長</td></tr>
-              <tr><th>栞葉 るり</th><td>新病院担当者 / 外科主任部長代理</td></tr>
-              <tr><th>五十嵐 菜々</th><td>診療科再編・日程等再編担当者</td></tr>
-              <tr><th>夜乃 くろむ</th><td>医療サポート科相談室長</td></tr>
-              <tr><th>白砂 まどか</th><td>医療サポート科カウンセラー兼相談室長</td></tr>
-              <tr><th>浜川 百合子</th><td>病院監査委員長 / 心療内科主任部長</td></tr>
-            </tbody>
-          </table>
+
+        <div class="card-grid cols-3">
+          <article class="card doctor-card">
+            <h2>病院首脳陣</h2>
+            <ul class="plain-list">
+              <li><strong>病院長：</strong>紡木こかげ</li>
+              <li><strong>副病院長：</strong>四宮春樹 / 鏑木ろこ</li>
+              <li><strong>病院長代理：</strong>藍沢耕作 / 大泉洋</li>
+              <li><strong>副病院長代理：</strong>進藤一生 / 石神のぞみ</li>
+            </ul>
+          </article>
+
+          <article class="card doctor-card">
+            <h2>外来・運営幹部</h2>
+            <ul class="plain-list">
+              <li><strong>外来医長：</strong>渡邊トドック</li>
+              <li><strong>精神科・児童精神科外来医長：</strong>周央サンゴ</li>
+              <li><strong>病院運営委員長：</strong>黒井しば</li>
+              <li><strong>学校連携・行政連携委員長：</strong>蝶屋はなび</li>
+            </ul>
+          </article>
+
+          <article class="card doctor-card">
+            <h2>改革・相談体制</h2>
+            <ul class="plain-list">
+              <li><strong>病院改革委員：</strong>先斗寧</li>
+              <li><strong>再編担当：</strong>五十嵐菜々</li>
+              <li><strong>相談室長：</strong>夜乃くろむ / 白砂まどか</li>
+              <li><strong>病院監査委員長：</strong>浜川百合子</li>
+              <li><strong>最高顧問：</strong>蝸堂みかる</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section alt doctor-section">
+    <section id="internal" class="section doctor-section">
       <div class="container">
         <div class="section-head">
           <h2>内科・外科・整形外科</h2>
+          <p><a href="#top">ページ上部へ戻る</a></p>
         </div>
-        <div class="table-wrap">
-          <table class="info-table">
-            <thead>
-              <tr><th>氏名</th><th>担当</th></tr>
-            </thead>
-            <tbody>
-              <tr><th>猪股 隆</th><td>外科主任部長</td></tr>
-              <tr><th>鏑木 ろこ</th><td>内科主任部長（循環器内科）</td></tr>
-              <tr><th>五島 健助</th><td>消化器内科主任部長代理</td></tr>
-              <tr><th>神楽坂 倫太郎</th><td>消化器内科 主任係長代理</td></tr>
-              <tr><th>高本 めぐみ</th><td>循環器内科主任部長</td></tr>
-              <tr><th>澤田 咲</th><td>神経内科（脳神経内科・外科担当）主任部長</td></tr>
-              <tr><th>白砂 まどか</th><td>血管外科・血液内科・心臓外科主任部長 / ラベンダー外来統括責任者</td></tr>
-              <tr><th>辻元 朝子</th><td>整形外科主任係長</td></tr>
-              <tr><th>松前 春香</th><td>内科・消化器内科主任係長代理</td></tr>
-              <tr><th>夜乃 くろむ</th><td>呼吸器内科主任係長代理</td></tr>
-              <tr><th>早坂 昇</th><td>内科医員</td></tr>
-              <tr><th>高木 裕樹</th><td>内科医員</td></tr>
-              <tr><th>原 守</th><td>遺伝カウンセリング・緩和ケア予約担当医 / 外科サポート担当医</td></tr>
-            </tbody>
-          </table>
+
+        <div class="card-grid cols-3">
+          <article class="card doctor-card">
+            <h2>内科</h2>
+            <ul class="plain-list">
+              <li>鏑木ろこ</li>
+              <li>高本めぐみ</li>
+              <li>五島健助</li>
+              <li>神楽坂倫太郎</li>
+              <li>松前春香</li>
+              <li>夜乃くろむ</li>
+              <li>早坂昇</li>
+              <li>高木裕樹</li>
+              <li>白砂まどか</li>
+            </ul>
+          </article>
+
+          <article class="card doctor-card">
+            <h2>外科・脳神経</h2>
+            <ul class="plain-list">
+              <li><strong>一般外科：</strong>猪股隆 / 栞葉るり / 進藤一生</li>
+              <li><strong>脳神経内科・外科：</strong>澤田咲</li>
+              <li><strong>緩和・予約整理支援：</strong>原守</li>
+            </ul>
+          </article>
+
+          <article class="card doctor-card">
+            <h2>整形外科</h2>
+            <ul class="plain-list">
+              <li>辻元朝子</li>
+              <li>加地秀樹（分院連携）</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section doctor-section">
+    <section id="pediatrics" class="section alt doctor-section">
       <div class="container">
         <div class="section-head">
           <h2>小児科・思春期科・周産期</h2>
+          <p><a href="#top">ページ上部へ戻る</a></p>
         </div>
-        <div class="table-wrap">
-          <table class="info-table">
-            <thead>
-              <tr><th>氏名</th><th>担当</th></tr>
-            </thead>
-            <tbody>
-              <tr><th>先斗 寧</th><td>思春期科主任部長 / 小児外科主任部長</td></tr>
-              <tr><th>五十嵐 菜々</th><td>思春期科主任部長代理 / 小児外科主任部長代理</td></tr>
-              <tr><th>石神 のぞみ</th><td>思春期科最高統括責任者 / 小児科全般主任部長</td></tr>
-              <tr><th>小々波 いるか</th><td>思春期科主任係長 / 小児科全般主任係長代理</td></tr>
-              <tr><th>不破 拓海</th><td>小児糖尿病・内分泌・新生児科・新生児発達科主任部長</td></tr>
-              <tr><th>星川 輝</th><td>小児科全般主任係長</td></tr>
-              <tr><th>紡木 こかげ</th><td>思春期科・小児科外来医長</td></tr>
-              <tr><th>黒井 しば</th><td>小児科全般主任部長補佐 / 児童精神科専門医</td></tr>
-              <tr><th>蝸堂 みかる</th><td>小児科全般主任部長 / 児童精神・特殊外科連撃統括医</td></tr>
-              <tr><th>千凛 あゆむ</th><td>本館・別館小児科最高顧問</td></tr>
-              <tr><th>角巻 わため</th><td>小児神経科担当医 / 児童精神科研修中</td></tr>
-              <tr><th>栞葉 るり</th><td>思春期科・小児外科・小児神経</td></tr>
-              <tr><th>蝶屋 はなび</th><td>小児科・周産期・慢性期マルチタスク統括特任部長</td></tr>
-              <tr><th>四宮 春樹</th><td>産婦人科主任部長</td></tr>
-              <tr><th>水野 遥</th><td>産婦人科主任係長</td></tr>
-              <tr><th>赤羽 葉雪</th><td>産婦人科医員 / カウンセリング担当</td></tr>
-              <tr><th>赤羽 祐司</th><td>産婦人科医員</td></tr>
-              <tr><th>雲母 たまこ</th><td>産婦人科研修医</td></tr>
-              <tr><th>菊田 真理恵</th><td>産婦人科 日中外来特任主任部長</td></tr>
-            </tbody>
-          </table>
+
+        <div class="card-grid cols-3">
+          <article class="card doctor-card">
+            <h2>小児科一般</h2>
+            <ul class="plain-list">
+              <li>星川輝</li>
+              <li>黒井しば</li>
+              <li>一ノ瀬うるは</li>
+              <li>石神のぞみ</li>
+              <li>小々波いるか</li>
+            </ul>
+          </article>
+
+          <article class="card doctor-card">
+            <h2>小児専門・思春期</h2>
+            <ul class="plain-list">
+              <li>先斗寧</li>
+              <li>五十嵐菜々</li>
+              <li>蝸堂みかる</li>
+              <li>千凛あゆむ</li>
+              <li>角巻わため</li>
+              <li>不破拓海</li>
+              <li>紡木こかげ</li>
+              <li>蝶屋はなび</li>
+            </ul>
+          </article>
+
+          <article class="card doctor-card">
+            <h2>産婦人科・周産期</h2>
+            <ul class="plain-list">
+              <li>四宮春樹</li>
+              <li>水野遥</li>
+              <li>赤羽葉雪</li>
+              <li>赤羽祐司</li>
+              <li>雲母たまこ</li>
+              <li>菊田真理恵</li>
+              <li>田崎恵（トミカ分院連携）</li>
+              <li>木村彩乃（トミカ分院連携）</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section alt doctor-section">
+    <section id="emergency" class="section doctor-section">
       <div class="container">
         <div class="section-head">
           <h2>救急科</h2>
+          <p><a href="#top">ページ上部へ戻る</a></p>
         </div>
-        <div class="table-wrap">
-          <table class="info-table">
-            <thead>
-              <tr><th>氏名</th><th>担当</th></tr>
-            </thead>
-            <tbody>
-              <tr><th>藍沢 耕作</th><td>救急科主任部長</td></tr>
-              <tr><th>進藤 一生</th><td>救急科主任係長</td></tr>
-              <tr><th>五条 蓮</th><td>救急科主任部長代理 / Ai手術担当医</td></tr>
-              <tr><th>一橋 太郎</th><td>救急科主任部長代理 / 総合診療科主任係長</td></tr>
-              <tr><th>星川 サラ</th><td>救急科主任部長代理</td></tr>
-              <tr><th>神崎 徹</th><td>別館救急科（ER）主任係長代理</td></tr>
-              <tr><th>前澤 優作</th><td>医員 / 小児救急先行医</td></tr>
-              <tr><th>茨城 美紅</th><td>医員 / 山岳救助担当医</td></tr>
-            </tbody>
-          </table>
+
+        <div class="card-grid cols-3">
+          <article class="card doctor-card">
+            <h2>救急科幹部</h2>
+            <ul class="plain-list">
+              <li>藍沢耕作</li>
+              <li>進藤一生</li>
+              <li>五条蓮</li>
+              <li>一橋太郎</li>
+            </ul>
+          </article>
+
+          <article class="card doctor-card">
+            <h2>救急当直・支援</h2>
+            <ul class="plain-list">
+              <li>星川サラ</li>
+              <li>神崎徹</li>
+              <li>前澤優作</li>
+              <li>茨城美紅</li>
+            </ul>
+          </article>
+
+          <article class="card doctor-card">
+            <h2>連携</h2>
+            <p>
+              夜間は救急科を中心に、各科当番医と連携して対応します。
+            </p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section doctor-section">
+    <section id="mental" class="section alt doctor-section">
       <div class="container">
         <div class="section-head">
-          <h2>精神科・児童精神科・心理</h2>
+          <h2>精神科・児童精神科・心療内科・心理支援</h2>
+          <p><a href="#top">ページ上部へ戻る</a></p>
         </div>
-        <div class="table-wrap">
-          <table class="info-table">
-            <thead>
-              <tr><th>氏名</th><th>担当</th></tr>
-            </thead>
-            <tbody>
-              <tr><th>夢咲 ネム</th><td>精神科主任部長</td></tr>
-              <tr><th>周央 サンゴ</th><td>思春期科特任主任教授 / 児童精神科連携トップ</td></tr>
-              <tr><th>先斗 寧</th><td>児童精神科・精神科主任係長</td></tr>
-              <tr><th>雪村 双葉</th><td>児童精神科主任部長</td></tr>
-              <tr><th>中村 里子</th><td>ふらの・ハートポート専任外来医長代理 / 心理カウンセラー・医師</td></tr>
-              <tr><th>竹田 康</th><td>思春期科・こころの専門医 / 児童精神科主任部長代理</td></tr>
-              <tr><th>天宮 こころ</th><td>児童精神科主任教授（特任）</td></tr>
-              <tr><th>葉加瀬 冬雪</th><td>専任心理士 / 広域学校連携スクールカウンセラー</td></tr>
-              <tr><th>アンジュ・カトリーナ</th><td>別館児童精神科 専任主任心理士</td></tr>
-              <tr><th>大久保 希美</th><td>別館精神科 専任心理士</td></tr>
-              <tr><th>浜川 百合子</th><td>心療内科主任部長</td></tr>
-              <tr><th>風間 トオル</th><td>心療内科主任部長代理</td></tr>
-            </tbody>
-          </table>
+
+        <div class="card-grid cols-3">
+          <article class="card doctor-card">
+            <h2>精神科・児童精神科</h2>
+            <ul class="plain-list">
+              <li>夢咲ネム</li>
+              <li>周央サンゴ</li>
+              <li>先斗寧</li>
+              <li>雪村双葉</li>
+              <li>竹田康</li>
+              <li>天宮こころ</li>
+            </ul>
+          </article>
+
+          <article class="card doctor-card">
+            <h2>心療内科</h2>
+            <ul class="plain-list">
+              <li>浜川百合子</li>
+              <li>風間トオル</li>
+            </ul>
+          </article>
+
+          <article class="card doctor-card">
+            <h2>心理・相談支援</h2>
+            <ul class="plain-list">
+              <li>中村里子</li>
+              <li>葉加瀬冬雪</li>
+              <li>アンジュ・カトリーナ</li>
+              <li>大久保希美</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section alt doctor-section">
+    <section id="specialty" class="section doctor-section">
       <div class="container">
         <div class="section-head">
           <h2>皮膚科・眼科・耳鼻咽喉科・緩和ケア・遺伝・喫煙外来</h2>
+          <p><a href="#top">ページ上部へ戻る</a></p>
         </div>
-        <div class="table-wrap">
-          <table class="info-table">
-            <thead>
-              <tr><th>氏名</th><th>担当</th></tr>
-            </thead>
-            <tbody>
-              <tr><th>緋山 美帆子</th><td>皮膚科主任部長</td></tr>
-              <tr><th>山田 義治</th><td>皮膚科主任部長代理</td></tr>
-              <tr><th>白石 恵</th><td>眼科主任部長</td></tr>
-              <tr><th>福山 鉄人</th><td>眼科主任部長代理</td></tr>
-              <tr><th>大泉 洋</th><td>耳鼻咽喉科主任部長 / 喫煙外来担当医</td></tr>
-              <tr><th>樋口 楓</th><td>耳鼻咽喉科主任部長代理</td></tr>
-              <tr><th>長野 信二</th><td>緩和ケア主任部長</td></tr>
-              <tr><th>田沼 譲</th><td>遺伝カウンセリング主任部長 / 喫煙外来主任部長</td></tr>
-              <tr><th>星野 彩乃</th><td>遺伝カウンセリング（産婦人科） / 緩和ケア担当医</td></tr>
-              <tr><th>原 守</th><td>遺伝カウンセリング・緩和ケア予約整理担当</td></tr>
-              <tr><th>鏑木 ろこ</th><td>喫煙外来担当医</td></tr>
-            </tbody>
-          </table>
+
+        <div class="card-grid cols-3">
+          <article class="card doctor-card">
+            <h2>皮膚科・眼科・耳鼻咽喉科</h2>
+            <ul class="plain-list">
+              <li><strong>皮膚科：</strong>緋山美帆子 / 山田義治</li>
+              <li><strong>眼科：</strong>白石恵 / 福山鉄人</li>
+              <li><strong>耳鼻咽喉科：</strong>大泉洋 / 樋口楓</li>
+            </ul>
+          </article>
+
+          <article class="card doctor-card">
+            <h2>緩和ケア・遺伝</h2>
+            <ul class="plain-list">
+              <li><strong>緩和ケア：</strong>長野信二 / 星野彩乃 / 原守</li>
+              <li><strong>遺伝カウンセリング：</strong>田沼譲 / 星野彩乃 / 原守</li>
+            </ul>
+          </article>
+
+          <article class="card doctor-card">
+            <h2>喫煙外来・関連支援</h2>
+            <ul class="plain-list">
+              <li>大泉洋</li>
+              <li>鏑木ろこ</li>
+              <li>田沼譲</li>
+              <li>角巻わため（フォローアップ連携）</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section doctor-section">
+    <section id="general" class="section alt doctor-section">
       <div class="container">
         <div class="section-head">
-          <h2>総合診療科・泌尿器科・連携・研修医</h2>
+          <h2>総合診療科・フォローアップ</h2>
+          <p><a href="#top">ページ上部へ戻る</a></p>
         </div>
-        <div class="table-wrap">
-          <table class="info-table">
-            <thead>
-              <tr><th>氏名</th><th>担当</th></tr>
-            </thead>
-            <tbody>
-              <tr><th>渡邊 トドック</th><td>総合診療科主任部長</td></tr>
-              <tr><th>星川 郁男</th><td>総合診療科最高顧問兼臨床研修特任指導教授</td></tr>
-              <tr><th>藤原 のりこ</th><td>総合診療科医員</td></tr>
-              <tr><th>小森 明二</th><td>泌尿器科主任部長</td></tr>
-              <tr><th>北里 りさ</th><td>泌尿器科主任係長</td></tr>
-              <tr><th>七瀬 すず菜</th><td>総合診療科兼ラベンダー外来・救急トリアージ支援室</td></tr>
-              <tr><th>加地 秀樹</th><td>トミカ出向</td></tr>
-              <tr><th>奥野 宗一郎</th><td>トミカ出向</td></tr>
-              <tr><th>田崎 恵</th><td>産婦人科主任部長代理</td></tr>
-              <tr><th>江田 雄二</th><td>総合診療科（小児科担当）</td></tr>
-              <tr><th>山崎 育三</th><td>精神科・児童精神科部長・係長代理</td></tr>
-              <tr><th>家長 むぎ</th><td>小児科・児童精神科主任部長代理</td></tr>
-              <tr><th>木村 彩乃</th><td>産婦人科外来医長</td></tr>
-              <tr><th>花芽 すみれ</th><td>トミカ分院救急科主任部長</td></tr>
-              <tr><th>高畑 崇</th><td>旭川医科大学病院 小児科教授 / 出張医</td></tr>
-              <tr><th>井坂 信彦</th><td>北海道大学付属病院 眼科 / 出張医</td></tr>
-              <tr><th>斉木 直樹</th><td>北海道大学付属病院名誉教授 / 出張医</td></tr>
-              <tr><th>一ノ瀬 うるは</th><td>小児科兼児童精神科・ラベンダー外来専任研修医</td></tr>
-              <tr><th>空澄 セナ</th><td>旭川医科大学病院に出向 / 児童精神科講師・副診療科長</td></tr>
-              <tr><th>目黒 連</th><td>旭川医科大学病院に出向 / 助教・外来医長</td></tr>
-            </tbody>
-          </table>
+
+        <div class="card-grid cols-3">
+          <article class="card doctor-card">
+            <h2>総合診療科</h2>
+            <ul class="plain-list">
+              <li>渡邊トドック</li>
+              <li>星川郁男</li>
+              <li>藤原のりこ</li>
+              <li>一橋太郎</li>
+              <li>七瀬すず菜（支援）</li>
+            </ul>
+          </article>
+
+          <article class="card doctor-card">
+            <h2>フォローアップ・リエゾン</h2>
+            <ul class="plain-list">
+              <li>中村里子</li>
+              <li>角巻わため</li>
+              <li>葉加瀬冬雪</li>
+            </ul>
+          </article>
+
+          <article class="card doctor-card">
+            <h2>受診先に迷う方へ</h2>
+            <p>
+              どの診療科を受診するか迷う場合は、まず総合診療科をご利用ください。
+            </p>
+          </article>
         </div>
+      </div>
+    </section>
+
+    <section id="urology" class="section doctor-section">
+      <div class="container">
+        <div class="section-head">
+          <h2>泌尿器科</h2>
+          <p><a href="#top">ページ上部へ戻る</a></p>
+        </div>
+
+        <div class="card-grid cols-2">
+          <article class="card doctor-card">
+            <h2>泌尿器科担当医</h2>
+            <ul class="plain-list">
+              <li>小森明二</li>
+              <li>北里りさ</li>
+            </ul>
+            <p>排尿の悩み、泌尿器疾患、相談しにくい症状にも対応します。</p>
+          </article>
+
+          <article class="card doctor-card">
+            <h2>予約の目安</h2>
+            <ul class="plain-list">
+              <li>火曜・木曜は予約制中心</li>
+              <li>金曜・土曜は通常運用枠あり</li>
+              <li>詳細は外来診察予定表をご確認ください</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="tomica" class="section alt doctor-section">
+      <div class="container">
+        <div class="section-head">
+          <h2>トミカ分院（トミカにじいろクリニック）</h2>
+          <p><a href="#top">ページ上部へ戻る</a></p>
+        </div>
+
+        <div class="card-grid cols-3">
+          <article class="card doctor-card">
+            <h2>分院幹部</h2>
+            <ul class="plain-list">
+              <li><strong>分院長：</strong>加地秀樹</li>
+              <li><strong>分院長代理：</strong>奥野宗一郎</li>
+              <li><strong>副分院長：</strong>家長むぎ</li>
+              <li><strong>救急科主任部長：</strong>花芽すみれ</li>
+            </ul>
+          </article>
+
+          <article class="card doctor-card">
+            <h2>分院担当医</h2>
+            <ul class="plain-list">
+              <li>田崎恵</li>
+              <li>江田雄二</li>
+              <li>山崎育三</li>
+              <li>木村彩乃</li>
+              <li>早坂昇</li>
+              <li>紡木こかげ</li>
+              <li>千凛あゆむ</li>
+              <li>角巻わため</li>
+              <li>夜乃くろむ</li>
+            </ul>
+          </article>
+
+          <article class="card doctor-card">
+            <h2>分院案内</h2>
+            <p>
+              小児科・内科・産婦人科・精神科・児童精神科・救急支援を中心に、本院と連携して運営しています。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <article class="card">
+          <h2>関連リンク</h2>
+          <ul class="link-list">
+            <li><a href="doctor-comments.html">公式医師紹介コメント集</a></li>
+            <li><a href="gairai.html">外来診察予定表</a></li>
+            <li><a href="departments.html">診療科紹介</a></li>
+            <li><a href="reservation.html">予約案内</a></li>
+            <li>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeExIc--O2srrXXBPToLxZVku8YZY6iQyUkYmHUPeajeuKQOw/viewform?usp=header"
+                target="_blank"
+                rel="noopener noreferrer"
+              >予約フォーム（外部）</a>
+            </li>
+          </ul>
+        </article>
       </div>
     </section>
   </main>
@@ -289,7 +481,7 @@
 
       if (!input || !result) return;
 
-      const rows = Array.from(document.querySelectorAll(".info-table tbody tr"));
+      const cards = Array.from(document.querySelectorAll(".doctor-card"));
       const sections = Array.from(document.querySelectorAll(".doctor-section"));
 
       function normalize(text) {
@@ -304,24 +496,21 @@
         const keyword = normalize(input.value);
         let visibleCount = 0;
 
-        rows.forEach((row) => {
-          const text = normalize(row.textContent);
+        cards.forEach((card) => {
+          const text = normalize(card.textContent);
           const match = !keyword || text.includes(keyword);
-          row.style.display = match ? "" : "none";
+          card.style.display = match ? "" : "none";
           if (match) visibleCount++;
         });
 
         sections.forEach((section) => {
-          const tableRows = Array.from(section.querySelectorAll(".info-table tbody tr"));
-          const hasVisibleRow = tableRows.some((row) => row.style.display !== "none");
-          section.style.display = hasVisibleRow ? "" : "none";
+          const visibleCards = Array.from(section.querySelectorAll(".doctor-card")).some(
+            (card) => card.style.display !== "none"
+          );
+          section.style.display = visibleCards ? "" : "none";
         });
 
-        if (!keyword) {
-          result.textContent = "すべて表示中";
-        } else {
-          result.textContent = visibleCount + "件表示中";
-        }
+        result.textContent = keyword ? visibleCount + "件表示中" : "すべて表示中";
       }
 
       input.addEventListener("input", updateSearch);
