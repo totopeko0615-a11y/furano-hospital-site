@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>医師紹介 | 富良野希望未来病院グループ</title>
-  <meta name="description" content="富良野希望未来病院グループの医師紹介ページです。病院経営陣、各診療科、連携医師、研修医をご案内します。">
+  <meta name="description" content="富良野希望未来病院グループの医師紹介ページです。病院経営陣、各診療科、心理支援、分院・出向・研修医をご案内します。">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -39,12 +39,30 @@
 
     <section class="section">
       <div class="container">
+        <article class="card">
+          <h2>医師検索</h2>
+          <p>氏名・役職・担当・診療科名で検索できます。</p>
+          <input
+            id="doctorSearch"
+            type="text"
+            placeholder="例：小児科 / 救急 / 渡邊 / 泌尿器科 / 周央"
+            style="width: 100%; padding: 12px 14px; border: 1px solid #d7e1ee; border-radius: 12px; font: inherit;"
+          >
+          <p id="doctorSearchResult" style="margin-top: 12px; color: #5f6f82;">すべて表示中</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section doctor-section">
+      <div class="container">
         <div class="section-head">
           <h2>病院経営陣</h2>
         </div>
         <div class="table-wrap">
           <table class="info-table">
-            <thead><tr><th>氏名</th><th>役職</th></tr></thead>
+            <thead>
+              <tr><th>氏名</th><th>役職</th></tr>
+            </thead>
             <tbody>
               <tr><th>紡木 こかげ</th><td>病院長 / 思春期科・小児科外来医長</td></tr>
               <tr><th>四宮 春樹</th><td>副病院長 / 産婦人科主任部長</td></tr>
@@ -70,14 +88,16 @@
       </div>
     </section>
 
-    <section class="section alt">
+    <section class="section alt doctor-section">
       <div class="container">
         <div class="section-head">
           <h2>内科・外科・整形外科</h2>
         </div>
         <div class="table-wrap">
           <table class="info-table">
-            <thead><tr><th>氏名</th><th>担当</th></tr></thead>
+            <thead>
+              <tr><th>氏名</th><th>担当</th></tr>
+            </thead>
             <tbody>
               <tr><th>猪股 隆</th><td>外科主任部長</td></tr>
               <tr><th>鏑木 ろこ</th><td>内科主任部長（循環器内科）</td></tr>
@@ -98,14 +118,16 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section doctor-section">
       <div class="container">
         <div class="section-head">
           <h2>小児科・思春期科・周産期</h2>
         </div>
         <div class="table-wrap">
           <table class="info-table">
-            <thead><tr><th>氏名</th><th>担当</th></tr></thead>
+            <thead>
+              <tr><th>氏名</th><th>担当</th></tr>
+            </thead>
             <tbody>
               <tr><th>先斗 寧</th><td>思春期科主任部長 / 小児外科主任部長</td></tr>
               <tr><th>五十嵐 菜々</th><td>思春期科主任部長代理 / 小児外科主任部長代理</td></tr>
@@ -132,14 +154,16 @@
       </div>
     </section>
 
-    <section class="section alt">
+    <section class="section alt doctor-section">
       <div class="container">
         <div class="section-head">
           <h2>救急科</h2>
         </div>
         <div class="table-wrap">
           <table class="info-table">
-            <thead><tr><th>氏名</th><th>担当</th></tr></thead>
+            <thead>
+              <tr><th>氏名</th><th>担当</th></tr>
+            </thead>
             <tbody>
               <tr><th>藍沢 耕作</th><td>救急科主任部長</td></tr>
               <tr><th>進藤 一生</th><td>救急科主任係長</td></tr>
@@ -155,14 +179,16 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section doctor-section">
       <div class="container">
         <div class="section-head">
           <h2>精神科・児童精神科・心理</h2>
         </div>
         <div class="table-wrap">
           <table class="info-table">
-            <thead><tr><th>氏名</th><th>担当</th></tr></thead>
+            <thead>
+              <tr><th>氏名</th><th>担当</th></tr>
+            </thead>
             <tbody>
               <tr><th>夢咲 ネム</th><td>精神科主任部長</td></tr>
               <tr><th>周央 サンゴ</th><td>思春期科特任主任教授 / 児童精神科連携トップ</td></tr>
@@ -182,14 +208,16 @@
       </div>
     </section>
 
-    <section class="section alt">
+    <section class="section alt doctor-section">
       <div class="container">
         <div class="section-head">
           <h2>皮膚科・眼科・耳鼻咽喉科・緩和ケア・遺伝・喫煙外来</h2>
         </div>
         <div class="table-wrap">
           <table class="info-table">
-            <thead><tr><th>氏名</th><th>担当</th></tr></thead>
+            <thead>
+              <tr><th>氏名</th><th>担当</th></tr>
+            </thead>
             <tbody>
               <tr><th>緋山 美帆子</th><td>皮膚科主任部長</td></tr>
               <tr><th>山田 義治</th><td>皮膚科主任部長代理</td></tr>
@@ -208,14 +236,16 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section doctor-section">
       <div class="container">
         <div class="section-head">
           <h2>総合診療科・泌尿器科・連携・研修医</h2>
         </div>
         <div class="table-wrap">
           <table class="info-table">
-            <thead><tr><th>氏名</th><th>担当</th></tr></thead>
+            <thead>
+              <tr><th>氏名</th><th>担当</th></tr>
+            </thead>
             <tbody>
               <tr><th>渡邊 トドック</th><td>総合診療科主任部長</td></tr>
               <tr><th>星川 郁男</th><td>総合診療科最高顧問兼臨床研修特任指導教授</td></tr>
@@ -250,5 +280,52 @@
       <p>© 2026 富良野希望未来病院グループ / Furano Hope Future Hospital Group</p>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const input = document.getElementById("doctorSearch");
+      const result = document.getElementById("doctorSearchResult");
+
+      if (!input || !result) return;
+
+      const rows = Array.from(document.querySelectorAll(".info-table tbody tr"));
+      const sections = Array.from(document.querySelectorAll(".doctor-section"));
+
+      function normalize(text) {
+        return (text || "")
+          .toString()
+          .replace(/\s+/g, "")
+          .replace(/　/g, "")
+          .toLowerCase();
+      }
+
+      function updateSearch() {
+        const keyword = normalize(input.value);
+        let visibleCount = 0;
+
+        rows.forEach((row) => {
+          const text = normalize(row.textContent);
+          const match = !keyword || text.includes(keyword);
+          row.style.display = match ? "" : "none";
+          if (match) visibleCount++;
+        });
+
+        sections.forEach((section) => {
+          const tableRows = Array.from(section.querySelectorAll(".info-table tbody tr"));
+          const hasVisibleRow = tableRows.some((row) => row.style.display !== "none");
+          section.style.display = hasVisibleRow ? "" : "none";
+        });
+
+        if (!keyword) {
+          result.textContent = "すべて表示中";
+        } else {
+          result.textContent = visibleCount + "件表示中";
+        }
+      }
+
+      input.addEventListener("input", updateSearch);
+      updateSearch();
+    });
+  </script>
 </body>
 </html>
