@@ -220,7 +220,7 @@ const doctorData = [
   {
     category: "小児科・思春期科・周産期",
     name: "雲母 たまこ",
-    role: "医員 / 産婦人科研修医 / その他臨床担当",
+    role: "医員 / 産婦人科研修医 / その他臨床",
     comment: "産婦人科を中心に臨床を担当します。"
   },
   {
@@ -492,3 +492,433 @@ const doctorData = [
     comment: "専門外来体制の強化に関わります。"
   }
 ];
+
+const departmentData = {
+  naika: {
+    title: "内科",
+    summary: "一般内科、循環器内科、消化器内科、呼吸器内科など、日常的な体調不良から慢性疾患、専門性の高い内科診療まで幅広く対応します。",
+    reception: "原則予約なしで受診できます。ただし月曜日〜木曜日の午後は1名体制で、救急性の高い患者さまを優先します。専門内科は予約制となる場合があります。",
+    points: [
+      "月〜木午後は△ 1名体制、原則予約なし可",
+      "循環器・消化器・呼吸器など専門内科は予約制となる場合があります",
+      "金曜・土曜は通常運用です",
+      "慢性疾患の継続管理や総合診療との連携にも対応します"
+    ],
+    doctors: [
+      "鏑木 ろこ",
+      "五島 健助",
+      "神楽坂 倫太郎",
+      "高本 めぐみ",
+      "松前 春香",
+      "夜乃 くろむ",
+      "早坂 昇",
+      "高木 裕樹",
+      "白砂 まどか"
+    ]
+  },
+
+  shonika: {
+    title: "小児科・思春期科",
+    summary: "一般小児医療に加え、思春期支援、発達支援、小児神経、小児内分泌、新生児発達、学校生活や家族支援まで見据えた体制を整えています。",
+    reception: "小児科一般は原則予約なしで受診できます。ただし月曜日〜木曜日の午後は1名体制です。小児専門外来は原則予約制です。",
+    points: [
+      "小児科一般は月〜木午後△ 1名体制",
+      "小児専門外来は原則予約制です",
+      "思春期科、児童精神科、周産期部門と連携します",
+      "発達・学校生活・こころの相談まで含めて支援します"
+    ],
+    doctors: [
+      "先斗 寧",
+      "五十嵐 菜々",
+      "石神 のぞみ",
+      "小々波 いるか",
+      "不破 拓海",
+      "星川 輝",
+      "紡木 こかげ",
+      "黒井 しば",
+      "蝸堂 みかる",
+      "千凛 あゆむ",
+      "角巻 わため",
+      "栞葉 るり",
+      "蝶屋 はなび",
+      "一ノ瀬 うるは"
+    ]
+  },
+
+  nou: {
+    title: "脳神経内科・外科",
+    summary: "頭痛、しびれ、神経症状、脳神経領域の継続診療や専門評価に対応します。",
+    reception: "午後は原則予約制です。救急性が高い場合は救急科と連携して対応します。",
+    points: [
+      "月〜木午後は予 予約制",
+      "神経症状や脳神経領域の専門診療に対応",
+      "必要時は救急科・総合診療科と連携",
+      "継続診療や精密評価にも対応します"
+    ],
+    doctors: [
+      "澤田 咲"
+    ]
+  },
+
+  seikei: {
+    title: "一般外科・整形外科",
+    summary: "外科的処置、術後フォロー、外傷、整形外科的評価などに幅広く対応します。",
+    reception: "月曜日〜木曜日の午後は原則予約制です。急変や外傷時は救急科と連携して受け入れます。",
+    points: [
+      "月〜木午後は予 予約制",
+      "金曜・土曜は通常運用です",
+      "外傷や急患では救急科と連携します",
+      "小児外科サポートや周辺診療科との連携があります"
+    ],
+    doctors: [
+      "猪股 隆",
+      "栞葉 るり",
+      "進藤 一生",
+      "辻元 朝子",
+      "不破 拓海",
+      "原 守"
+    ]
+  },
+
+  sango: {
+    title: "産婦人科",
+    summary: "妊娠・出産・産後ケアに加え、婦人科疾患や月経に関する悩み、女性のライフステージに応じた相談に対応します。",
+    reception: "月曜日〜木曜日の午後は原則予約制です。金曜・土曜は通常運用、日曜は縮小運用です。",
+    points: [
+      "妊娠・出産・産後まで一貫支援します",
+      "月〜木午後は予 予約制です",
+      "小児科・思春期科・心理支援部門と連携します",
+      "日曜は週替わりの縮小運用です"
+    ],
+    doctors: [
+      "四宮 春樹",
+      "水野 遥",
+      "赤羽 葉雪",
+      "赤羽 祐司",
+      "雲母 たまこ",
+      "菊田 真理恵",
+      "木村 彩乃",
+      "田崎 恵",
+      "角巻 わため",
+      "先斗 寧"
+    ]
+  },
+
+  seishin: {
+    title: "精神科・児童精神科・心療内科",
+    summary: "不眠、不安、気分の落ち込み、ストレス関連症状、発達や対人関係の悩み、不登校、思春期特有のこころの問題などに対応します。",
+    reception: "月曜日〜木曜日の午後は原則予約制です。専門医による診察を希望される方は事前予約または受付への相談をおすすめします。",
+    points: [
+      "精神科と児童精神科、心療内科の連携体制があります",
+      "月〜木午後は予 予約制です",
+      "相談窓口、心理士、学校連携体制を整えています",
+      "土曜は集中配置日として手厚い体制です"
+    ],
+    doctors: [
+      "夢咲 ネム",
+      "周央 サンゴ",
+      "先斗 寧",
+      "雪村 双葉",
+      "中村 里子",
+      "竹田 康",
+      "小森 明二",
+      "天宮 こころ",
+      "葉加瀬 冬雪",
+      "アンジュ・カトリーナ",
+      "大久保 希美",
+      "浜川 百合子",
+      "風間 トオル",
+      "黒井 しば",
+      "蝶屋 はなび"
+    ]
+  },
+
+  kyukyu: {
+    title: "救急科",
+    summary: "急な発熱、外傷、意識障害、呼吸苦など、緊急対応が必要な症状に幅広く対応します。成人救急に加え、小児救急にも対応します。",
+    reception: "24時間対応です。夜間帯は救急科と各科当番医が中心となって対応します。",
+    points: [
+      "成人・小児の救急初期対応に対応",
+      "24時間体制で受け入れます",
+      "外科・整形外科・小児科・精神科などと連携します",
+      "災害時や特殊対応も見据えた体制を整えています"
+    ],
+    doctors: [
+      "藍沢 耕作",
+      "進藤 一生",
+      "五条 蓮",
+      "一橋 太郎",
+      "星川 サラ",
+      "神崎 徹",
+      "前澤 優作",
+      "茨城 美紅",
+      "花芽 すみれ",
+      "江田 雄二"
+    ]
+  },
+
+  hifu: {
+    title: "皮膚科・眼科・耳鼻咽喉科",
+    summary: "皮膚、目、耳・鼻・のどに関する幅広い症状に対応します。身近な症状から専門的な評価までご相談いただけます。",
+    reception: "月曜日〜木曜日の午後は原則予約制です。日曜日は休診です。",
+    points: [
+      "皮膚科、眼科、耳鼻咽喉科の連携案内が可能です",
+      "月〜木午後は予 予約制です",
+      "日曜は休診です",
+      "必要時は他科や連携医療機関につなぎます"
+    ],
+    doctors: [
+      "緋山 美帆子",
+      "山田 義治",
+      "白石 恵",
+      "福山 鉄人",
+      "大泉 洋",
+      "樋口 楓"
+    ]
+  },
+
+  sogo: {
+    title: "総合診療科",
+    summary: "どの科を受診すればよいかわからない方、複数の症状がある方、身体の不調とこころの不調が重なっている方の最初の窓口です。",
+    reception: "原則予約なしでも相談可能です。木曜日は終日1名体制、日曜日は縮小運用です。感染症疑いのある方は別館診察室で対応する場合があります。",
+    points: [
+      "最初の相談窓口として幅広く対応します",
+      "木曜は終日△ 1名体制です",
+      "日曜は縮小運用です",
+      "必要に応じて適切な専門診療科へつなぎます"
+    ],
+    doctors: [
+      "渡邊 トドック",
+      "星川 郁男",
+      "藤原 のりこ",
+      "一橋 太郎",
+      "夜乃 くろむ",
+      "原 守",
+      "高木 裕樹",
+      "五島 健助",
+      "七瀬 すず菜",
+      "角巻 わため"
+    ]
+  },
+
+  kanwa: {
+    title: "緩和ケア・遺伝カウンセリング科",
+    summary: "病気に伴う身体的・心理的負担をやわらげる支援と、遺伝に関する不安や疑問への専門的な相談対応を行います。",
+    reception: "原則予約制です。専門相談は事前予約をお願いします。",
+    points: [
+      "身体的・心理的負担の軽減を支援します",
+      "遺伝に関する不安や疑問に専門的に対応します",
+      "患者さんご本人だけでなくご家族の相談にも対応します",
+      "他科と連携しながら継続支援を行います"
+    ],
+    doctors: [
+      "長野 信二",
+      "田沼 譲",
+      "星野 彩乃",
+      "原 守"
+    ]
+  },
+
+  hinyoki: {
+    title: "泌尿器科",
+    summary: "排尿の悩み、尿路感染症、泌尿器疾患に幅広く対応します。相談しづらい症状にも丁寧に対応します。",
+    reception: "曜日や時間帯により通常運用または予約制です。午後は予約制中心となる日があります。",
+    points: [
+      "排尿や泌尿器の悩みに幅広く対応します",
+      "相談しにくい症状にも丁寧に対応します",
+      "火・木は午後予約制中心です",
+      "金・土は比較的受診しやすい運用です"
+    ],
+    doctors: [
+      "小森 明二",
+      "北里 りさ"
+    ]
+  },
+
+  tomica: {
+    title: "トミカにじいろクリニック",
+    summary: "関連病院・分院との連携を通じて、救急、小児、精神、産婦人科など多領域で人材交流と診療支援を行っています。",
+    reception: "平日は日勤中心、土曜は午前一般＋午後予約、日曜は午前診療のみです。夜間は当番制で補完体制を整えています。",
+    points: [
+      "平日 08:30〜17:30 を中心に運用します",
+      "夜間は当番医体制で対応します",
+      "土曜午後は完全予約制です",
+      "本院との連携で小児・精神・救急・産婦人科を支えます"
+    ],
+    doctors: [
+      "加地 秀樹",
+      "奥野 宗一郎",
+      "田崎 恵",
+      "江田 雄二",
+      "山崎 育三",
+      "家長 むぎ",
+      "木村 彩乃",
+      "花芽 すみれ",
+      "夜乃 くろむ",
+      "千凛 あゆむ",
+      "角巻 わため",
+      "紡木 こかげ"
+    ]
+  }
+};
+
+function normalizeText(value) {
+  return (value || "")
+    .toString()
+    .replace(/\s+/g, "")
+    .replace(/　/g, "")
+    .toLowerCase();
+}
+
+function escapeHtml(value) {
+  return (value || "")
+    .toString()
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function findDoctorByName(name) {
+  const target = normalizeText(name);
+  return doctorData.find((doctor) => normalizeText(doctor.name) === target) || null;
+}
+
+function createDoctorCardHtml(doctor) {
+  return `
+    <article class="doctor-card">
+      <div class="doctor-card-body">
+        <p class="doctor-meta">${escapeHtml(doctor.category)}</p>
+        <h3>${escapeHtml(doctor.name)}</h3>
+        <p class="doctor-role">${escapeHtml(doctor.role)}</p>
+        <p>${escapeHtml(doctor.comment || "")}</p>
+      </div>
+    </article>
+  `;
+}
+
+function renderDepartment() {
+  const titleEl = document.getElementById("departmentTitle");
+  const summaryEl = document.getElementById("departmentSummary");
+  const receptionEl = document.getElementById("departmentReception");
+  const pointsEl = document.getElementById("departmentPoints");
+  const doctorsEl = document.getElementById("departmentDoctors");
+
+  if (!titleEl || !summaryEl || !receptionEl || !pointsEl || !doctorsEl) {
+    return;
+  }
+
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id") || "naika";
+  const department = departmentData[id] || departmentData.naika;
+
+  titleEl.textContent = department.title;
+  summaryEl.textContent = department.summary;
+  receptionEl.textContent = department.reception;
+
+  pointsEl.innerHTML = department.points
+    .map((point) => `<li>${escapeHtml(point)}</li>`)
+    .join("");
+
+  doctorsEl.innerHTML = department.doctors
+    .map((name) => {
+      const doctor = findDoctorByName(name);
+      if (doctor) {
+        return createDoctorCardHtml(doctor);
+      }
+      return `
+        <article class="doctor-card">
+          <div class="doctor-card-body">
+            <p class="doctor-meta">担当医</p>
+            <h3>${escapeHtml(name)}</h3>
+            <p class="doctor-role">医師情報を準備中です</p>
+          </div>
+        </article>
+      `;
+    })
+    .join("");
+}
+
+function renderDoctors() {
+  const searchInput = document.getElementById("doctorSearch");
+  const categorySelect = document.getElementById("doctorCategory");
+  const tableBody = document.getElementById("doctorTableBody");
+  const cardsContainer = document.getElementById("doctorCards");
+
+  if (!searchInput || !categorySelect || !tableBody || !cardsContainer) {
+    return;
+  }
+
+  const categories = [...new Set(doctorData.map((doctor) => doctor.category))];
+
+  categorySelect.innerHTML = `
+    <option value="">すべて表示</option>
+    ${categories
+      .map((category) => `<option value="${escapeHtml(category)}">${escapeHtml(category)}</option>`)
+      .join("")}
+  `;
+
+  function getFilteredDoctors() {
+    const keyword = normalizeText(searchInput.value);
+    const category = categorySelect.value;
+
+    return doctorData.filter((doctor) => {
+      const matchCategory = !category || doctor.category === category;
+
+      const searchTarget = normalizeText(
+        `${doctor.category} ${doctor.name} ${doctor.role} ${doctor.comment}`
+      );
+      const matchKeyword = !keyword || searchTarget.includes(keyword);
+
+      return matchCategory && matchKeyword;
+    });
+  }
+
+  function updateDoctorsView() {
+    const filtered = getFilteredDoctors();
+
+    if (filtered.length === 0) {
+      tableBody.innerHTML = `
+        <tr>
+          <td colspan="3">該当する医師が見つかりませんでした。</td>
+        </tr>
+      `;
+      cardsContainer.innerHTML = `
+        <article class="doctor-card">
+          <div class="doctor-card-body">
+            <h3>該当なし</h3>
+            <p>検索条件を変更して再度お試しください。</p>
+          </div>
+        </article>
+      `;
+      return;
+    }
+
+    tableBody.innerHTML = filtered
+      .map(
+        (doctor) => `
+          <tr>
+            <td>${escapeHtml(doctor.category)}</td>
+            <td>${escapeHtml(doctor.name)}</td>
+            <td>${escapeHtml(doctor.role)}</td>
+          </tr>
+        `
+      )
+      .join("");
+
+    cardsContainer.innerHTML = filtered.map(createDoctorCardHtml).join("");
+  }
+
+  searchInput.addEventListener("input", updateDoctorsView);
+  categorySelect.addEventListener("change", updateDoctorsView);
+
+  updateDoctorsView();
+}
+
+function initSite() {
+  renderDepartment();
+  renderDoctors();
+}
+
+document.addEventListener("DOMContentLoaded", initSite);
