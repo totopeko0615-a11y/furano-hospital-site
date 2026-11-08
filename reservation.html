@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>予約案内 | 富良野希望未来病院グループ</title>
-  <meta name="description" content="予約制外来のご案内です。予約対象診療科、電話予約、Web予約導線を掲載しています。">
+  <meta name="description" content="富良野希望未来病院グループの予約案内です。予約の要否、受診までの流れ、完全予約制外来、受診時の注意点をご案内します。">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,9 +17,10 @@
       <nav class="global-nav">
         <ul>
           <li><a href="index.html">ホーム</a></li>
-          <li><a href="reservation.html">予約案内</a></li>
+          <li><a href="departments.html">診療科紹介</a></li>
           <li><a href="gairai.html">外来診察予定表</a></li>
-          <li><a href="departments.html">診療科一覧</a></li>
+          <li><a href="doctors.html">医師紹介</a></li>
+          <li><a href="reservation.html">予約案内</a></li>
         </ul>
       </nav>
     </div>
@@ -28,31 +29,241 @@
   <main>
     <section class="page-hero">
       <div class="container">
-        <p class="eyebrow">Reservation</p>
-        <h1>予約制外来のご案内</h1>
-        <p class="page-lead">予約対象診療科、電話予約、Web予約フォームをご案内します。</p>
+        <p class="eyebrow">Reservation Guide</p>
+        <h1>予約案内</h1>
+        <p class="page-lead">
+          富良野希望未来病院の外来受診・予約ルールをご案内します。
+          原則予約不要ですが、一部の医師・専門外来は完全予約制です。
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <article class="notice-box">
+          <h2>🏥 受診前にご確認ください</h2>
+          <ul class="plain-list">
+            <li>原則として、事前予約なしで受診できます。</li>
+            <li>外来診察予定表に名前が載っている医師は、当日の予約なしでも受診可能です。</li>
+            <li>ただし、内科・小児科などを含め、<strong>予約のある患者さんが優先</strong>となります。</li>
+            <li>外来予定表に名前が載っていない医師や、専門外来は<strong>完全予約制</strong>です。</li>
+            <li>受診に迷う場合は、受付または地域予約サポートセンターへご相談ください。</li>
+          </ul>
+        </article>
       </div>
     </section>
 
     <section class="section">
       <div class="container card-grid cols-2">
         <article class="card">
-          <h2>電話予約</h2>
+          <h2>予約の基本ルール</h2>
           <table class="info-table">
             <tbody>
-              <tr><th>代表電話</th><td>1155-2431-1177</td></tr>
-              <tr><th>お伝えいただく内容</th><td>診療科名 / 氏名 / ご希望日 / 紹介状の有無</td></tr>
-              <tr><th>変更・取消</th><td>できるだけ早めにご連絡ください</td></tr>
+              <tr>
+                <th>原則</th>
+                <td>事前予約不要</td>
+              </tr>
+              <tr>
+                <th>当日受診可</th>
+                <td>外来診察予定表に名前が載っている医師</td>
+              </tr>
+              <tr>
+                <th>優先順</th>
+                <td>予約患者さんを優先して診察</td>
+              </tr>
+              <tr>
+                <th>完全予約制</th>
+                <td>予定表に名前が載っていない医師、各種専門外来</td>
+              </tr>
+              <tr>
+                <th>相談窓口</th>
+                <td>受付 / 地域予約サポートセンター</td>
+              </tr>
             </tbody>
           </table>
         </article>
 
         <article class="card">
-          <h2>Web予約</h2>
-          <p>以下のボタンからGoogleフォームの予約フォームを開けます。</p>
-          <p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeExIc--O2srrXXBPToLxZVku8YZY6iQyUkYmHUPeajeuKQOw/viewform?usp=publish-editor" class="btn btn-web" target="_blank" rel="noopener noreferrer">Web予約フォームを開く</a>
-          </p>
+          <h2>診察時間</h2>
+          <table class="info-table">
+            <tbody>
+              <tr>
+                <th>日勤診察</th>
+                <td>08:30 〜 17:30</td>
+              </tr>
+              <tr>
+                <th>夜間診察</th>
+                <td>17:40 〜 翌08:20</td>
+              </tr>
+              <tr>
+                <th>夜間体制</th>
+                <td>救急科（ウインターER）＋各科当番医</td>
+              </tr>
+              <tr>
+                <th>日曜日</th>
+                <td>縮小運用</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>受診までの流れ</h2>
+          <p>初めての方も、再診の方もこの流れでご確認ください。</p>
+        </div>
+
+        <div class="card-grid cols-3">
+          <article class="card">
+            <h2>1. 診療科を確認</h2>
+            <p>
+              受診したい診療科が決まっている場合は、診療科紹介や外来診察予定表をご確認ください。
+              どの診療科がよいかわからない場合は、総合診療科へご相談ください。
+            </p>
+          </article>
+
+          <article class="card">
+            <h2>2. 予約の要否を確認</h2>
+            <p>
+              外来診察予定表に名前がある医師は、原則として当日受診できます。
+              ただし、予定表にない医師や専門外来は完全予約制です。
+            </p>
+          </article>
+
+          <article class="card">
+            <h2>3. 来院・受付</h2>
+            <p>
+              当日は受付で症状や受診目的をお伝えください。
+              緊急性が高い場合は、救急科や適切な診療科に優先案内します。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>予約なしで受診しやすい外来</h2>
+          <p>ただし、混雑時や救急対応時は待ち時間が長くなることがあります。</p>
+        </div>
+
+        <div class="table-wrap">
+          <table class="info-table">
+            <thead>
+              <tr>
+                <th>診療区分</th>
+                <th>受診しやすさ</th>
+                <th>補足</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>内科</th>
+                <td>原則受診可</td>
+                <td>月〜木午後は1名体制、予約患者さん優先</td>
+              </tr>
+              <tr>
+                <th>小児科一般</th>
+                <td>原則受診可</td>
+                <td>月〜木午後は1名体制、予約患者さん優先</td>
+              </tr>
+              <tr>
+                <th>総合診療科</th>
+                <td>原則受診可</td>
+                <td>受診先に迷う方の最初の窓口</td>
+              </tr>
+              <tr>
+                <th>救急科</th>
+                <td>24時間対応</td>
+                <td>緊急性の高い患者さんを優先</td>
+              </tr>
+              <tr>
+                <th>金曜・土曜の各科</th>
+                <td>比較的受診しやすい</td>
+                <td>通常運用日</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>完全予約制の主な外来</h2>
+          <p>事前の予約がない場合、受診できないことがあります。</p>
+        </div>
+
+        <div class="table-wrap">
+          <table class="info-table">
+            <thead>
+              <tr>
+                <th>外来・診療内容</th>
+                <th>予約</th>
+                <th>補足</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>外来予定表に名前が載っていない医師</th>
+                <td>完全予約制</td>
+                <td>事前予約が必要です</td>
+              </tr>
+              <tr>
+                <th>各種専門外来</th>
+                <td>完全予約制</td>
+                <td>専門診療枠は原則予約のみ</td>
+              </tr>
+              <tr>
+                <th>緩和ケア外来</th>
+                <td>完全予約制</td>
+                <td>事前相談をおすすめします</td>
+              </tr>
+              <tr>
+                <th>遺伝カウンセリング</th>
+                <td>完全予約制</td>
+                <td>予約整理担当を通じて調整</td>
+              </tr>
+              <tr>
+                <th>小児専門外来</th>
+                <td>原則予約制</td>
+                <td>専門診療のため事前調整推奨</td>
+              </tr>
+              <tr>
+                <th>月〜木午後の内科・小児科以外</th>
+                <td>原則予約制</td>
+                <td>通常外来より予約優先性が高い運用です</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container card-grid cols-2">
+        <article class="card">
+          <h2>精神科・児童精神科を受診される方へ</h2>
+          <ul class="plain-list">
+            <li>当日の予約なし枠では、専門医以外の医師が担当する場合があります。</li>
+            <li>専門医による診察を希望する場合は、事前予約または当日の受付・看護師への申し出をお願いします。</li>
+            <li>学校・家庭・発達に関する相談は、相談窓口や心理職との連携も可能です。</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>総合診療科を受診される方へ</h2>
+          <ul class="plain-list">
+            <li>どの診療科に行けばよいかわからない場合の最初の窓口です。</li>
+            <li>感染症が疑われる方は、別館診察室で隔離診察となる場合があります。</li>
+            <li>木曜日・日曜日は医師1名体制の限定運用です。</li>
+            <li>木曜日・日曜日は予約受付を停止している運用があります。</li>
+          </ul>
         </article>
       </div>
     </section>
@@ -60,27 +271,85 @@
     <section class="section alt">
       <div class="container card-grid cols-2">
         <article class="card">
-          <h2>原則予約制の主な診療科</h2>
+          <h2>フォローアップ外来・リエゾン特別外来</h2>
           <ul class="plain-list">
-            <li>外科</li>
-            <li>整形外科</li>
-            <li>脳神経内科</li>
-            <li>産婦人科</li>
-            <li>精神科・児童精神科・心療内科</li>
-            <li>皮膚科・眼科・耳鼻咽喉科</li>
-            <li>緩和ケア・遺伝カウンセリング</li>
-            <li>小児専門外来</li>
+            <li>担当医は他科や別館をまたぐ兼務医師が多い体制です。</li>
+            <li>緊急対応等により、直前に担当医が変更となる場合があります。</li>
+            <li>担当変更をできるだけ避けたい場合は、事前に受付・看護師・担当医へご相談ください。</li>
           </ul>
         </article>
 
         <article class="card">
-          <h2>予約なしで受診しやすい枠</h2>
+          <h2>眼科・皮膚科・耳鼻咽喉科・喫煙外来</h2>
           <ul class="plain-list">
-            <li>内科：原則予約なし可</li>
-            <li>小児科：原則予約なし可</li>
-            <li>ただし月〜木午後は1名体制です</li>
-            <li>金曜日・土曜日は比較的受診しやすい体制です</li>
+            <li>眼科・皮膚科・耳鼻咽喉科の日曜日は完全休診です。</li>
+            <li>喫煙外来は、予約がない日は休診となる場合があります。</li>
+            <li>確実な受診を希望する場合は、事前確認をおすすめします。</li>
           </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>来院時にご用意いただきたいもの</h2>
+          <p>スムーズな受付のため、以下をご確認ください。</p>
+        </div>
+
+        <div class="card-grid cols-3">
+          <article class="card">
+            <h2>初診の方</h2>
+            <ul class="plain-list">
+              <li>本人確認書類</li>
+              <li>保険資格情報が確認できるもの</li>
+              <li>紹介状（ある場合）</li>
+              <li>お薬手帳や服薬中のお薬情報</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h2>再診の方</h2>
+            <ul class="plain-list">
+              <li>診察券</li>
+              <li>保険資格情報が確認できるもの</li>
+              <li>お薬手帳</li>
+              <li>予約内容の控え（ある場合）</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h2>あると安心なもの</h2>
+            <ul class="plain-list">
+              <li>症状のメモ</li>
+              <li>体温・発症時期の記録</li>
+              <li>学校・家庭での様子の記録</li>
+              <li>これまでの検査結果や画像資料</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container card-grid cols-2">
+        <article class="card">
+          <h2>よくあるご相談</h2>
+          <ul class="plain-list">
+            <li><strong>どの科に行けばいいかわからない</strong> → 総合診療科へご相談ください。</li>
+            <li><strong>当日受診したい</strong> → 外来診察予定表に担当医名があるかご確認ください。</li>
+            <li><strong>専門医で受診したい</strong> → 事前予約または当日の受付相談をおすすめします。</li>
+            <li><strong>子どもの発達や学校生活も相談したい</strong> → 小児科・思春期科・児童精神科・相談支援部門が連携します。</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>関連ページ</h2>
+          <div class="button-group">
+            <a href="gairai.html" class="btn btn-primary">外来診察予定表を見る</a>
+            <a href="departments.html" class="btn btn-secondary">診療科紹介を見る</a>
+            <a href="doctors.html" class="btn btn-secondary">医師紹介を見る</a>
+          </div>
         </article>
       </div>
     </section>
