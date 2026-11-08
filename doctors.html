@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>医師紹介 | 富良野希望未来病院グループ</title>
+  <meta name="description" content="全医師紹介ページです。役職検索、区分検索、紹介コメントを掲載しています。">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="site.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-main">富良野希望未来病院グループ</span>
+        <span class="logo-sub">Furano Hope Future Hospital Group</span>
+      </div>
+      <nav class="global-nav">
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="doctors.html">医師紹介</a></li>
+          <li><a href="departments.html">診療科一覧</a></li>
+          <li><a href="access.html">アクセス</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Doctor Directory</p>
+        <h1>医師紹介</h1>
+        <p class="page-lead">氏名・役職・区分で検索できます。顔写真欄は仮アイコン表示です。</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <article class="card">
+          <h2>検索</h2>
+          <div class="search-row">
+            <input id="doctorSearch" class="search-input" type="text" placeholder="氏名・役職・区分で検索">
+            <select id="doctorCategory" class="search-select">
+              <option value="">すべての区分</option>
+            </select>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>役職一覧</h2>
+          <p>まず一覧で確認して、下で詳細コメントを見られます。</p>
+        </div>
+
+        <div class="table-wrap">
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th>区分</th>
+                <th>氏名</th>
+                <th>役職</th>
+              </tr>
+            </thead>
+            <tbody id="doctorTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>紹介コメント</h2>
+        </div>
+        <div id="doctorCards" class="doctor-grid"></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
