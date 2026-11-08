@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>富良野希望未来病院グループ | 公式サイト</title>
-  <meta name="description" content="富良野希望未来病院グループの公式サイトです。外来診療案内、予約案内、医師紹介、アクセス、お知らせをご案内します。">
+  <title>富良野希望未来病院グループ</title>
+  <meta name="description" content="富良野希望未来病院グループの公式サイトです。診療科紹介、外来診察予定表、予約案内、医師紹介をご案内します。">
   <link rel="stylesheet" href="style.css">
+  <script defer src="site.js"></script>
 </head>
 <body>
   <header class="site-header">
@@ -17,105 +18,201 @@
       <nav class="global-nav">
         <ul>
           <li><a href="index.html">ホーム</a></li>
+          <li><a href="departments.html">診療科紹介</a></li>
           <li><a href="gairai.html">外来診察予定表</a></li>
-          <li><a href="reservation.html">予約案内</a></li>
-          <li><a href="news.html">お知らせ</a></li>
-          <li><a href="access.html">アクセス</a></li>
           <li><a href="doctors.html">医師紹介</a></li>
-          <li><a href="departments.html">診療科一覧</a></li>
-          <li><a href="first-visit.html">初めての方へ</a></li>
+          <li><a href="reservation.html">予約案内</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <p class="eyebrow">新体制スタート</p>
-          <h1>外来診療・専門外来・救急を、<br>地域にわかりやすく。</h1>
-          <p class="hero-lead">
-            富良野希望未来病院グループは、本院とトミカにじいろクリニックが連携し、
-            一般外来、専門外来、救急対応を組み合わせながら、
-            地域の皆さまが安心して受診できる体制づくりを進めています。
-          </p>
-          <div class="button-group">
-            <a href="reservation.html" class="btn btn-web">Web予約フォームへ</a>
-            <a href="gairai.html" class="btn btn-primary">外来診察予定表を見る</a>
-            <a href="news.html" class="btn btn-secondary">お知らせを見る</a>
-          </div>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Furano Hope Future Hospital Group</p>
+        <h1>地域に寄り添い、からだとこころの両方を支える病院へ</h1>
+        <p class="page-lead">
+          富良野希望未来病院は、内科・外科・救急・小児・産婦人科・精神科などの診療科が連携し、
+          地域の皆さまの健康を支える病院です。小児・思春期の医療、周産期支援、こころの医療、
+          総合診療にも力を入れ、患者さんとご家族の状況に合わせた診療を目指しています。
+        </p>
+        <div class="button-group">
+          <a href="departments.html" class="btn btn-primary">診療科紹介を見る</a>
+          <a href="gairai.html" class="btn btn-secondary">外来診察予定表を見る</a>
+          <a href="reservation.html" class="btn btn-secondary">予約案内を見る</a>
         </div>
-
-        <aside class="hero-panel">
-          <h2>重要なお知らせ</h2>
-          <ul class="notice-list">
-            <li>月曜日〜木曜日の午後は、一部診療科で予約制を導入しています。</li>
-            <li><strong>内科・小児科は原則予約なしで受診可能</strong>ですが、午後は1名体制です。</li>
-            <li>金曜日・土曜日は比較的受診しやすい体制です。</li>
-            <li>休診・代診情報は <a href="news.html">お知らせページ</a> をご確認ください。</li>
-          </ul>
-          <p>代表電話：1155-2431-1177</p>
-        </aside>
       </div>
     </section>
 
     <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>ご案内</h2>
-          <p>受診前に確認しやすいよう、主要ページをまとめています。</p>
-        </div>
+      <div class="container card-grid cols-2">
+        <article class="card">
+          <h2>病院の特色</h2>
+          <table class="info-table">
+            <tbody>
+              <tr><th>地域医療</th><td>総合診療を入口に、内科・外科・専門診療科が連携</td></tr>
+              <tr><th>小児・思春期医療</th><td>小児科、思春期科、小児外科、小児神経、児童精神科が一体で対応</td></tr>
+              <tr><th>救急対応</th><td>成人救急・小児救急の両面に対応</td></tr>
+              <tr><th>周産期支援</th><td>産婦人科、小児科、心理支援部門が連携</td></tr>
+              <tr><th>こころの医療</th><td>精神科、児童精神科、心療内科、相談窓口、心理士体制を整備</td></tr>
+              <tr><th>多職種連携</th><td>医師、心理士、相談員、支援部門、学校・行政連携体制を重視</td></tr>
+            </tbody>
+          </table>
+        </article>
 
-        <div class="card-grid cols-3">
-          <article class="card">
-            <h3>予約案内</h3>
-            <p>電話予約とWeb予約フォームをご利用いただけます。</p>
-            <p><a href="reservation.html">予約案内へ</a></p>
-          </article>
-          <article class="card">
-            <h3>お知らせ</h3>
-            <p>新体制、休診・代診、本日のご案内などを掲載しています。</p>
-            <p><a href="news.html">お知らせへ</a></p>
-          </article>
-          <article class="card">
-            <h3>アクセス</h3>
-            <p>本院とトミカにじいろクリニックへの来院方法をご案内します。</p>
-            <p><a href="access.html">アクセスへ</a></p>
-          </article>
-        </div>
+        <article class="card">
+          <h2>患者さんへのメッセージ</h2>
+          <p>
+            富良野希望未来病院は、幅広い診療科と院内の連携を通じて、地域の皆さまの健康を支えます。
+            体の症状だけでなく、子どもの成長やこころの悩み、学校・家庭での困りごとについても、
+            必要な診療科や相談部門につなぎます。
+          </p>
+          <p>
+            受診する診療科がわからない場合は、まず総合診療科へご相談ください。
+          </p>
+        </article>
       </div>
     </section>
 
     <section class="section alt">
       <div class="container">
-        <div class="summary-box">
-          <h2>お問い合わせ</h2>
-          <p>代表電話：1155-2431-1177</p>
-          <p>
-            富良野希望未来病院：JR富良野駅から徒歩10分<br>
-            トミカにじいろクリニック：トミカ市民バス終点から徒歩3分
-          </p>
+        <div class="section-head">
+          <h2>主な診療案内</h2>
+          <p>気になる診療内容から、詳細ページへ進めます。</p>
+        </div>
+
+        <div class="dept-grid">
+          <article class="dept-card">
+            <h3>内科・外科・整形外科</h3>
+            <p>幅広い内科疾患や外科的な疾患、運動器の不調に対応します。</p>
+            <a href="departments.html#naika" class="btn btn-primary">詳細を見る</a>
+          </article>
+
+          <article class="dept-card">
+            <h3>小児科・思春期科</h3>
+            <p>小児一般診療から発達支援、思春期支援まで幅広く対応します。</p>
+            <a href="departments.html#shonika" class="btn btn-primary">詳細を見る</a>
+          </article>
+
+          <article class="dept-card">
+            <h3>救急科</h3>
+            <p>急な体調不良やけがに対応し、必要に応じて各科と連携します。</p>
+            <a href="departments.html#kyukyu" class="btn btn-primary">詳細を見る</a>
+          </article>
+
+          <article class="dept-card">
+            <h3>産婦人科</h3>
+            <p>妊娠・出産・産後ケアや婦人科診療を行います。</p>
+            <a href="departments.html#sango" class="btn btn-primary">詳細を見る</a>
+          </article>
+
+          <article class="dept-card">
+            <h3>精神科・児童精神科</h3>
+            <p>こころの不調や思春期の悩みに、医師・心理職・相談窓口が連携して対応します。</p>
+            <a href="departments.html#seishin" class="btn btn-primary">詳細を見る</a>
+          </article>
+
+          <article class="dept-card">
+            <h3>総合診療科</h3>
+            <p>どの診療科に行けばよいかわからないときの相談窓口です。</p>
+            <a href="departments.html#sogo" class="btn btn-primary">詳細を見る</a>
+          </article>
         </div>
       </div>
     </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h3>富良野希望未来病院グループ</h3>
-        <p>地域に寄り添い、受診しやすく、安心できる医療体制を目指します。</p>
+    <section class="section">
+      <div class="container card-grid cols-2">
+        <article class="card">
+          <h2>外来受診のポイント</h2>
+          <ul class="plain-list">
+            <li>月〜木午後の内科は <strong>△ 1名体制・原則予約なし可</strong></li>
+            <li>月〜木午後の小児科は <strong>△ 1名体制・原則予約なし可</strong></li>
+            <li>そのほかの診療科は、月〜木午後は <strong>予 原則予約制</strong></li>
+            <li>金曜・土曜は通常運用、日曜は縮小運用です</li>
+            <li>夜間は救急科＋各科当番医で対応します</li>
+          </ul>
+          <p style="margin-top: 16px;">
+            詳しい曜日別の担当医は、外来診察予定表をご確認ください。
+          </p>
+          <a href="gairai.html" class="btn btn-secondary">外来診察予定表へ</a>
+        </article>
+
+        <article class="card">
+          <h2>相談支援・多職種連携</h2>
+          <p>
+            診療だけでは解決しにくい不安や生活上の悩みについても、
+            院内の相談窓口、心理職、学校・行政連携部門が連携して支援します。
+          </p>
+          <ul class="plain-list">
+            <li>こころの相談窓口「ふらの・ハートポート」</li>
+            <li>医療サポート科相談室</li>
+            <li>学校連携・行政連携体制</li>
+            <li>フォローアップ外来</li>
+            <li>リエゾン特別外来</li>
+          </ul>
+          <a href="departments.html#support" class="btn btn-secondary">相談支援の詳細へ</a>
+        </article>
       </div>
-      <div>
-        <h3>代表電話</h3>
-        <p>1155-2431-1177</p>
+    </section>
+
+    <section class="section alt">
+      <div class="container card-grid cols-2">
+        <article class="card">
+          <h2>病院幹部・運営体制</h2>
+          <p>
+            診療体制の充実に加え、新病院の整備、病院運営の改善、
+            学校・行政との連携、相談支援体制の強化に取り組んでいます。
+          </p>
+          <ul class="plain-list">
+            <li>病院長：紡木 こかげ</li>
+            <li>副病院長：四宮 春樹、鏑木 ろこ</li>
+            <li>病院長代理：藍沢 耕作、大泉 洋</li>
+            <li>副病院長代理：進藤 一生、石神 のぞみ</li>
+            <li>病院経営改革・病院運営委員会 委員長：黒井 しば</li>
+          </ul>
+          <a href="departments.html" class="btn btn-secondary">病院運営の詳細へ</a>
+        </article>
+
+        <article class="card">
+          <h2>関連施設・連携体制</h2>
+          <p>
+            トミカにじいろクリニックや関連施設との連携を通じて、
+            小児、精神、産婦人科、救急など多領域で診療支援を行っています。
+          </p>
+          <ul class="plain-list">
+            <li>トミカ分院との連携</li>
+            <li>旭川医科大学病院からの出向医師</li>
+            <li>多職種による地域支援</li>
+            <li>院内外の連携強化</li>
+          </ul>
+          <a href="departments.html#tomica" class="btn btn-secondary">連携医師の詳細へ</a>
+        </article>
       </div>
-      <div>
-        <h3>関連ページ</h3>
-        <p><a href="departments.html">診療科一覧</a></p>
+    </section>
+
+    <section class="section">
+      <div class="container card-grid cols-3">
+        <article class="card">
+          <h2>診療科紹介</h2>
+          <p>各診療科の役割、担当医、相談できる内容をご案内します。</p>
+          <a href="departments.html" class="btn btn-primary">見る</a>
+        </article>
+
+        <article class="card">
+          <h2>外来診察予定表</h2>
+          <p>曜日ごとの担当医、診療体制、夜間・救急体制をご確認いただけます。</p>
+          <a href="gairai.html" class="btn btn-primary">見る</a>
+        </article>
+
+        <article class="card">
+          <h2>予約案内</h2>
+          <p>予約の要否や受診前に確認したいことをまとめています。</p>
+          <a href="reservation.html" class="btn btn-primary">見る</a>
+        </article>
       </div>
-    </div>
-  </footer>
+    </section>
+  </main>
 </body>
 </html>
