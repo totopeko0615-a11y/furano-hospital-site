@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>診療科詳細 | 富良野希望未来病院グループ</title>
-  <meta name="description" content="診療科ごとの詳細ページです。受診の目安、担当医、診療のポイントをご案内します。">
+  <title>診療科紹介 | 富良野希望未来病院グループ</title>
+  <meta name="description" content="診療科一覧ページです。各診療科の個別ページへ進めます。">
   <link rel="stylesheet" href="style.css">
-  <script defer src="site.js"></script>
 </head>
 <body>
   <header class="site-header">
@@ -18,8 +17,9 @@
       <nav class="global-nav">
         <ul>
           <li><a href="index.html">ホーム</a></li>
-          <li><a href="departments.html">診療科一覧</a></li>
+          <li><a href="departments.html">診療科紹介</a></li>
           <li><a href="gairai.html">外来診察予定表</a></li>
+          <li><a href="doctors.html">医師紹介</a></li>
           <li><a href="reservation.html">予約案内</a></li>
         </ul>
       </nav>
@@ -29,33 +29,85 @@
   <main>
     <section class="page-hero">
       <div class="container">
-        <p class="eyebrow">Department</p>
-        <h1 id="departmentTitle">診療科名</h1>
-        <p class="page-lead" id="departmentSummary">診療科の説明</p>
+        <p class="eyebrow">Departments</p>
+        <h1>診療科紹介</h1>
+        <p class="page-lead">受診したい診療科を選ぶと、個別ページで受診目安・担当医・診療ポイントを確認できます。</p>
       </div>
     </section>
 
     <section class="section">
-      <div class="container card-grid cols-2">
-        <article class="card">
-          <h2>受診の目安</h2>
-          <p id="departmentReception"></p>
+      <div class="container dept-grid">
+        <article class="dept-card">
+          <h3>内科</h3>
+          <p>一般内科、循環器、消化器、呼吸器など幅広い症状に対応します。</p>
+          <a href="department.html?id=naika" class="btn btn-primary">詳細を見る</a>
         </article>
 
-        <article class="card">
-          <h2>ポイント</h2>
-          <ul id="departmentPoints" class="plain-list"></ul>
+        <article class="dept-card">
+          <h3>小児科</h3>
+          <p>一般小児、小児専門、思春期、小児神経、新生児発達相談に対応します。</p>
+          <a href="department.html?id=shonika" class="btn btn-primary">詳細を見る</a>
         </article>
-      </div>
-    </section>
 
-    <section class="section alt">
-      <div class="container">
-        <div class="section-head">
-          <h2>担当医</h2>
-          <p>担当医・関連医師をご案内します。</p>
-        </div>
-        <div id="departmentDoctors" class="doctor-grid"></div>
+        <article class="dept-card">
+          <h3>脳神経内科・外科</h3>
+          <p>脳神経領域の専門診療、急性変化や継続フォローに対応します。</p>
+          <a href="department.html?id=nou" class="btn btn-primary">詳細を見る</a>
+        </article>
+
+        <article class="dept-card">
+          <h3>一般外科・整形外科</h3>
+          <p>外傷、骨折、術後フォロー、一般外科相談に対応します。</p>
+          <a href="department.html?id=seikei" class="btn btn-primary">詳細を見る</a>
+        </article>
+
+        <article class="dept-card">
+          <h3>産婦人科</h3>
+          <p>妊娠・出産・婦人科相談・周産期支援に対応します。</p>
+          <a href="department.html?id=sango" class="btn btn-primary">詳細を見る</a>
+        </article>
+
+        <article class="dept-card">
+          <h3>精神科・児童精神科・心療内科</h3>
+          <p>こころの不調、睡眠、児童思春期、専門精神医療に対応します。</p>
+          <a href="department.html?id=seishin" class="btn btn-primary">詳細を見る</a>
+        </article>
+
+        <article class="dept-card">
+          <h3>救急科</h3>
+          <p>ウインターERとして24時間体制で救急搬送・急変対応に対応します。</p>
+          <a href="department.html?id=kyukyu" class="btn btn-primary">詳細を見る</a>
+        </article>
+
+        <article class="dept-card">
+          <h3>皮膚科・眼科・耳鼻咽喉科</h3>
+          <p>眼・皮膚・耳鼻領域の外来診療に対応します。</p>
+          <a href="department.html?id=hifu" class="btn btn-primary">詳細を見る</a>
+        </article>
+
+        <article class="dept-card">
+          <h3>総合診療科</h3>
+          <p>どの診療科に行けばよいか迷う方、感染症疑惑のある方にも対応します。</p>
+          <a href="department.html?id=sogo" class="btn btn-primary">詳細を見る</a>
+        </article>
+
+        <article class="dept-card">
+          <h3>緩和ケア・遺伝カウンセリング</h3>
+          <p>痛みや不安の軽減、遺伝相談、専門カウンセリングに対応します。</p>
+          <a href="department.html?id=kanwa" class="btn btn-primary">詳細を見る</a>
+        </article>
+
+        <article class="dept-card">
+          <h3>泌尿器科</h3>
+          <p>排尿の悩みや泌尿器症状、相談しにくい症状にも対応します。</p>
+          <a href="department.html?id=hinyoki" class="btn btn-primary">詳細を見る</a>
+        </article>
+
+        <article class="dept-card">
+          <h3>トミカにじいろクリニック</h3>
+          <p>分院診療、夜間当番、新設救急補完体制を担います。</p>
+          <a href="department.html?id=tomica" class="btn btn-primary">詳細を見る</a>
+        </article>
       </div>
     </section>
   </main>
