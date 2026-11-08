@@ -84,3 +84,117 @@
   </main>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>診療科詳細 | 富良野希望未来病院グループ</title>
+  <meta name="description" content="富良野希望未来病院グループの診療科詳細ページです。診療内容、受診の目安、担当医をご案内します。">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="site.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-main">富良野希望未来病院グループ</span>
+        <span class="logo-sub">Furano Hope Future Hospital Group</span>
+      </div>
+      <nav class="global-nav">
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="departments.html">診療科紹介</a></li>
+          <li><a href="gairai.html">外来診察予定表</a></li>
+          <li><a href="doctors.html">医師紹介</a></li>
+          <li><a href="reservation.html">予約案内</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Department Detail</p>
+        <h1 id="departmentTitle">診療科名</h1>
+        <p class="page-lead" id="departmentSummary">診療科の説明がここに表示されます。</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <article class="card">
+          <h2>診療科を選ぶ</h2>
+          <div class="button-group">
+            <a href="department.html?id=naika" class="btn btn-secondary">内科</a>
+            <a href="department.html?id=shonika" class="btn btn-secondary">小児科・思春期科</a>
+            <a href="department.html?id=nou" class="btn btn-secondary">脳神経内科・外科</a>
+            <a href="department.html?id=seikei" class="btn btn-secondary">一般外科・整形外科</a>
+            <a href="department.html?id=sango" class="btn btn-secondary">産婦人科</a>
+            <a href="department.html?id=seishin" class="btn btn-secondary">精神科・児童精神科・心療内科</a>
+            <a href="department.html?id=kyukyu" class="btn btn-secondary">救急科</a>
+            <a href="department.html?id=hifu" class="btn btn-secondary">皮膚科・眼科・耳鼻咽喉科</a>
+            <a href="department.html?id=sogo" class="btn btn-secondary">総合診療科</a>
+            <a href="department.html?id=kanwa" class="btn btn-secondary">緩和ケア・遺伝カウンセリング科</a>
+            <a href="department.html?id=hinyoki" class="btn btn-secondary">泌尿器科</a>
+            <a href="department.html?id=tomica" class="btn btn-secondary">トミカにじいろクリニック</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container card-grid cols-2">
+        <article class="card">
+          <h2>受診の目安</h2>
+          <p id="departmentReception">受診の目安がここに表示されます。</p>
+        </article>
+
+        <article class="card">
+          <h2>診療のポイント</h2>
+          <ul id="departmentPoints" class="plain-list">
+            <li>読み込み中です。</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>担当医</h2>
+          <p>主な担当医・関連医師をご案内します。</p>
+        </div>
+        <div id="departmentDoctors" class="doctor-grid"></div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container card-grid cols-2">
+        <article class="card">
+          <h2>病院全体の特色</h2>
+          <ul class="plain-list">
+            <li>総合診療を入口に、内科・外科・専門診療科が連携</li>
+            <li>小児科、思春期科、小児外科、小児神経、児童精神科が一体で対応</li>
+            <li>成人救急・小児救急の両面に対応</li>
+            <li>産婦人科、小児科、心理支援部門が連携</li>
+            <li>精神科、児童精神科、心療内科、相談窓口、心理士体制を整備</li>
+            <li>医師、心理士、相談員、支援部門、学校・行政連携体制を重視</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>診療科紹介が切り替わらないとき</h2>
+          <ul class="plain-list">
+            <li>URL が <code>department.html?id=naika</code> のようになっているか確認してください。</li>
+            <li><code>department.html</code> だけで開くと、初期表示として内科が出ます。</li>
+            <li><code>site.js</code> が読み込まれていないと切り替わりません。</li>
+            <li>更新後は <strong>Ctrl + F5</strong> で再読み込みしてください。</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
