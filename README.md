@@ -1,0 +1,2 @@
+# furano-hospital-site
+Public
