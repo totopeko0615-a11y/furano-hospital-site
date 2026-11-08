@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>医師紹介 | 富良野希望未来病院グループ</title>
-  <meta name="description" content="全医師紹介ページです。役職検索、区分検索、紹介コメントを掲載しています。">
+  <meta name="description" content="富良野希望未来病院グループの医師紹介ページです。病院経営陣、各診療科、出張医、連携医師、研修医をご案内します。">
   <link rel="stylesheet" href="style.css">
   <script defer src="site.js"></script>
 </head>
@@ -18,9 +18,10 @@
       <nav class="global-nav">
         <ul>
           <li><a href="index.html">ホーム</a></li>
+          <li><a href="departments.html">診療科紹介</a></li>
+          <li><a href="gairai.html">外来診察予定表</a></li>
           <li><a href="doctors.html">医師紹介</a></li>
-          <li><a href="departments.html">診療科一覧</a></li>
-          <li><a href="access.html">アクセス</a></li>
+          <li><a href="reservation.html">予約案内</a></li>
         </ul>
       </nav>
     </div>
@@ -29,22 +30,33 @@
   <main>
     <section class="page-hero">
       <div class="container">
-        <p class="eyebrow">Doctor Directory</p>
+        <p class="eyebrow">Doctors</p>
         <h1>医師紹介</h1>
-        <p class="page-lead">氏名・役職・区分で検索できます。顔写真欄は仮アイコン表示です。</p>
+        <p class="page-lead">
+          病院経営陣、各診療科、出張医、連携医師、研修医まで、担当分野ごとにご紹介します。
+        </p>
       </div>
     </section>
 
     <section class="section">
-      <div class="container">
+      <div class="container card-grid cols-2">
         <article class="card">
-          <h2>検索</h2>
-          <div class="search-row">
-            <input id="doctorSearch" class="search-input" type="text" placeholder="氏名・役職・区分で検索">
-            <select id="doctorCategory" class="search-select">
-              <option value="">すべての区分</option>
-            </select>
-          </div>
+          <h2>医師を検索</h2>
+          <label for="doctorSearch">氏名・役職・診療分野で検索</label>
+          <input
+            id="doctorSearch"
+            type="text"
+            class="form-input"
+            placeholder="例：小児科 / 救急 / 渡邊 / 精神科 / 産婦人科"
+          >
+        </article>
+
+        <article class="card">
+          <h2>カテゴリーで絞り込み</h2>
+          <label for="doctorCategory">カテゴリーを選択</label>
+          <select id="doctorCategory" class="form-input">
+            <option value="">すべて表示</option>
+          </select>
         </article>
       </div>
     </section>
@@ -52,20 +64,24 @@
     <section class="section alt">
       <div class="container">
         <div class="section-head">
-          <h2>役職一覧</h2>
-          <p>まず一覧で確認して、下で詳細コメントを見られます。</p>
+          <h2>一覧表</h2>
+          <p>検索・絞り込み結果を一覧で確認できます。</p>
         </div>
 
         <div class="table-wrap">
-          <table class="schedule-table">
+          <table class="info-table">
             <thead>
               <tr>
-                <th>区分</th>
+                <th>カテゴリー</th>
                 <th>氏名</th>
-                <th>役職</th>
+                <th>役職・担当</th>
               </tr>
             </thead>
-            <tbody id="doctorTableBody"></tbody>
+            <tbody id="doctorTableBody">
+              <tr>
+                <td colspan="3">読み込み中です。</td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </div>
@@ -74,9 +90,42 @@
     <section class="section">
       <div class="container">
         <div class="section-head">
-          <h2>紹介コメント</h2>
+          <h2>医師プロフィール</h2>
+          <p>担当分野や役割をカード形式でご案内します。</p>
         </div>
-        <div id="doctorCards" class="doctor-grid"></div>
+
+        <div id="doctorCards" class="doctor-grid">
+          <article class="doctor-card">
+            <div class="doctor-card-body">
+              <h3>読み込み中です。</h3>
+              <p>医師情報を読み込んでいます。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container card-grid cols-2">
+        <article class="card">
+          <h2>このページでできること</h2>
+          <ul class="plain-list">
+            <li>氏名で検索</li>
+            <li>診療科や役職で検索</li>
+            <li>カテゴリーごとの絞り込み</li>
+            <li>一覧表とカード表示の両方で確認</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>表示されないとき</h2>
+          <ul class="plain-list">
+            <li><code>site.js</code> が読み込まれているか確認してください。</li>
+            <li><code>style.css</code> が読み込まれているか確認してください。</li>
+            <li>更新後は <strong>Ctrl + F5</strong> で再読み込みしてください。</li>
+            <li>メニューのリンク先が <code>doctors.html</code> になっているか確認してください。</li>
+          </ul>
+        </article>
       </div>
     </section>
   </main>
