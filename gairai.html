@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>外来診察予定表 | 富良野希望未来病院グループ</title>
-  <meta name="description" content="富良野希望未来病院グループの最新版外来診察予定表です。本院とトミカ分院の外来体制、曜日別外来表、夜間救急体制をご案内します。">
+  <meta name="description" content="富良野希望未来病院グループの外来診察予定表。本院・トミカ分院の曜日別外来、産婦人科、新生児発達外来、夜間救急体制をご案内します。">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body id="top">
   <header class="site-header">
     <div class="container header-inner">
@@ -14,11 +15,12 @@
         <span class="logo-main">富良野希望未来病院グループ</span>
         <span class="logo-sub">Furano Hope Future Hospital Group</span>
       </div>
+
       <nav class="global-nav">
         <ul>
           <li><a href="index.html">ホーム</a></li>
           <li><a href="departments.html">診療科紹介</a></li>
-          <li><a href="gairai.html">外来診察予定表</a></li>
+          <li><a href="gairai.html" aria-current="page">外来診察予定表</a></li>
           <li><a href="doctors.html">医師紹介</a></li>
           <li><a href="reservation.html">予約案内</a></li>
         </ul>
@@ -32,8 +34,60 @@
         <p class="eyebrow">Outpatient Schedule</p>
         <h1>外来診察予定表</h1>
         <p class="page-lead">
-          本院とトミカ分院の外来体制を掲載しています。2026年11月10日改定の診療科再編・外来運用更新を反映した最新版です。
+          本院とトミカ分院の外来体制を掲載しています。
+          2026年11月10日改定の診療科再編に加え、
+          産婦人科の担当変更と新生児発達外来の再開を反映しています。
         </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <article class="card">
+          <h2>産婦人科の担当変更・新生児発達外来再開のお知らせ</h2>
+          <p>
+            <strong>佐々木彩乃医師が産婦人科主任係長に着任します。</strong>
+            水野遥医師は<strong>市立旭川病院へ出向</strong>となります。
+          </p>
+
+          <ul class="plain-list">
+            <li>
+              第3・第4土曜日午後の産婦人科は、
+              雲母たまこ・佐々木彩乃が担当します。
+              菊田真理恵が応援に入ります。
+            </li>
+            <li>
+              第3・第4日曜日午後の産婦人科は、
+              雲母たまこ・佐々木彩乃が担当します。
+            </li>
+            <li>
+              上記の産婦人科枠では、先斗寧の支援担当を終了します。
+              他科での担当は変更ありません。
+            </li>
+            <li>
+              新生児発達外来を、毎週火曜日・金曜日の午後に再開します。
+              担当は佐々木彩乃医師、完全予約制です。
+            </li>
+            <li>
+              土曜日は産婦人科の緊急時の診察に対応するため、
+              新生児発達外来は行いません。
+            </li>
+            <li>
+              佐々木医師は、上記以外の勤務日・時間帯に、
+              精神科・児童精神科および産婦人科の診療支援を行います。
+              通常診療は完全予約制です。
+            </li>
+          </ul>
+
+          <p>
+            これまで産婦人科の診療支援にご協力いただいた先斗寧に、
+            心より感謝申し上げます。
+          </p>
+          <p>
+            緊急受診を希望される場合は、可能な限り来院前にご連絡ください。
+            診療状況や患者さんの状態を確認して対応します。
+          </p>
+        </article>
       </div>
     </section>
 
@@ -54,21 +108,19 @@
           <div class="table-wrap">
             <table class="info-table">
               <thead>
-                <tr>
-                  <th>記号</th>
-                  <th>意味</th>
-                </tr>
+                <tr><th scope="col">記号</th><th scope="col">意味</th></tr>
               </thead>
               <tbody>
-                <tr><th>◎</th><td>通常外来</td></tr>
-                <tr><th>△</th><td>1名体制</td></tr>
-                <tr><th>予</th><td>予約制</td></tr>
-                <tr><th>出</th><td>出張医対応</td></tr>
-                <tr><th>救</th><td>救急対応中心</td></tr>
-                <tr><th>休</th><td>休診</td></tr>
+                <tr><th scope="row">◎</th><td>通常外来</td></tr>
+                <tr><th scope="row">△</th><td>1名体制</td></tr>
+                <tr><th scope="row">予</th><td>予約制</td></tr>
+                <tr><th scope="row">出</th><td>出張医対応</td></tr>
+                <tr><th scope="row">救</th><td>救急対応中心</td></tr>
+                <tr><th scope="row">休</th><td>休診</td></tr>
               </tbody>
             </table>
           </div>
+          <p>佐々木彩乃医師の通常診療は、曜日・診療科を問わず完全予約制です。</p>
         </article>
       </div>
     </section>
@@ -86,6 +138,7 @@
             <li><a href="#honin-friday">本院 金曜日</a></li>
             <li><a href="#honin-saturday">本院 土曜日</a></li>
             <li><a href="#honin-sunday">本院 日曜日</a></li>
+            <li><a href="#newborn-development">新生児発達外来</a></li>
             <li><a href="#night-emergency">本院 夜間・救急</a></li>
           </ul>
         </article>
@@ -110,21 +163,21 @@
         <div class="table-wrap">
           <table class="info-table">
             <thead>
-              <tr>
-                <th>対象</th>
-                <th>運用ルール</th>
-              </tr>
+              <tr><th scope="col">対象</th><th scope="col">運用ルール</th></tr>
             </thead>
             <tbody>
-              <tr><th>月〜木 午後の内科</th><td>△ 1名体制（原則予約なし可）※廃止・統合科の影響により急きょ変更の可能性あり</td></tr>
-              <tr><th>月〜木 午後の小児科</th><td>△ 1名体制（原則予約なし可）</td></tr>
-              <tr><th>月〜木 午後のその他診療科</th><td>予 原則予約制</td></tr>
-              <tr><th>皮膚科・眼科・耳鼻咽喉科</th><td>出 週2回（水・金）出張医1名体制（月・火・木・土・日は休診）</td></tr>
-              <tr><th>フォローアップ・リエゾン</th><td>精神科・児童精神科へ統合</td></tr>
-              <tr><th>緩和ケア・遺伝カウンセリング</th><td>予 完全予約制（夜間当直・内科等へ柔軟配置）</td></tr>
-              <tr><th>金・土</th><td>通常運用（感覚器3科は金曜のみ出張医対応）</td></tr>
-              <tr><th>日</th><td>縮小運用</td></tr>
-              <tr><th>夜間</th><td>救急科＋各科当番医</td></tr>
+              <tr><th scope="row">月〜木 午後の内科</th><td>△ 1名体制（原則予約なし可）※廃止・統合科の影響により急きょ変更の可能性あり</td></tr>
+              <tr><th scope="row">月〜木 午後の小児科</th><td>△ 1名体制（原則予約なし可）</td></tr>
+              <tr><th scope="row">月〜木 午後のその他診療科</th><td>予 原則予約制</td></tr>
+              <tr><th scope="row">皮膚科・眼科・耳鼻咽喉科</th><td>出 週2回（水・金）出張医1名体制（月・火・木・土・日は休診）</td></tr>
+              <tr><th scope="row">フォローアップ・リエゾン</th><td>精神科・児童精神科へ統合</td></tr>
+              <tr><th scope="row">緩和ケア・遺伝カウンセリング</th><td>予 完全予約制（夜間当直・内科等へ柔軟配置）</td></tr>
+              <tr><th scope="row">佐々木彩乃医師の通常診療</th><td>予 完全予約制。第3・第4土日午後は産婦人科、火・金午後は新生児発達外来を担当。その他の勤務日・時間帯は精神科・児童精神科および産婦人科の診療支援</td></tr>
+              <tr><th scope="row">土曜日の産婦人科・緊急対応</th><td>佐々木医師は緊急時の診察にも対応。可能な限り来院前に連絡。土曜の新生児発達外来は実施しません</td></tr>
+              <tr><th scope="row">金・土</th><td>通常運用（感覚器3科は金曜のみ出張医対応。佐々木医師の通常診療は完全予約制）</td></tr>
+              <tr><th scope="row">日</th><td>縮小運用</td></tr>
+              <tr><th scope="row">第5週の産婦人科</th><td>担当は別途ご案内します</td></tr>
+              <tr><th scope="row">夜間</th><td>救急科＋各科当番医</td></tr>
             </tbody>
           </table>
         </div>
@@ -140,27 +193,22 @@
         <div class="table-wrap">
           <table class="schedule-table">
             <thead>
-              <tr>
-                <th>診療科</th>
-                <th>午前</th>
-                <th>午後</th>
-                <th>備考</th>
-              </tr>
+              <tr><th scope="col">診療科</th><th scope="col">午前</th><th scope="col">午後</th><th scope="col">備考</th></tr>
             </thead>
             <tbody>
-              <tr><th>内科</th><td>◎ 松前春香 / 高本めぐみ / 早坂昇</td><td>△ 鏑木ろこ または 神楽坂倫太郎（週替わり）</td><td>午後1名体制・急きょ変更あり</td></tr>
-              <tr><th>脳神経内科・外科</th><td>◎ 澤田咲</td><td>予 澤田咲</td><td>午後予約制</td></tr>
-              <tr><th>一般外科</th><td>◎ 猪股隆 / 進藤一生</td><td>予 猪股隆 / 進藤一生</td><td>午後予約制</td></tr>
-              <tr><th>心療内科</th><td>◎ 浜川百合子</td><td>予 浜川百合子</td><td></td></tr>
-              <tr><th>小児科一般</th><td>◎ 星川輝 / 黒井しば / 一ノ瀬うるは</td><td>△ 蝸堂みかる / 一ノ瀬うるは（交代）</td><td>午後1名体制</td></tr>
-              <tr><th>小児専門</th><td>予 栞葉るり / 蝸堂みかる</td><td>予 五十嵐菜々 / 千凛あゆむ</td><td>完全予約</td></tr>
-              <tr><th>産婦人科</th><td>◎ 四宮春樹 / 菊田真理恵 / 雲母たまこ（補助）</td><td>予 四宮春樹 / 菊田真理恵</td><td></td></tr>
-              <tr><th>精神科・児童精神科</th><td>◎ 夢咲ネム / 周央サンゴ</td><td>予 夢咲ネム / 周央サンゴ</td><td>フォローアップ・リエゾン含む</td></tr>
-              <tr><th>皮膚科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
-              <tr><th>眼科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
-              <tr><th>耳鼻咽喉科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
-              <tr><th>総合診療・専門</th><td>◎ 高木裕樹 / 五島健助 / 星川郁男 / 藤原のりこ</td><td>予 同上</td><td></td></tr>
-              <tr><th>泌尿器科</th><td>予 小森明二</td><td>予 小森明二</td><td>臨時相談枠</td></tr>
+              <tr><th scope="row">内科</th><td>◎ 松前春香 / 高本めぐみ / 早坂昇</td><td>△ 鏑木ろこ または 神楽坂倫太郎（週替わり）</td><td>午後1名体制・急きょ変更あり</td></tr>
+              <tr><th scope="row">脳神経内科・外科</th><td>◎ 澤田咲</td><td>予 澤田咲</td><td>午後予約制</td></tr>
+              <tr><th scope="row">一般外科</th><td>◎ 猪股隆 / 進藤一生</td><td>予 猪股隆 / 進藤一生</td><td>午後予約制</td></tr>
+              <tr><th scope="row">心療内科</th><td>◎ 浜川百合子</td><td>予 浜川百合子</td><td></td></tr>
+              <tr><th scope="row">小児科一般</th><td>◎ 星川輝 / 黒井しば / 一ノ瀬うるは</td><td>△ 蝸堂みかる / 一ノ瀬うるは（交代）</td><td>午後1名体制</td></tr>
+              <tr><th scope="row">小児専門</th><td>予 栞葉るり / 蝸堂みかる</td><td>予 五十嵐菜々 / 千凛あゆむ</td><td>完全予約</td></tr>
+              <tr><th scope="row">産婦人科</th><td>◎ 四宮春樹 / 菊田真理恵 / 雲母たまこ（補助）</td><td>予 四宮春樹 / 菊田真理恵</td><td></td></tr>
+              <tr><th scope="row">精神科・児童精神科</th><td>◎ 夢咲ネム / 周央サンゴ</td><td>予 夢咲ネム / 周央サンゴ</td><td>フォローアップ・リエゾン含む</td></tr>
+              <tr><th scope="row">皮膚科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
+              <tr><th scope="row">眼科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
+              <tr><th scope="row">耳鼻咽喉科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
+              <tr><th scope="row">総合診療・専門</th><td>◎ 高木裕樹 / 五島健助 / 星川郁男 / 藤原のりこ</td><td>予 同上</td><td></td></tr>
+              <tr><th scope="row">泌尿器科</th><td>予 小森明二</td><td>予 小森明二</td><td>臨時相談枠</td></tr>
             </tbody>
           </table>
         </div>
@@ -176,28 +224,24 @@
         <div class="table-wrap">
           <table class="schedule-table">
             <thead>
-              <tr>
-                <th>診療科</th>
-                <th>午前</th>
-                <th>午後</th>
-                <th>備考</th>
-              </tr>
+              <tr><th scope="col">診療科</th><th scope="col">午前</th><th scope="col">午後</th><th scope="col">備考</th></tr>
             </thead>
             <tbody>
-              <tr><th>内科</th><td>◎ 高木裕樹 / 高本めぐみ / 七瀬すず菜</td><td>△ 松前春香</td><td>午後1名体制・急きょ変更あり</td></tr>
-              <tr><th>脳神経内科・外科</th><td>◎ 澤田咲</td><td>予 澤田咲</td><td></td></tr>
-              <tr><th>一般外科</th><td>◎ 栞葉るり</td><td>予 栞葉るり</td><td></td></tr>
-              <tr><th>整形外科</th><td>◎ 辻元朝子</td><td>予 辻元朝子</td><td></td></tr>
-              <tr><th>心療内科</th><td>◎ 風間トオル</td><td>予 風間トオル</td><td></td></tr>
-              <tr><th>小児科一般</th><td>◎ 星川輝 / 黒井しば / 一ノ瀬うるは</td><td>△ 黒井しば（補助：一ノ瀬うるは）</td><td>午後1名体制</td></tr>
-              <tr><th>小児専門</th><td>予 雲母たまこ / 不破拓海</td><td>予 蝶屋はなび / 蝸堂みかる / 不破拓海 / 赤羽葉雪 / 角巻わため</td><td>完全予約</td></tr>
-              <tr><th>産婦人科</th><td>◎ 四宮春樹 / 菊田真理恵 / 雲母たまこ（補助）</td><td>予 四宮春樹 / 菊田真理恵</td><td></td></tr>
-              <tr><th>精神科・児童精神科</th><td>◎ 雪村双葉 / 天宮こころ</td><td>予 同上</td><td>フォローアップ・リエゾン含む</td></tr>
-              <tr><th>皮膚科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
-              <tr><th>眼科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
-              <tr><th>耳鼻咽喉科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
-              <tr><th>総合診療・専門</th><td>◎ 五島健助 / 星川郁男 / 大泉洋（喫煙）</td><td>予 同上</td><td></td></tr>
-              <tr><th>泌尿器科</th><td>◎ 北里りさ / 小森明二</td><td>予 北里りさ / 小森明二</td><td>午後予約制中心</td></tr>
+              <tr><th scope="row">内科</th><td>◎ 高木裕樹 / 高本めぐみ / 七瀬すず菜</td><td>△ 松前春香</td><td>午後1名体制・急きょ変更あり</td></tr>
+              <tr><th scope="row">脳神経内科・外科</th><td>◎ 澤田咲</td><td>予 澤田咲</td><td></td></tr>
+              <tr><th scope="row">一般外科</th><td>◎ 栞葉るり</td><td>予 栞葉るり</td><td></td></tr>
+              <tr><th scope="row">整形外科</th><td>◎ 辻元朝子</td><td>予 辻元朝子</td><td></td></tr>
+              <tr><th scope="row">心療内科</th><td>◎ 風間トオル</td><td>予 風間トオル</td><td></td></tr>
+              <tr><th scope="row">小児科一般</th><td>◎ 星川輝 / 黒井しば / 一ノ瀬うるは</td><td>△ 黒井しば（補助：一ノ瀬うるは）</td><td>午後1名体制</td></tr>
+              <tr><th scope="row">小児専門</th><td>予 雲母たまこ / 不破拓海</td><td>予 蝶屋はなび / 蝸堂みかる / 不破拓海 / 赤羽葉雪 / 角巻わため</td><td>完全予約</td></tr>
+              <tr><th scope="row">産婦人科</th><td>◎ 四宮春樹 / 菊田真理恵 / 雲母たまこ（補助）</td><td>予 四宮春樹 / 菊田真理恵</td><td></td></tr>
+              <tr><th scope="row">新生児発達外来</th><td>—</td><td>予 佐々木彩乃</td><td>再開・完全予約制</td></tr>
+              <tr><th scope="row">精神科・児童精神科</th><td>◎ 雪村双葉 / 天宮こころ</td><td>予 同上</td><td>フォローアップ・リエゾン含む</td></tr>
+              <tr><th scope="row">皮膚科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
+              <tr><th scope="row">眼科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
+              <tr><th scope="row">耳鼻咽喉科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
+              <tr><th scope="row">総合診療・専門</th><td>◎ 五島健助 / 星川郁男 / 大泉洋（喫煙）</td><td>予 同上</td><td></td></tr>
+              <tr><th scope="row">泌尿器科</th><td>◎ 北里りさ / 小森明二</td><td>予 北里りさ / 小森明二</td><td>午後予約制中心</td></tr>
             </tbody>
           </table>
         </div>
@@ -213,27 +257,22 @@
         <div class="table-wrap">
           <table class="schedule-table">
             <thead>
-              <tr>
-                <th>診療科</th>
-                <th>午前</th>
-                <th>午後</th>
-                <th>備考</th>
-              </tr>
+              <tr><th scope="col">診療科</th><th scope="col">午前</th><th scope="col">午後</th><th scope="col">備考</th></tr>
             </thead>
             <tbody>
-              <tr><th>内科</th><td>◎ 神楽坂倫太郎 / 松前春香 / 早坂昇 / 高本めぐみ</td><td>△ 夜乃くろむ または 高木裕樹（週替わり）</td><td>午後1名体制・急きょ変更あり</td></tr>
-              <tr><th>脳神経内科・外科</th><td>◎ 澤田咲</td><td>予 澤田咲</td><td></td></tr>
-              <tr><th>一般外科</th><td>◎ 猪股隆 / 不破拓海</td><td>予 猪股隆 / 不破拓海</td><td></td></tr>
-              <tr><th>心療内科</th><td>◎ 浜川百合子</td><td>予 浜川百合子</td><td></td></tr>
-              <tr><th>小児科一般</th><td>◎ 星川輝 / 黒井しば / 一ノ瀬うるは（応援）</td><td>△ 星川輝（補助：蝸堂みかる）</td><td>午後1名体制</td></tr>
-              <tr><th>小児専門</th><td>予 角巻わため / 紡木こかげ</td><td>予 蝶屋はなび / 紡木こかげ / 千凛あゆむ / 先斗寧 / 石神のぞみ</td><td>完全予約</td></tr>
-              <tr><th>産婦人科</th><td>◎ 四宮春樹 / 菊田真理恵 / 雲母たまこ（補助）</td><td>予 四宮春樹 / 菊田真理恵</td><td></td></tr>
-              <tr><th>精神科・児童精神科</th><td>◎ 夢咲ネム / 竹田康</td><td>予 夢咲ネム / 竹田康</td><td>フォローアップ・リエゾン含む</td></tr>
-              <tr><th>皮膚科</th><td>出 出張医1名</td><td>予 同上</td><td>水曜出張医対応</td></tr>
-              <tr><th>眼科</th><td>出 出張医1名</td><td>予 同上</td><td>水曜出張医対応</td></tr>
-              <tr><th>耳鼻咽喉科</th><td>出 出張医1名</td><td>予 同上</td><td>水曜出張医対応</td></tr>
-              <tr><th>総合診療・専門</th><td>◎ 藤原のりこ / 大泉洋（喫煙）</td><td>予 同上</td><td></td></tr>
-              <tr><th>泌尿器科</th><td>予 小森明二</td><td>予 小森明二</td><td>完全予約制</td></tr>
+              <tr><th scope="row">内科</th><td>◎ 神楽坂倫太郎 / 松前春香 / 早坂昇 / 高本めぐみ</td><td>△ 夜乃くろむ または 高木裕樹（週替わり）</td><td>午後1名体制・急きょ変更あり</td></tr>
+              <tr><th scope="row">脳神経内科・外科</th><td>◎ 澤田咲</td><td>予 澤田咲</td><td></td></tr>
+              <tr><th scope="row">一般外科</th><td>◎ 猪股隆 / 不破拓海</td><td>予 猪股隆 / 不破拓海</td><td></td></tr>
+              <tr><th scope="row">心療内科</th><td>◎ 浜川百合子</td><td>予 浜川百合子</td><td></td></tr>
+              <tr><th scope="row">小児科一般</th><td>◎ 星川輝 / 黒井しば / 一ノ瀬うるは（応援）</td><td>△ 星川輝（補助：蝸堂みかる）</td><td>午後1名体制</td></tr>
+              <tr><th scope="row">小児専門</th><td>予 角巻わため / 紡木こかげ</td><td>予 蝶屋はなび / 紡木こかげ / 千凛あゆむ / 先斗寧 / 石神のぞみ</td><td>完全予約</td></tr>
+              <tr><th scope="row">産婦人科</th><td>◎ 四宮春樹 / 菊田真理恵 / 雲母たまこ（補助）</td><td>予 四宮春樹 / 菊田真理恵</td><td></td></tr>
+              <tr><th scope="row">精神科・児童精神科</th><td>◎ 夢咲ネム / 竹田康</td><td>予 夢咲ネム / 竹田康</td><td>フォローアップ・リエゾン含む</td></tr>
+              <tr><th scope="row">皮膚科</th><td>出 出張医1名</td><td>予 同上</td><td>水曜出張医対応</td></tr>
+              <tr><th scope="row">眼科</th><td>出 出張医1名</td><td>予 同上</td><td>水曜出張医対応</td></tr>
+              <tr><th scope="row">耳鼻咽喉科</th><td>出 出張医1名</td><td>予 同上</td><td>水曜出張医対応</td></tr>
+              <tr><th scope="row">総合診療・専門</th><td>◎ 藤原のりこ / 大泉洋（喫煙）</td><td>予 同上</td><td></td></tr>
+              <tr><th scope="row">泌尿器科</th><td>予 小森明二</td><td>予 小森明二</td><td>完全予約制</td></tr>
             </tbody>
           </table>
         </div>
@@ -249,31 +288,26 @@
         <div class="table-wrap">
           <table class="schedule-table">
             <thead>
-              <tr>
-                <th>診療科</th>
-                <th>午前</th>
-                <th>午後</th>
-                <th>備考</th>
-              </tr>
+              <tr><th scope="col">診療科</th><th scope="col">午前</th><th scope="col">午後</th><th scope="col">備考</th></tr>
             </thead>
             <tbody>
-              <tr><th>内科</th><td>◎ 高木裕樹</td><td>△ 早坂昇</td><td>午後1名体制・急きょ変更あり</td></tr>
-              <tr><th>脳神経内科・外科</th><td>◎ 澤田咲</td><td>予 澤田咲</td><td></td></tr>
-              <tr><th>一般外科</th><td>◎ 栞葉るり</td><td>予 栞葉るり</td><td></td></tr>
-              <tr><th>整形外科</th><td>◎ 辻元朝子</td><td>予 辻元朝子</td><td></td></tr>
-              <tr><th>心療内科</th><td>◎ 風間トオル</td><td>予 風間トオル</td><td></td></tr>
-              <tr><th>小児科一般</th><td>◎ 星川輝 / 黒井しば</td><td>△ 栞葉るり または 一ノ瀬うるは</td><td>午後1名体制</td></tr>
-              <tr><th>小児専門</th><td>予 小々波いるか / 周央サンゴ</td><td>予 蝸堂みかる / 石神のぞみ / 千凛あゆむ</td><td>完全予約</td></tr>
-              <tr><th>総合診療科</th><td>△ 星川郁男</td><td>△ 星川郁男</td><td>木曜終日1名体制</td></tr>
-              <tr><th>総合診療サポート</th><td>七瀬すず菜（トリアージ支援）</td><td>七瀬すず菜（トリアージ支援）</td><td>木曜予約不可</td></tr>
-              <tr><th>産婦人科</th><td>◎ 四宮春樹 / 菊田真理恵</td><td>予 四宮春樹 / 菊田真理恵</td><td></td></tr>
-              <tr><th>精神科・児童精神科</th><td>◎ 夢咲ネム / 天宮こころ / 周央サンゴ</td><td>予 同上</td><td>フォローアップ・リエゾン含む</td></tr>
-              <tr><th>皮膚科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
-              <tr><th>眼科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
-              <tr><th>耳鼻咽喉科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
-              <tr><th>泌尿器科</th><td>◎ 北里りさ / 小森明二</td><td>予 北里りさ / 小森明二</td><td></td></tr>
-              <tr><th>緩和ケア・遺伝</th><td>予 完全予約制</td><td>予 完全予約制</td><td>必要時夜間当直・診察対応</td></tr>
-              <tr><th>喫煙外来</th><td>◎ 大泉洋</td><td>予 大泉洋</td><td></td></tr>
+              <tr><th scope="row">内科</th><td>◎ 高木裕樹</td><td>△ 早坂昇</td><td>午後1名体制・急きょ変更あり</td></tr>
+              <tr><th scope="row">脳神経内科・外科</th><td>◎ 澤田咲</td><td>予 澤田咲</td><td></td></tr>
+              <tr><th scope="row">一般外科</th><td>◎ 栞葉るり</td><td>予 栞葉るり</td><td></td></tr>
+              <tr><th scope="row">整形外科</th><td>◎ 辻元朝子</td><td>予 辻元朝子</td><td></td></tr>
+              <tr><th scope="row">心療内科</th><td>◎ 風間トオル</td><td>予 風間トオル</td><td></td></tr>
+              <tr><th scope="row">小児科一般</th><td>◎ 星川輝 / 黒井しば</td><td>△ 栞葉るり または 一ノ瀬うるは</td><td>午後1名体制</td></tr>
+              <tr><th scope="row">小児専門</th><td>予 小々波いるか / 周央サンゴ</td><td>予 蝸堂みかる / 石神のぞみ / 千凛あゆむ</td><td>完全予約</td></tr>
+              <tr><th scope="row">総合診療科</th><td>△ 星川郁男</td><td>△ 星川郁男</td><td>木曜終日1名体制</td></tr>
+              <tr><th scope="row">総合診療サポート</th><td>七瀬すず菜（トリアージ支援）</td><td>七瀬すず菜（トリアージ支援）</td><td>木曜予約不可</td></tr>
+              <tr><th scope="row">産婦人科</th><td>◎ 四宮春樹 / 菊田真理恵</td><td>予 四宮春樹 / 菊田真理恵</td><td></td></tr>
+              <tr><th scope="row">精神科・児童精神科</th><td>◎ 夢咲ネム / 天宮こころ / 周央サンゴ</td><td>予 同上</td><td>フォローアップ・リエゾン含む</td></tr>
+              <tr><th scope="row">皮膚科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
+              <tr><th scope="row">眼科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
+              <tr><th scope="row">耳鼻咽喉科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
+              <tr><th scope="row">泌尿器科</th><td>◎ 北里りさ / 小森明二</td><td>予 北里りさ / 小森明二</td><td></td></tr>
+              <tr><th scope="row">緩和ケア・遺伝</th><td>予 完全予約制</td><td>予 完全予約制</td><td>必要時夜間当直・診察対応</td></tr>
+              <tr><th scope="row">喫煙外来</th><td>◎ 大泉洋</td><td>予 大泉洋</td><td></td></tr>
             </tbody>
           </table>
         </div>
@@ -289,24 +323,20 @@
         <div class="table-wrap">
           <table class="schedule-table">
             <thead>
-              <tr>
-                <th>診療科</th>
-                <th>午前</th>
-                <th>午後</th>
-                <th>備考</th>
-              </tr>
+              <tr><th scope="col">診療科</th><th scope="col">午前</th><th scope="col">午後</th><th scope="col">備考</th></tr>
             </thead>
             <tbody>
-              <tr><th>内科</th><td>◎ 神楽坂倫太郎 / 高本めぐみ / 五島健助 / 早坂昇</td><td>◎ 同上</td><td>通常運用</td></tr>
-              <tr><th>外科</th><td>◎ 猪股隆 / 進藤一生</td><td>◎ 同上</td><td></td></tr>
-              <tr><th>小児科一般</th><td>◎ 星川輝 / 黒井しば / 一ノ瀬うるは（応援）</td><td>◎ 同上</td><td></td></tr>
-              <tr><th>小児専門</th><td>予 紡木こかげ / 先斗寧 / 赤羽祐司</td><td>予 同上</td><td>完全予約枠あり</td></tr>
-              <tr><th>産婦人科</th><td>◎ 四宮春樹 / 菊田真理恵</td><td>◎ 同上</td><td></td></tr>
-              <tr><th>精神・心療</th><td>◎ 竹田康 / 石神のぞみ / 天宮こころ / 北里りさ / 夢咲ネム / 周央サンゴ / 雪村双葉</td><td>◎ 同上</td><td>フォローアップ・リエゾン含む</td></tr>
-              <tr><th>皮膚科</th><td>出 出張医1名</td><td>出 同上</td><td>金曜出張医対応</td></tr>
-              <tr><th>眼科</th><td>出 出張医1名</td><td>出 同上</td><td>金曜出張医対応</td></tr>
-              <tr><th>耳鼻咽喉科</th><td>出 出張医1名</td><td>出 同上</td><td>金曜出張医対応</td></tr>
-              <tr><th>泌尿器科</th><td>◎ 北里りさ</td><td>◎ 北里りさ</td><td></td></tr>
+              <tr><th scope="row">内科</th><td>◎ 神楽坂倫太郎 / 高本めぐみ / 五島健助 / 早坂昇</td><td>◎ 同上</td><td>通常運用</td></tr>
+              <tr><th scope="row">外科</th><td>◎ 猪股隆 / 進藤一生</td><td>◎ 同上</td><td></td></tr>
+              <tr><th scope="row">小児科一般</th><td>◎ 星川輝 / 黒井しば / 一ノ瀬うるは（応援）</td><td>◎ 同上</td><td></td></tr>
+              <tr><th scope="row">小児専門</th><td>予 紡木こかげ / 先斗寧 / 赤羽祐司</td><td>予 同上</td><td>完全予約枠あり</td></tr>
+              <tr><th scope="row">産婦人科</th><td>◎ 四宮春樹 / 菊田真理恵</td><td>◎ 同上</td><td></td></tr>
+              <tr><th scope="row">新生児発達外来</th><td>—</td><td>予 佐々木彩乃</td><td>再開・完全予約制。土曜午後から金曜午後へ変更</td></tr>
+              <tr><th scope="row">精神・心療</th><td>◎ 竹田康 / 石神のぞみ / 天宮こころ / 北里りさ / 夢咲ネム / 周央サンゴ / 雪村双葉</td><td>◎ 同上</td><td>フォローアップ・リエゾン含む</td></tr>
+              <tr><th scope="row">皮膚科</th><td>出 出張医1名</td><td>出 同上</td><td>金曜出張医対応</td></tr>
+              <tr><th scope="row">眼科</th><td>出 出張医1名</td><td>出 同上</td><td>金曜出張医対応</td></tr>
+              <tr><th scope="row">耳鼻咽喉科</th><td>出 出張医1名</td><td>出 同上</td><td>金曜出張医対応</td></tr>
+              <tr><th scope="row">泌尿器科</th><td>◎ 北里りさ</td><td>◎ 北里りさ</td><td></td></tr>
             </tbody>
           </table>
         </div>
@@ -322,28 +352,32 @@
         <div class="table-wrap">
           <table class="schedule-table">
             <thead>
-              <tr>
-                <th>診療科</th>
-                <th>午前</th>
-                <th>午後</th>
-                <th>備考</th>
-              </tr>
+              <tr><th scope="col">診療科</th><th scope="col">午前</th><th scope="col">午後</th><th scope="col">備考</th></tr>
             </thead>
             <tbody>
-              <tr><th>心療内科・精神科</th><td>◎ 浜川百合子 / 風間トオル / 竹田康 / 天宮こころ / 夢咲ネム / 周央サンゴ / 雪村双葉</td><td>◎ 同上</td><td>フォローアップ・リエゾン含む</td></tr>
-              <tr><th>内科</th><td>◎ 白砂まどか / 高木裕樹 / 高本めぐみ / 五島健助</td><td>◎ 同上</td><td></td></tr>
-              <tr><th>外科</th><td>◎ 栞葉るり / 猪股隆 / 不破拓海</td><td>◎ 同上</td><td></td></tr>
-              <tr><th>小児科一般</th><td>◎ 星川輝 / 黒井しば</td><td>◎ 同上</td><td></td></tr>
-              <tr><th>小児専門</th><td>◎ 紡木こかげ / 蝸堂みかる / 小々波いるか / 石神のぞみ / 五十嵐菜々</td><td>◎ 同上</td><td></td></tr>
-              <tr><th>産婦人科</th><td>◎ 第1・2週：角巻わため / 赤羽祐司（交代で担当）</td><td>◎ 第3・4週：雲母たまこ / 先斗寧（応援：菊田真理恵）</td><td>週替わり</td></tr>
-              <tr><th>総合診療</th><td>◎ 星川郁男 / 藤原のりこ / 七瀬すず菜</td><td>◎ 同上</td><td></td></tr>
-              <tr><th>皮膚科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
-              <tr><th>眼科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
-              <tr><th>耳鼻咽喉科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
-              <tr><th>泌尿器科</th><td>◎ 北里りさ / 小森明二</td><td>◎ 同上</td><td></td></tr>
+              <tr><th scope="row">心療内科・精神科</th><td>◎ 浜川百合子 / 風間トオル / 竹田康 / 天宮こころ / 夢咲ネム / 周央サンゴ / 雪村双葉</td><td>◎ 同上</td><td>フォローアップ・リエゾン含む</td></tr>
+              <tr><th scope="row">内科</th><td>◎ 白砂まどか / 高木裕樹 / 高本めぐみ / 五島健助</td><td>◎ 同上</td><td></td></tr>
+              <tr><th scope="row">外科</th><td>◎ 栞葉るり / 猪股隆 / 不破拓海</td><td>◎ 同上</td><td></td></tr>
+              <tr><th scope="row">小児科一般</th><td>◎ 星川輝 / 黒井しば</td><td>◎ 同上</td><td></td></tr>
+              <tr><th scope="row">小児専門</th><td>◎ 紡木こかげ / 蝸堂みかる / 小々波いるか / 石神のぞみ / 五十嵐菜々</td><td>◎ 同上</td><td></td></tr>
+              <tr>
+                <th scope="row">産婦人科</th>
+                <td>◎ 第1・2週：角巻わため / 赤羽祐司（交代で担当）</td>
+                <td>第3・4週：雲母たまこ / 予 佐々木彩乃（応援：菊田真理恵）</td>
+                <td>週替わり。佐々木医師の通常診療は完全予約制。緊急時は状態を確認して診察対応</td>
+              </tr>
+              <tr><th scope="row">総合診療</th><td>◎ 星川郁男 / 藤原のりこ / 七瀬すず菜</td><td>◎ 同上</td><td></td></tr>
+              <tr><th scope="row">皮膚科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
+              <tr><th scope="row">眼科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
+              <tr><th scope="row">耳鼻咽喉科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
+              <tr><th scope="row">泌尿器科</th><td>◎ 北里りさ / 小森明二</td><td>◎ 同上</td><td></td></tr>
             </tbody>
           </table>
         </div>
+        <p>
+          新生児発達外来は火曜日・金曜日の午後に実施します。
+          土曜日には実施しません。
+        </p>
       </div>
     </section>
 
@@ -356,23 +390,56 @@
         <div class="table-wrap">
           <table class="schedule-table">
             <thead>
-              <tr>
-                <th>診療科</th>
-                <th>午前</th>
-                <th>午後</th>
-                <th>備考</th>
-              </tr>
+              <tr><th scope="col">診療科</th><th scope="col">午前</th><th scope="col">午後</th><th scope="col">備考</th></tr>
             </thead>
             <tbody>
-              <tr><th>総合診療・内科兼務</th><td>△ 松前春香</td><td>△ 松前春香</td><td>終日1名体制</td></tr>
-              <tr><th>総合診療サポート</th><td>藤原のりこ</td><td>藤原のりこ</td><td>支援配置</td></tr>
-              <tr><th>小児科一般</th><td>△ 小々波いるか</td><td>△ 蝶屋はなび</td><td>交代制</td></tr>
-              <tr><th>精神科・児童精神科</th><td>予 雪村双葉 / 空澄セナ（オンコール）</td><td>予 雪村双葉 / 空澄セナ（オンコール）</td><td>完全予約・フォローアップ・リエゾン含む</td></tr>
-              <tr><th>産婦人科</th><td>△ 第1・2週：角巻わため または 赤羽祐司</td><td>△ 第3・4週：雲母たまこ / 先斗寧</td><td>週替わり</td></tr>
-              <tr><th>救急科</th><td>救 24時間交代制</td><td>救 24時間交代制</td><td>常時対応</td></tr>
+              <tr><th scope="row">総合診療・内科兼務</th><td>△ 松前春香</td><td>△ 松前春香</td><td>終日1名体制</td></tr>
+              <tr><th scope="row">総合診療サポート</th><td>藤原のりこ</td><td>藤原のりこ</td><td>支援配置</td></tr>
+              <tr><th scope="row">小児科一般</th><td>△ 小々波いるか</td><td>△ 蝶屋はなび</td><td>交代制</td></tr>
+              <tr><th scope="row">精神科・児童精神科</th><td>予 雪村双葉 / 空澄セナ（オンコール）</td><td>予 雪村双葉 / 空澄セナ（オンコール）</td><td>完全予約・フォローアップ・リエゾン含む</td></tr>
+              <tr>
+                <th scope="row">産婦人科</th>
+                <td>△ 第1・2週：角巻わため または 赤羽祐司</td>
+                <td>第3・4週：雲母たまこ / 予 佐々木彩乃</td>
+                <td>週替わり。佐々木医師の通常診療は完全予約制</td>
+              </tr>
+              <tr><th scope="row">救急科</th><td>救 24時間交代制</td><td>救 24時間交代制</td><td>常時対応</td></tr>
             </tbody>
           </table>
         </div>
+      </div>
+    </section>
+
+    <section id="newborn-development" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>新生児発達外来</h2>
+          <p><a href="#top">ページ上部へ戻る</a></p>
+        </div>
+
+        <article class="card">
+          <p>
+            佐々木彩乃医師の着任に伴い、
+            新生児発達外来を再開します。
+          </p>
+
+          <div class="table-wrap">
+            <table class="info-table">
+              <thead>
+                <tr><th scope="col">項目</th><th scope="col">内容</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">診療日</th><td>毎週火曜日・金曜日</td></tr>
+                <tr><th scope="row">時間帯</th><td>午後</td></tr>
+                <tr><th scope="row">担当医師</th><td>佐々木彩乃（産婦人科主任係長）</td></tr>
+                <tr><th scope="row">予約</th><td>完全予約制。事前に受付へご相談ください</td></tr>
+                <tr><th scope="row">土曜日について</th><td>産婦人科の緊急時の診察に対応するため、新生児発達外来は行いません</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p><a href="reservation.html">予約案内はこちら</a></p>
+        </article>
       </div>
     </section>
 
@@ -385,17 +452,13 @@
         <div class="table-wrap">
           <table class="info-table">
             <thead>
-              <tr>
-                <th>区分</th>
-                <th>時間</th>
-                <th>担当</th>
-              </tr>
+              <tr><th scope="col">区分</th><th scope="col">時間</th><th scope="col">担当</th></tr>
             </thead>
             <tbody>
-              <tr><th>夜間診療</th><td>17:40〜翌08:20</td><td>救急科＋各科当番医</td></tr>
-              <tr><th>救急科主任ライン</th><td>24時間</td><td>藍沢耕作 / 進藤一生 / 五条蓮 / 一橋太郎 / 星川サラ / 神崎徹</td></tr>
-              <tr><th>小児救急支援</th><td>必要時</td><td>前澤優作</td></tr>
-              <tr><th>山岳・特殊救助支援</th><td>必要時</td><td>茨城美紅</td></tr>
+              <tr><th scope="row">夜間診療</th><td>17:40〜翌08:20</td><td>救急科＋各科当番医</td></tr>
+              <tr><th scope="row">救急科主任ライン</th><td>24時間</td><td>藍沢耕作 / 進藤一生 / 五条蓮 / 一橋太郎 / 星川サラ / 神崎徹</td></tr>
+              <tr><th scope="row">小児救急支援</th><td>必要時</td><td>前澤優作</td></tr>
+              <tr><th scope="row">山岳・特殊救助支援</th><td>必要時</td><td>茨城美紅</td></tr>
             </tbody>
           </table>
         </div>
@@ -411,21 +474,16 @@
         <div class="table-wrap">
           <table class="schedule-table">
             <thead>
-              <tr>
-                <th>診療科</th>
-                <th>日勤 08:30〜17:30</th>
-                <th>夜間 18:00〜21:30</th>
-                <th>備考</th>
-              </tr>
+              <tr><th scope="col">診療科</th><th scope="col">日勤 08:30〜17:30</th><th scope="col">夜間 18:00〜21:30</th><th scope="col">備考</th></tr>
             </thead>
             <tbody>
-              <tr><th>内科・整形外科</th><td>◎ 加地秀樹</td><td>—</td><td>分院長・専門医</td></tr>
-              <tr><th>循環器内科・消化器内科</th><td>◎ 奥野宗一郎</td><td>—</td><td>専門外来兼務</td></tr>
-              <tr><th>産婦人科</th><td>◎ 木村彩乃 / 田崎恵</td><td>—</td><td>平日運用</td></tr>
-              <tr><th>小児科</th><td>◎ 家長むぎ</td><td>—</td><td>分院兼務ライン</td></tr>
-              <tr><th>精神科・児童精神科</th><td>◎ 山崎育三 / 家長むぎ</td><td>—</td><td>終日</td></tr>
-              <tr><th>夜間診療当番</th><td>—</td><td>夜 家長むぎ または 江田雄二</td><td>交代制</td></tr>
-              <tr><th>救急対応</th><td>日勤対応可能医師</td><td>夜 花芽すみれ＋非常勤当直1名</td><td>24時間補完体制</td></tr>
+              <tr><th scope="row">内科・整形外科</th><td>◎ 加地秀樹</td><td>—</td><td>分院長・専門医</td></tr>
+              <tr><th scope="row">循環器内科・消化器内科</th><td>◎ 奥野宗一郎</td><td>—</td><td>専門外来兼務</td></tr>
+              <tr><th scope="row">産婦人科</th><td>◎ 木村彩乃 / 田崎恵</td><td>—</td><td>平日運用</td></tr>
+              <tr><th scope="row">小児科</th><td>◎ 家長むぎ</td><td>—</td><td>分院兼務ライン</td></tr>
+              <tr><th scope="row">精神科・児童精神科</th><td>◎ 山崎育三 / 家長むぎ</td><td>—</td><td>終日</td></tr>
+              <tr><th scope="row">夜間診療当番</th><td>—</td><td>夜 家長むぎ または 江田雄二</td><td>交代制</td></tr>
+              <tr><th scope="row">救急対応</th><td>日勤対応可能医師</td><td>夜 花芽すみれ＋非常勤当直1名</td><td>24時間補完体制</td></tr>
             </tbody>
           </table>
         </div>
@@ -441,21 +499,16 @@
         <div class="table-wrap">
           <table class="schedule-table">
             <thead>
-              <tr>
-                <th>時間帯</th>
-                <th>診療科</th>
-                <th>担当</th>
-                <th>備考</th>
-              </tr>
+              <tr><th scope="col">時間帯</th><th scope="col">診療科</th><th scope="col">担当</th><th scope="col">備考</th></tr>
             </thead>
             <tbody>
-              <tr><th>08:30〜12:00</th><td>呼吸器内科・内科全般</td><td>夜乃くろむ</td><td>午前一般外来</td></tr>
-              <tr><th>08:30〜12:00</th><td>小児専門・思春期</td><td>千凛あゆむ</td><td>午前一般外来</td></tr>
-              <tr><th>08:30〜12:00</th><td>思春期・小児神経補助</td><td>角巻わため</td><td>午前のみ</td></tr>
-              <tr><th>13:00〜15:30</th><td>一般内科・整形</td><td>加地秀樹</td><td>完全予約</td></tr>
-              <tr><th>13:00〜15:30</th><td>精神科・児童精神科・小児科</td><td>家長むぎ</td><td>完全予約</td></tr>
-              <tr><th>13:00〜15:30</th><td>小児科・内科補助</td><td>紡木こかげ / 家長むぎ（交代制）</td><td>完全予約</td></tr>
-              <tr><th>15:30以降</th><td>閉鎖準備</td><td>—</td><td>17:00完全閉鎖</td></tr>
+              <tr><th scope="row">08:30〜12:00</th><td>呼吸器内科・内科全般</td><td>夜乃くろむ</td><td>午前一般外来</td></tr>
+              <tr><th scope="row">08:30〜12:00</th><td>小児専門・思春期</td><td>千凛あゆむ</td><td>午前一般外来</td></tr>
+              <tr><th scope="row">08:30〜12:00</th><td>思春期・小児神経補助</td><td>角巻わため</td><td>午前のみ</td></tr>
+              <tr><th scope="row">13:00〜15:30</th><td>一般内科・整形</td><td>加地秀樹</td><td>完全予約</td></tr>
+              <tr><th scope="row">13:00〜15:30</th><td>精神科・児童精神科・小児科</td><td>家長むぎ</td><td>完全予約</td></tr>
+              <tr><th scope="row">13:00〜15:30</th><td>小児科・内科補助</td><td>紡木こかげ / 家長むぎ（交代制）</td><td>完全予約</td></tr>
+              <tr><th scope="row">15:30以降</th><td>閉鎖準備</td><td>—</td><td>17:00完全閉鎖</td></tr>
             </tbody>
           </table>
         </div>
@@ -471,17 +524,12 @@
         <div class="table-wrap">
           <table class="schedule-table">
             <thead>
-              <tr>
-                <th>時間帯</th>
-                <th>診療科</th>
-                <th>担当</th>
-                <th>備考</th>
-              </tr>
+              <tr><th scope="col">時間帯</th><th scope="col">診療科</th><th scope="col">担当</th><th scope="col">備考</th></tr>
             </thead>
             <tbody>
-              <tr><th>08:30〜12:00</th><td>一般内科</td><td>早坂昇</td><td>午前診療のみ</td></tr>
-              <tr><th>08:30〜12:00</th><td>小児専門・思春期</td><td>紡木こかげ</td><td>午前診療のみ</td></tr>
-              <tr><th>12:00以降</th><td>休診</td><td>—</td><td>全館ロックダウン</td></tr>
+              <tr><th scope="row">08:30〜12:00</th><td>一般内科</td><td>早坂昇</td><td>午前診療のみ</td></tr>
+              <tr><th scope="row">08:30〜12:00</th><td>小児専門・思春期</td><td>紡木こかげ</td><td>午前診療のみ</td></tr>
+              <tr><th scope="row">12:00以降</th><td>休診</td><td>—</td><td>全館ロックダウン</td></tr>
             </tbody>
           </table>
         </div>
@@ -508,11 +556,21 @@
             <li>月〜木午後の内科は、担当医が急きょ変更となる場合があります。</li>
             <li>皮膚科・眼科・耳鼻咽喉科は水曜・金曜の出張医対応です。</li>
             <li>緩和ケア・遺伝カウンセリング科は完全予約制です。</li>
+            <li>佐々木彩乃医師の通常診療は完全予約制です。</li>
+            <li>新生児発達外来は火曜・金曜午後です。土曜は実施しません。</li>
+            <li>水野遥医師は市立旭川病院へ出向中です。</li>
           </ul>
         </section>
       </div>
 
       <hr class="soft">
+      <p>
+        <small>
+          このサイトは架空の病院を扱う創作サイトです。
+          掲載されている診療予定・人事・所属は創作上の設定であり、
+          実在する人物・医療機関の正式な情報ではありません。
+        </small>
+      </p>
       <p>© 2026 富良野希望未来病院グループ / Furano Hope Future Hospital Group</p>
     </div>
   </footer>
