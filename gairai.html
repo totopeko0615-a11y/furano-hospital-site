@@ -3,20 +3,385 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>外来診察予定表 | 富良野希望未来病院グループ</title>
-  <meta name="description" content="富良野希望未来病院グループの外来診察予定表。本院・トミカ分院の曜日別外来、産婦人科、新生児発達外来、夜間救急体制をご案内します。">
+
+  <meta
+    name="description"
+    content="富良野希望未来病院グループの外来診察予定表。本院・トミカ分院の担当医、診療時間、予約専門外来、小児科・新生児発達外来、夜間救急体制をご案内します。"
+  >
+
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* 外来診察予定表専用スタイル */
+    .outpatient-page {
+      --schedule-main: #17685c;
+      --schedule-light: #edf7f3;
+      --schedule-border: #d5e2dc;
+      --schedule-text: #263a33;
+      --schedule-muted: #53695f;
+      margin: 0;
+      color: var(--schedule-text);
+      background: #fff;
+      font-family:
+        -apple-system, BlinkMacSystemFont,
+        "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+      line-height: 1.8;
+    }
+
+    .outpatient-page,
+    .outpatient-page * {
+      box-sizing: border-box;
+    }
+
+    .outpatient-page a {
+      color: #116759;
+      text-underline-offset: 0.2em;
+    }
+
+    .outpatient-page a:focus-visible,
+    .outpatient-page [tabindex]:focus-visible {
+      outline: 3px solid #bf7718;
+      outline-offset: 4px;
+    }
+
+    .outpatient-page .container {
+      width: min(1160px, calc(100% - 32px));
+      margin-inline: auto;
+    }
+
+    .outpatient-page .site-header {
+      border-bottom: 1px solid var(--schedule-border);
+      background: #fff;
+    }
+
+    .outpatient-page .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding-block: 18px;
+    }
+
+    .outpatient-page .logo-main,
+    .outpatient-page .logo-sub {
+      display: block;
+    }
+
+    .outpatient-page .logo-main {
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    .outpatient-page .logo-sub {
+      color: var(--schedule-muted);
+      font-size: 0.8rem;
+    }
+
+    .outpatient-page .global-nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .outpatient-page .global-nav a {
+      font-size: 0.93rem;
+    }
+
+    .outpatient-page [aria-current="page"] {
+      font-weight: bold;
+    }
+
+    .outpatient-page .page-hero {
+      padding: 40px 0;
+      background: var(--schedule-light);
+    }
+
+    .outpatient-page h1 {
+      margin: 0 0 16px;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      line-height: 1.4;
+    }
+
+    .outpatient-page .page-lead {
+      margin-bottom: 0;
+    }
+
+    .outpatient-page .section {
+      padding: 28px 0;
+      scroll-margin-top: 20px;
+    }
+
+    .outpatient-page .alt {
+      background: #f7faf8;
+    }
+
+    .outpatient-page h2 {
+      margin: 0 0 20px;
+      padding-left: 14px;
+      border-left: 5px solid var(--schedule-main);
+      font-size: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .outpatient-page h3 {
+      margin: 24px 0 12px;
+      font-size: 1.15rem;
+    }
+
+    .outpatient-page .card {
+      padding: 22px;
+      border: 1px solid var(--schedule-border);
+      border-radius: 10px;
+      background: #fff;
+    }
+
+    .outpatient-page .card + .card {
+      margin-top: 20px;
+    }
+
+    .outpatient-page .notice {
+      padding: 18px 20px;
+      border-left: 5px solid #b8791c;
+      background: #fff7e8;
+    }
+
+    .outpatient-page .notice p {
+      margin: 0;
+    }
+
+    .outpatient-page .notice p + p {
+      margin-top: 10px;
+    }
+
+    .outpatient-page .plain-list {
+      padding-left: 1.4em;
+    }
+
+    .outpatient-page .plain-list li + li {
+      margin-top: 8px;
+    }
+
+    .outpatient-page .link-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px 20px;
+      padding-left: 1.4em;
+    }
+
+    .outpatient-page .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      border: 1px solid var(--schedule-border);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .outpatient-page table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+
+    .outpatient-page .schedule-table {
+      min-width: 800px;
+    }
+
+    .outpatient-page .wide-table {
+      min-width: 720px;
+    }
+
+    .outpatient-page caption {
+      padding: 10px 14px;
+      background: #f5f9f6;
+      text-align: left;
+      font-weight: bold;
+    }
+
+    .outpatient-page th,
+    .outpatient-page td {
+      padding: 12px;
+      border-right: 1px solid var(--schedule-border);
+      border-bottom: 1px solid var(--schedule-border);
+      text-align: left;
+      vertical-align: top;
+      overflow-wrap: anywhere;
+    }
+
+    .outpatient-page thead th {
+      background: var(--schedule-light);
+    }
+
+    .outpatient-page tbody th {
+      background: #f8fbf9;
+    }
+
+    .outpatient-page tr:last-child > * {
+      border-bottom: 0;
+    }
+
+    .outpatient-page tr > *:last-child {
+      border-right: 0;
+    }
+
+    .outpatient-page .schedule-table th:first-child {
+      width: 160px;
+    }
+
+    .outpatient-page .schedule-table td:nth-child(2),
+    .outpatient-page .schedule-table td:nth-child(3) {
+      width: 29%;
+    }
+
+    .outpatient-page .note {
+      margin-top: 12px;
+      color: var(--schedule-muted);
+      font-size: 0.92rem;
+    }
+
+    .outpatient-page .scroll-hint {
+      margin: 8px 0;
+      color: var(--schedule-muted);
+      font-size: 0.88rem;
+    }
+
+    .outpatient-page .back-link {
+      margin-top: 18px;
+      text-align: right;
+      font-size: 0.93rem;
+    }
+
+    .outpatient-page .button {
+      display: inline-block;
+      margin: 10px 12px 0 0;
+      padding: 9px 16px;
+      border: 1px solid var(--schedule-main);
+      border-radius: 6px;
+      background: var(--schedule-main);
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .outpatient-page .site-footer {
+      padding: 26px 0;
+      border-top: 1px solid var(--schedule-border);
+      color: var(--schedule-muted);
+      font-size: 0.88rem;
+    }
+
+    .outpatient-page .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 12px;
+      z-index: 1000;
+      padding: 10px;
+      background: #fff;
+    }
+
+    .outpatient-page .skip-link:focus {
+      top: 10px;
+    }
+
+    @media (max-width: 700px) {
+      .outpatient-page .link-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .outpatient-page .card {
+        padding: 16px;
+      }
+
+      .outpatient-page .page-hero {
+        padding: 28px 0;
+      }
+
+      .outpatient-page .section {
+        padding: 24px 0;
+      }
+
+      .outpatient-page .header-inner {
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .outpatient-page .link-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media print {
+      .outpatient-page .site-header,
+      .outpatient-page .page-menu,
+      .outpatient-page .back-link,
+      .outpatient-page .scroll-hint,
+      .outpatient-page .button,
+      .outpatient-page .skip-link {
+        display: none !important;
+      }
+
+      .outpatient-page .container {
+        width: 100%;
+      }
+
+      .outpatient-page .section,
+      .outpatient-page .page-hero {
+        padding: 12px 0;
+        background: #fff;
+      }
+
+      .outpatient-page .table-wrap {
+        overflow: visible;
+      }
+
+      .outpatient-page table {
+        min-width: 0;
+        font-size: 8.5pt;
+      }
+
+      .outpatient-page th,
+      .outpatient-page td {
+        padding: 5px;
+      }
+
+      .outpatient-page thead {
+        display: table-header-group;
+      }
+
+      .outpatient-page tr {
+        break-inside: avoid;
+      }
+
+      .outpatient-page h2,
+      .outpatient-page h3 {
+        break-after: avoid;
+      }
+
+      .outpatient-page a {
+        color: #000;
+      }
+    }
+  </style>
 </head>
 
-<body id="top">
+<body id="top" class="outpatient-page">
+
+  <a class="skip-link" href="#main-content">本文へ移動</a>
+
   <header class="site-header">
     <div class="container header-inner">
       <div class="logo">
         <span class="logo-main">富良野希望未来病院グループ</span>
-        <span class="logo-sub">Furano Hope Future Hospital Group</span>
+        <span class="logo-sub">本院・トミカにじいろクリニック</span>
       </div>
 
-      <nav class="global-nav">
+      <nav class="global-nav" aria-label="メインメニュー">
         <ul>
           <li><a href="index.html">ホーム</a></li>
           <li><a href="departments.html">診療科紹介</a></li>
@@ -28,109 +393,142 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
+
     <section class="page-hero">
       <div class="container">
-        <p class="eyebrow">Outpatient Schedule</p>
         <h1>外来診察予定表</h1>
         <p class="page-lead">
-          本院とトミカ分院の外来体制を掲載しています。
-          2026年11月10日改定の診療科再編に加え、
-          産婦人科の担当変更と新生児発達外来の再開を反映しています。
+          本院とトミカ分院の外来担当医、予約条件、
+          カウンセリング、夜間救急体制をご案内します。
+        </p>
+        <p>
+          交代担当・臨時休診・代診については、
+          月間予定表および各外来の案内をご確認ください。
+        </p>
+        <a class="button" href="reservation.html">予約案内</a>
+        <a class="button" href="departments.html">診療科・診察室の案内</a>
+      </div>
+    </section>
+
+    <section id="rules" class="section">
+      <div class="container">
+        <h2>診療時間・共通ルール</h2>
+
+        <div class="notice">
+          <p>
+            <strong>
+              月曜日から木曜日の午後は、
+              緊急の場合を除き全科完全予約制です。
+            </strong>
+          </p>
+          <p>
+            金曜日・土曜日の通常外来は予約なしで受診できます。
+            予約専門外来・完全予約制外来は除きます。
+          </p>
+        </div>
+
+        <h3>診療時間</h3>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">区分</th>
+                <th scope="col">時間</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">日中診療</th>
+                <td>08:30〜17:30</td>
+              </tr>
+              <tr>
+                <th scope="row">本院の夜間診療枠</th>
+                <td>17:40〜21:00</td>
+              </tr>
+              <tr>
+                <th scope="row">夜間救急</th>
+                <td>17:40〜翌08:20</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <ul class="plain-list">
+          <li>
+            トミカ分院の土曜・日曜は、
+            分院欄に記載した診療時間を優先します。
+          </li>
+          <li>
+            診療時間と受付終了時刻は異なる場合があります。
+            各外来の受付案内をご確認ください。
+          </li>
+          <li>
+            日曜日は内科・小児科一般以外は予約制です。
+            小児専門外来も予約制です。
+          </li>
+          <li>
+            月〜木午後の内科・小児科一般は、
+            主担当医1名体制です。
+          </li>
+          <li>
+            金曜の小児科一般は担当医3名、
+            土曜は担当医2名と補助医1名です。
+          </li>
+          <li>
+            皮膚科・眼科・耳鼻咽喉科は、
+            火・水・金の週3日、各科それぞれ出張医1名が担当します。
+          </li>
+          <li>
+            フォローアップ・リエゾンは精神科・児童精神科で受け付けます。
+          </li>
+          <li>
+            佐々木彩乃医師の通常診療は、
+            曜日・診療科を問わず完全予約制です。
+          </li>
+          <li>
+            診察室は
+            <a href="departments.html">診療科紹介</a>
+            の各外来案内をご確認ください。
+          </li>
+        </ul>
+
+        <h3>表示の見方</h3>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">記号</th>
+                <th scope="col">意味</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">◎</th><td>通常外来・予約なし可。予約患者優先。</td></tr>
+              <tr><th scope="row">△</th><td>主担当医1名体制。</td></tr>
+              <tr><th scope="row">予</th><td>予約制。</td></tr>
+              <tr><th scope="row">完予</th><td>完全予約制。</td></tr>
+              <tr><th scope="row">出</th><td>出張医対応。</td></tr>
+              <tr><th scope="row">救</th><td>救急対応中心。</td></tr>
+              <tr><th scope="row">休</th><td>定期外来休診。</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="note">
+          「交代制」は記載した医師のうち1名が担当します。
+          担当者別の実施日は月間予定表でご確認ください。
         </p>
       </div>
     </section>
 
-    <section class="section">
+    <section id="page-menu" class="section alt page-menu">
       <div class="container">
-        <article class="card">
-          <h2>産婦人科の担当変更・新生児発達外来再開のお知らせ</h2>
-          <p>
-            <strong>佐々木彩乃医師が産婦人科主任係長に着任します。</strong>
-            水野遥医師は<strong>市立旭川病院へ出向</strong>となります。
-          </p>
+        <h2>ページ内メニュー</h2>
 
-          <ul class="plain-list">
-            <li>
-              第3・第4土曜日午後の産婦人科は、
-              雲母たまこ・佐々木彩乃が担当します。
-              菊田真理恵が応援に入ります。
-            </li>
-            <li>
-              第3・第4日曜日午後の産婦人科は、
-              雲母たまこ・佐々木彩乃が担当します。
-            </li>
-            <li>
-              上記の産婦人科枠では、先斗寧の支援担当を終了します。
-              他科での担当は変更ありません。
-            </li>
-            <li>
-              新生児発達外来を、毎週火曜日・金曜日の午後に再開します。
-              担当は佐々木彩乃医師、完全予約制です。
-            </li>
-            <li>
-              土曜日は産婦人科の緊急時の診察に対応するため、
-              新生児発達外来は行いません。
-            </li>
-            <li>
-              佐々木医師は、上記以外の勤務日・時間帯に、
-              精神科・児童精神科および産婦人科の診療支援を行います。
-              通常診療は完全予約制です。
-            </li>
-          </ul>
-
-          <p>
-            これまで産婦人科の診療支援にご協力いただいた先斗寧に、
-            心より感謝申し上げます。
-          </p>
-          <p>
-            緊急受診を希望される場合は、可能な限り来院前にご連絡ください。
-            診療状況や患者さんの状態を確認して対応します。
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container card-grid cols-2">
-        <article class="card">
-          <h2>診療科再編・更新のお知らせ</h2>
-          <ul class="plain-list">
-            <li>皮膚科・眼科・耳鼻咽喉科は、水曜・金曜の出張医1名体制へ変更しました。</li>
-            <li>フォローアップ外来・リエゾン特別外来は、精神科・児童精神科へ統合しました。</li>
-            <li>緩和ケア・遺伝カウンセリング科は、完全予約制へ変更しました。</li>
-            <li>月〜木午後の内科は、再編の影響で急きょ担当医や体制が変更となる場合があります。</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h2>表示の見方</h2>
-          <div class="table-wrap">
-            <table class="info-table">
-              <thead>
-                <tr><th scope="col">記号</th><th scope="col">意味</th></tr>
-              </thead>
-              <tbody>
-                <tr><th scope="row">◎</th><td>通常外来</td></tr>
-                <tr><th scope="row">△</th><td>1名体制</td></tr>
-                <tr><th scope="row">予</th><td>予約制</td></tr>
-                <tr><th scope="row">出</th><td>出張医対応</td></tr>
-                <tr><th scope="row">救</th><td>救急対応中心</td></tr>
-                <tr><th scope="row">休</th><td>休診</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p>佐々木彩乃医師の通常診療は、曜日・診療科を問わず完全予約制です。</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section alt">
-      <div class="container card-grid cols-2">
-        <article class="card">
-          <h2>ページ内リンク</h2>
+        <nav aria-label="ページ内メニュー">
           <ul class="link-list">
-            <li><a href="#rules">本院 共通運用ルール</a></li>
             <li><a href="#honin-monday">本院 月曜日</a></li>
             <li><a href="#honin-tuesday">本院 火曜日</a></li>
             <li><a href="#honin-wednesday">本院 水曜日</a></li>
@@ -138,441 +536,1341 @@
             <li><a href="#honin-friday">本院 金曜日</a></li>
             <li><a href="#honin-saturday">本院 土曜日</a></li>
             <li><a href="#honin-sunday">本院 日曜日</a></li>
-            <li><a href="#newborn-development">新生児発達外来</a></li>
+            <li><a href="#shirasuna-specialty">白砂まどか医師の専門外来</a></li>
+            <li><a href="#newborn-development">小児科・新生児発達外来</a></li>
+            <li><a href="#obstetrics-guide">産婦人科の週別担当</a></li>
+            <li><a href="#counseling">カウンセリング</a></li>
+            <li><a href="#reservation-specialty">緩和ケア・遺伝・喫煙外来</a></li>
             <li><a href="#night-emergency">本院 夜間・救急</a></li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h2>トミカ分院メニュー</h2>
-          <ul class="link-list">
-            <li><a href="#tomica-weekday">トミカ分院 平日（月〜金）</a></li>
+            <li><a href="#tomica-weekday">トミカ分院 平日</a></li>
             <li><a href="#tomica-saturday">トミカ分院 土曜日</a></li>
             <li><a href="#tomica-sunday">トミカ分院 日曜日</a></li>
+            <li><a href="#tomica-night">トミカ分院 夜間・救急</a></li>
+            <li><a href="#changes">休診・代診のご案内</a></li>
           </ul>
-        </article>
+        </nav>
       </div>
     </section>
 
-    <section id="rules" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>本院 共通運用ルール</h2>
-          <p><a href="#top">ページ上部へ戻る</a></p>
-        </div>
-        <div class="table-wrap">
-          <table class="info-table">
-            <thead>
-              <tr><th scope="col">対象</th><th scope="col">運用ルール</th></tr>
-            </thead>
-            <tbody>
-              <tr><th scope="row">月〜木 午後の内科</th><td>△ 1名体制（原則予約なし可）※廃止・統合科の影響により急きょ変更の可能性あり</td></tr>
-              <tr><th scope="row">月〜木 午後の小児科</th><td>△ 1名体制（原則予約なし可）</td></tr>
-              <tr><th scope="row">月〜木 午後のその他診療科</th><td>予 原則予約制</td></tr>
-              <tr><th scope="row">皮膚科・眼科・耳鼻咽喉科</th><td>出 週2回（水・金）出張医1名体制（月・火・木・土・日は休診）</td></tr>
-              <tr><th scope="row">フォローアップ・リエゾン</th><td>精神科・児童精神科へ統合</td></tr>
-              <tr><th scope="row">緩和ケア・遺伝カウンセリング</th><td>予 完全予約制（夜間当直・内科等へ柔軟配置）</td></tr>
-              <tr><th scope="row">佐々木彩乃医師の通常診療</th><td>予 完全予約制。第3・第4土日午後は産婦人科、火・金午後は新生児発達外来を担当。その他の勤務日・時間帯は精神科・児童精神科および産婦人科の診療支援</td></tr>
-              <tr><th scope="row">土曜日の産婦人科・緊急対応</th><td>佐々木医師は緊急時の診察にも対応。可能な限り来院前に連絡。土曜の新生児発達外来は実施しません</td></tr>
-              <tr><th scope="row">金・土</th><td>通常運用（感覚器3科は金曜のみ出張医対応。佐々木医師の通常診療は完全予約制）</td></tr>
-              <tr><th scope="row">日</th><td>縮小運用</td></tr>
-              <tr><th scope="row">第5週の産婦人科</th><td>担当は別途ご案内します</td></tr>
-              <tr><th scope="row">夜間</th><td>救急科＋各科当番医</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
+    <!-- 曜日別予定表は、ページ末尾のデータから表示します。 -->
+    <div id="weekly-schedules"></div>
 
-    <section id="honin-monday" class="section alt">
-      <div class="container">
-        <div class="section-head">
-          <h2>本院 月曜日</h2>
-          <p><a href="#rules">共通ルールへ戻る</a></p>
+    <noscript>
+      <section class="section">
+        <div class="container notice">
+          <p>
+            曜日別の担当医表を表示するには、
+            ブラウザーのJavaScriptを有効にしてください。
+            専門外来・分院・夜間診療の案内は、この下に掲載しています。
+          </p>
         </div>
-        <div class="table-wrap">
-          <table class="schedule-table">
-            <thead>
-              <tr><th scope="col">診療科</th><th scope="col">午前</th><th scope="col">午後</th><th scope="col">備考</th></tr>
-            </thead>
-            <tbody>
-              <tr><th scope="row">内科</th><td>◎ 松前春香 / 高本めぐみ / 早坂昇</td><td>△ 鏑木ろこ または 神楽坂倫太郎（週替わり）</td><td>午後1名体制・急きょ変更あり</td></tr>
-              <tr><th scope="row">脳神経内科・外科</th><td>◎ 澤田咲</td><td>予 澤田咲</td><td>午後予約制</td></tr>
-              <tr><th scope="row">一般外科</th><td>◎ 猪股隆 / 進藤一生</td><td>予 猪股隆 / 進藤一生</td><td>午後予約制</td></tr>
-              <tr><th scope="row">心療内科</th><td>◎ 浜川百合子</td><td>予 浜川百合子</td><td></td></tr>
-              <tr><th scope="row">小児科一般</th><td>◎ 星川輝 / 黒井しば / 一ノ瀬うるは</td><td>△ 蝸堂みかる / 一ノ瀬うるは（交代）</td><td>午後1名体制</td></tr>
-              <tr><th scope="row">小児専門</th><td>予 栞葉るり / 蝸堂みかる</td><td>予 五十嵐菜々 / 千凛あゆむ</td><td>完全予約</td></tr>
-              <tr><th scope="row">産婦人科</th><td>◎ 四宮春樹 / 菊田真理恵 / 雲母たまこ（補助）</td><td>予 四宮春樹 / 菊田真理恵</td><td></td></tr>
-              <tr><th scope="row">精神科・児童精神科</th><td>◎ 夢咲ネム / 周央サンゴ</td><td>予 夢咲ネム / 周央サンゴ</td><td>フォローアップ・リエゾン含む</td></tr>
-              <tr><th scope="row">皮膚科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
-              <tr><th scope="row">眼科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
-              <tr><th scope="row">耳鼻咽喉科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
-              <tr><th scope="row">総合診療・専門</th><td>◎ 高木裕樹 / 五島健助 / 星川郁男 / 藤原のりこ</td><td>予 同上</td><td></td></tr>
-              <tr><th scope="row">泌尿器科</th><td>予 小森明二</td><td>予 小森明二</td><td>臨時相談枠</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
+      </section>
+    </noscript>
 
-    <section id="honin-tuesday" class="section">
+    <section id="shirasuna-specialty" class="section alt">
       <div class="container">
-        <div class="section-head">
-          <h2>本院 火曜日</h2>
-          <p><a href="#rules">共通ルールへ戻る</a></p>
-        </div>
-        <div class="table-wrap">
-          <table class="schedule-table">
-            <thead>
-              <tr><th scope="col">診療科</th><th scope="col">午前</th><th scope="col">午後</th><th scope="col">備考</th></tr>
-            </thead>
-            <tbody>
-              <tr><th scope="row">内科</th><td>◎ 高木裕樹 / 高本めぐみ / 七瀬すず菜</td><td>△ 松前春香</td><td>午後1名体制・急きょ変更あり</td></tr>
-              <tr><th scope="row">脳神経内科・外科</th><td>◎ 澤田咲</td><td>予 澤田咲</td><td></td></tr>
-              <tr><th scope="row">一般外科</th><td>◎ 栞葉るり</td><td>予 栞葉るり</td><td></td></tr>
-              <tr><th scope="row">整形外科</th><td>◎ 辻元朝子</td><td>予 辻元朝子</td><td></td></tr>
-              <tr><th scope="row">心療内科</th><td>◎ 風間トオル</td><td>予 風間トオル</td><td></td></tr>
-              <tr><th scope="row">小児科一般</th><td>◎ 星川輝 / 黒井しば / 一ノ瀬うるは</td><td>△ 黒井しば（補助：一ノ瀬うるは）</td><td>午後1名体制</td></tr>
-              <tr><th scope="row">小児専門</th><td>予 雲母たまこ / 不破拓海</td><td>予 蝶屋はなび / 蝸堂みかる / 不破拓海 / 赤羽葉雪 / 角巻わため</td><td>完全予約</td></tr>
-              <tr><th scope="row">産婦人科</th><td>◎ 四宮春樹 / 菊田真理恵 / 雲母たまこ（補助）</td><td>予 四宮春樹 / 菊田真理恵</td><td></td></tr>
-              <tr><th scope="row">新生児発達外来</th><td>—</td><td>予 佐々木彩乃</td><td>再開・完全予約制</td></tr>
-              <tr><th scope="row">精神科・児童精神科</th><td>◎ 雪村双葉 / 天宮こころ</td><td>予 同上</td><td>フォローアップ・リエゾン含む</td></tr>
-              <tr><th scope="row">皮膚科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
-              <tr><th scope="row">眼科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
-              <tr><th scope="row">耳鼻咽喉科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
-              <tr><th scope="row">総合診療・専門</th><td>◎ 五島健助 / 星川郁男 / 大泉洋（喫煙）</td><td>予 同上</td><td></td></tr>
-              <tr><th scope="row">泌尿器科</th><td>◎ 北里りさ / 小森明二</td><td>予 北里りさ / 小森明二</td><td>午後予約制中心</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
+        <h2>白砂まどか医師の専門外来</h2>
 
-    <section id="honin-wednesday" class="section alt">
-      <div class="container">
-        <div class="section-head">
-          <h2>本院 水曜日</h2>
-          <p><a href="#rules">共通ルールへ戻る</a></p>
-        </div>
-        <div class="table-wrap">
-          <table class="schedule-table">
-            <thead>
-              <tr><th scope="col">診療科</th><th scope="col">午前</th><th scope="col">午後</th><th scope="col">備考</th></tr>
-            </thead>
-            <tbody>
-              <tr><th scope="row">内科</th><td>◎ 神楽坂倫太郎 / 松前春香 / 早坂昇 / 高本めぐみ</td><td>△ 夜乃くろむ または 高木裕樹（週替わり）</td><td>午後1名体制・急きょ変更あり</td></tr>
-              <tr><th scope="row">脳神経内科・外科</th><td>◎ 澤田咲</td><td>予 澤田咲</td><td></td></tr>
-              <tr><th scope="row">一般外科</th><td>◎ 猪股隆 / 不破拓海</td><td>予 猪股隆 / 不破拓海</td><td></td></tr>
-              <tr><th scope="row">心療内科</th><td>◎ 浜川百合子</td><td>予 浜川百合子</td><td></td></tr>
-              <tr><th scope="row">小児科一般</th><td>◎ 星川輝 / 黒井しば / 一ノ瀬うるは（応援）</td><td>△ 星川輝（補助：蝸堂みかる）</td><td>午後1名体制</td></tr>
-              <tr><th scope="row">小児専門</th><td>予 角巻わため / 紡木こかげ</td><td>予 蝶屋はなび / 紡木こかげ / 千凛あゆむ / 先斗寧 / 石神のぞみ</td><td>完全予約</td></tr>
-              <tr><th scope="row">産婦人科</th><td>◎ 四宮春樹 / 菊田真理恵 / 雲母たまこ（補助）</td><td>予 四宮春樹 / 菊田真理恵</td><td></td></tr>
-              <tr><th scope="row">精神科・児童精神科</th><td>◎ 夢咲ネム / 竹田康</td><td>予 夢咲ネム / 竹田康</td><td>フォローアップ・リエゾン含む</td></tr>
-              <tr><th scope="row">皮膚科</th><td>出 出張医1名</td><td>予 同上</td><td>水曜出張医対応</td></tr>
-              <tr><th scope="row">眼科</th><td>出 出張医1名</td><td>予 同上</td><td>水曜出張医対応</td></tr>
-              <tr><th scope="row">耳鼻咽喉科</th><td>出 出張医1名</td><td>予 同上</td><td>水曜出張医対応</td></tr>
-              <tr><th scope="row">総合診療・専門</th><td>◎ 藤原のりこ / 大泉洋（喫煙）</td><td>予 同上</td><td></td></tr>
-              <tr><th scope="row">泌尿器科</th><td>予 小森明二</td><td>予 小森明二</td><td>完全予約制</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
+        <p class="scroll-hint">表が画面に収まらない場合は横にスクロールできます。</p>
 
-    <section id="honin-thursday" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>本院 木曜日</h2>
-          <p><a href="#rules">共通ルールへ戻る</a></p>
-        </div>
-        <div class="table-wrap">
-          <table class="schedule-table">
+        <div class="table-wrap" tabindex="0" role="region"
+             aria-label="白砂まどか医師の専門外来予定表">
+          <table class="wide-table">
             <thead>
-              <tr><th scope="col">診療科</th><th scope="col">午前</th><th scope="col">午後</th><th scope="col">備考</th></tr>
-            </thead>
-            <tbody>
-              <tr><th scope="row">内科</th><td>◎ 高木裕樹</td><td>△ 早坂昇</td><td>午後1名体制・急きょ変更あり</td></tr>
-              <tr><th scope="row">脳神経内科・外科</th><td>◎ 澤田咲</td><td>予 澤田咲</td><td></td></tr>
-              <tr><th scope="row">一般外科</th><td>◎ 栞葉るり</td><td>予 栞葉るり</td><td></td></tr>
-              <tr><th scope="row">整形外科</th><td>◎ 辻元朝子</td><td>予 辻元朝子</td><td></td></tr>
-              <tr><th scope="row">心療内科</th><td>◎ 風間トオル</td><td>予 風間トオル</td><td></td></tr>
-              <tr><th scope="row">小児科一般</th><td>◎ 星川輝 / 黒井しば</td><td>△ 栞葉るり または 一ノ瀬うるは</td><td>午後1名体制</td></tr>
-              <tr><th scope="row">小児専門</th><td>予 小々波いるか / 周央サンゴ</td><td>予 蝸堂みかる / 石神のぞみ / 千凛あゆむ</td><td>完全予約</td></tr>
-              <tr><th scope="row">総合診療科</th><td>△ 星川郁男</td><td>△ 星川郁男</td><td>木曜終日1名体制</td></tr>
-              <tr><th scope="row">総合診療サポート</th><td>七瀬すず菜（トリアージ支援）</td><td>七瀬すず菜（トリアージ支援）</td><td>木曜予約不可</td></tr>
-              <tr><th scope="row">産婦人科</th><td>◎ 四宮春樹 / 菊田真理恵</td><td>予 四宮春樹 / 菊田真理恵</td><td></td></tr>
-              <tr><th scope="row">精神科・児童精神科</th><td>◎ 夢咲ネム / 天宮こころ / 周央サンゴ</td><td>予 同上</td><td>フォローアップ・リエゾン含む</td></tr>
-              <tr><th scope="row">皮膚科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
-              <tr><th scope="row">眼科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
-              <tr><th scope="row">耳鼻咽喉科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
-              <tr><th scope="row">泌尿器科</th><td>◎ 北里りさ / 小森明二</td><td>予 北里りさ / 小森明二</td><td></td></tr>
-              <tr><th scope="row">緩和ケア・遺伝</th><td>予 完全予約制</td><td>予 完全予約制</td><td>必要時夜間当直・診察対応</td></tr>
-              <tr><th scope="row">喫煙外来</th><td>◎ 大泉洋</td><td>予 大泉洋</td><td></td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <section id="honin-friday" class="section alt">
-      <div class="container">
-        <div class="section-head">
-          <h2>本院 金曜日</h2>
-          <p><a href="#rules">共通ルールへ戻る</a></p>
-        </div>
-        <div class="table-wrap">
-          <table class="schedule-table">
-            <thead>
-              <tr><th scope="col">診療科</th><th scope="col">午前</th><th scope="col">午後</th><th scope="col">備考</th></tr>
-            </thead>
-            <tbody>
-              <tr><th scope="row">内科</th><td>◎ 神楽坂倫太郎 / 高本めぐみ / 五島健助 / 早坂昇</td><td>◎ 同上</td><td>通常運用</td></tr>
-              <tr><th scope="row">外科</th><td>◎ 猪股隆 / 進藤一生</td><td>◎ 同上</td><td></td></tr>
-              <tr><th scope="row">小児科一般</th><td>◎ 星川輝 / 黒井しば / 一ノ瀬うるは（応援）</td><td>◎ 同上</td><td></td></tr>
-              <tr><th scope="row">小児専門</th><td>予 紡木こかげ / 先斗寧 / 赤羽祐司</td><td>予 同上</td><td>完全予約枠あり</td></tr>
-              <tr><th scope="row">産婦人科</th><td>◎ 四宮春樹 / 菊田真理恵</td><td>◎ 同上</td><td></td></tr>
-              <tr><th scope="row">新生児発達外来</th><td>—</td><td>予 佐々木彩乃</td><td>再開・完全予約制。土曜午後から金曜午後へ変更</td></tr>
-              <tr><th scope="row">精神・心療</th><td>◎ 竹田康 / 石神のぞみ / 天宮こころ / 北里りさ / 夢咲ネム / 周央サンゴ / 雪村双葉</td><td>◎ 同上</td><td>フォローアップ・リエゾン含む</td></tr>
-              <tr><th scope="row">皮膚科</th><td>出 出張医1名</td><td>出 同上</td><td>金曜出張医対応</td></tr>
-              <tr><th scope="row">眼科</th><td>出 出張医1名</td><td>出 同上</td><td>金曜出張医対応</td></tr>
-              <tr><th scope="row">耳鼻咽喉科</th><td>出 出張医1名</td><td>出 同上</td><td>金曜出張医対応</td></tr>
-              <tr><th scope="row">泌尿器科</th><td>◎ 北里りさ</td><td>◎ 北里りさ</td><td></td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <section id="honin-saturday" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>本院 土曜日</h2>
-          <p><a href="#rules">共通ルールへ戻る</a></p>
-        </div>
-        <div class="table-wrap">
-          <table class="schedule-table">
-            <thead>
-              <tr><th scope="col">診療科</th><th scope="col">午前</th><th scope="col">午後</th><th scope="col">備考</th></tr>
-            </thead>
-            <tbody>
-              <tr><th scope="row">心療内科・精神科</th><td>◎ 浜川百合子 / 風間トオル / 竹田康 / 天宮こころ / 夢咲ネム / 周央サンゴ / 雪村双葉</td><td>◎ 同上</td><td>フォローアップ・リエゾン含む</td></tr>
-              <tr><th scope="row">内科</th><td>◎ 白砂まどか / 高木裕樹 / 高本めぐみ / 五島健助</td><td>◎ 同上</td><td></td></tr>
-              <tr><th scope="row">外科</th><td>◎ 栞葉るり / 猪股隆 / 不破拓海</td><td>◎ 同上</td><td></td></tr>
-              <tr><th scope="row">小児科一般</th><td>◎ 星川輝 / 黒井しば</td><td>◎ 同上</td><td></td></tr>
-              <tr><th scope="row">小児専門</th><td>◎ 紡木こかげ / 蝸堂みかる / 小々波いるか / 石神のぞみ / 五十嵐菜々</td><td>◎ 同上</td><td></td></tr>
               <tr>
-                <th scope="row">産婦人科</th>
-                <td>◎ 第1・2週：角巻わため / 赤羽祐司（交代で担当）</td>
-                <td>第3・4週：雲母たまこ / 予 佐々木彩乃（応援：菊田真理恵）</td>
-                <td>週替わり。佐々木医師の通常診療は完全予約制。緊急時は状態を確認して診察対応</td>
+                <th scope="col">外来</th>
+                <th scope="col">診療日</th>
+                <th scope="col">時間帯</th>
+                <th scope="col">担当医</th>
+                <th scope="col">予約区分</th>
               </tr>
-              <tr><th scope="row">総合診療</th><td>◎ 星川郁男 / 藤原のりこ / 七瀬すず菜</td><td>◎ 同上</td><td></td></tr>
-              <tr><th scope="row">皮膚科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
-              <tr><th scope="row">眼科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
-              <tr><th scope="row">耳鼻咽喉科</th><td>休</td><td>休</td><td>水曜・金曜のみ出張医1名体制</td></tr>
-              <tr><th scope="row">泌尿器科</th><td>◎ 北里りさ / 小森明二</td><td>◎ 同上</td><td></td></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">血管外科・血液内科・心臓外科</th>
+                <td>毎月第2・第4木曜日</td>
+                <td>午後</td>
+                <td>白砂まどか</td>
+                <td>完全予約制</td>
+              </tr>
+              <tr>
+                <th scope="row">ラベンダー外来</th>
+                <td>毎週火曜日</td>
+                <td>午後</td>
+                <td>白砂まどか</td>
+                <td>完全予約制</td>
+              </tr>
             </tbody>
           </table>
         </div>
-        <p>
-          新生児発達外来は火曜日・金曜日の午後に実施します。
-          土曜日には実施しません。
+
+        <p class="note">
+          木曜専門外来は「第2・第4木曜日」の固定です。
+          診療日変更は月間予定表で案内します。
         </p>
-      </div>
-    </section>
 
-    <section id="honin-sunday" class="section alt">
-      <div class="container">
-        <div class="section-head">
-          <h2>本院 日曜日</h2>
-          <p><a href="#rules">共通ルールへ戻る</a></p>
-        </div>
-        <div class="table-wrap">
-          <table class="schedule-table">
-            <thead>
-              <tr><th scope="col">診療科</th><th scope="col">午前</th><th scope="col">午後</th><th scope="col">備考</th></tr>
-            </thead>
-            <tbody>
-              <tr><th scope="row">総合診療・内科兼務</th><td>△ 松前春香</td><td>△ 松前春香</td><td>終日1名体制</td></tr>
-              <tr><th scope="row">総合診療サポート</th><td>藤原のりこ</td><td>藤原のりこ</td><td>支援配置</td></tr>
-              <tr><th scope="row">小児科一般</th><td>△ 小々波いるか</td><td>△ 蝶屋はなび</td><td>交代制</td></tr>
-              <tr><th scope="row">精神科・児童精神科</th><td>予 雪村双葉 / 空澄セナ（オンコール）</td><td>予 雪村双葉 / 空澄セナ（オンコール）</td><td>完全予約・フォローアップ・リエゾン含む</td></tr>
-              <tr>
-                <th scope="row">産婦人科</th>
-                <td>△ 第1・2週：角巻わため または 赤羽祐司</td>
-                <td>第3・4週：雲母たまこ / 予 佐々木彩乃</td>
-                <td>週替わり。佐々木医師の通常診療は完全予約制</td>
-              </tr>
-              <tr><th scope="row">救急科</th><td>救 24時間交代制</td><td>救 24時間交代制</td><td>常時対応</td></tr>
-            </tbody>
-          </table>
-        </div>
+        <p class="back-link"><a href="#page-menu">メニューへ戻る</a></p>
       </div>
     </section>
 
     <section id="newborn-development" class="section">
       <div class="container">
-        <div class="section-head">
-          <h2>新生児発達外来</h2>
-          <p><a href="#top">ページ上部へ戻る</a></p>
+        <h2>小児科・新生児発達外来</h2>
+
+        <p>
+          <strong>
+            新生児発達外来は小児科所属です。
+            産婦人科とは別の外来です。
+          </strong>
+        </p>
+
+        <div class="table-wrap" tabindex="0" role="region"
+             aria-label="小児科・新生児発達外来予定表">
+          <table class="wide-table">
+            <thead>
+              <tr>
+                <th scope="col">診療日</th>
+                <th scope="col">時間帯</th>
+                <th scope="col">担当医</th>
+                <th scope="col">予約区分</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">毎週火曜日</th>
+                <td>午後</td>
+                <td>佐々木彩乃</td>
+                <td>完全予約制</td>
+              </tr>
+              <tr>
+                <th scope="row">毎週金曜日</th>
+                <td>午後</td>
+                <td>佐々木彩乃</td>
+                <td>完全予約制</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
-        <article class="card">
+        <p class="note">
+          土曜日の新生児発達外来は実施しません。
+        </p>
+
+        <p class="back-link"><a href="#page-menu">メニューへ戻る</a></p>
+      </div>
+    </section>
+
+    <section id="obstetrics-guide" class="section alt">
+      <div class="container">
+        <h2>産婦人科の土曜・日曜担当</h2>
+
+        <div class="table-wrap" tabindex="0" role="region"
+             aria-label="産婦人科の土曜・日曜担当表">
+          <table class="wide-table">
+            <thead>
+              <tr>
+                <th scope="col">診療日</th>
+                <th scope="col">午前・午後の担当</th>
+                <th scope="col">予約条件</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">第1・第2土曜日</th>
+                <td>赤羽祐司／雲母たまこ〈補助〉</td>
+                <td>通常外来は予約なし可</td>
+              </tr>
+              <tr>
+                <th scope="row">第3・第4土曜日</th>
+                <td>赤羽祐司／佐々木彩乃</td>
+                <td>赤羽祐司：予約なし可。佐々木彩乃：完全予約制</td>
+              </tr>
+              <tr>
+                <th scope="row">第5土曜日</th>
+                <td>佐々木彩乃／雲母たまこ〈補助〉</td>
+                <td>完全予約制</td>
+              </tr>
+              <tr>
+                <th scope="row">第1・第2日曜日</th>
+                <td>赤羽祐司</td>
+                <td>予約制</td>
+              </tr>
+              <tr>
+                <th scope="row">第3・第4日曜日</th>
+                <td>佐々木彩乃</td>
+                <td>完全予約制</td>
+              </tr>
+              <tr>
+                <th scope="row">第5日曜日</th>
+                <td>佐々木彩乃／雲母たまこ〈補助〉</td>
+                <td>完全予約制</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <ul class="plain-list">
+          <li>
+            佐々木彩乃医師の産婦人科は、
+            毎週水曜日と第3・第4・第5土曜・日曜日です。
+          </li>
+          <li>
+            佐々木彩乃医師の通常診療はすべて完全予約制です。
+          </li>
+          <li>
+            火曜・金曜午後の佐々木彩乃医師は、
+            小児科・新生児発達外来を担当します。
+          </li>
+          <li>
+            雲母たまこ医師は、指導体制の下で研修・補助診療を行います。
+          </li>
+        </ul>
+
+        <p class="back-link"><a href="#page-menu">メニューへ戻る</a></p>
+      </div>
+    </section>
+
+    <section id="counseling" class="section">
+      <div class="container">
+        <h2>カウンセリング・こころの相談</h2>
+
+        <div class="notice">
           <p>
-            佐々木彩乃医師の着任に伴い、
-            新生児発達外来を再開します。
+            <strong>予約を基本として実施します。</strong>
           </p>
+          <p>
+            緊急性が高い場合は受付へお申し出ください。
+            空いているカウンセラーで対応を調整します。
+          </p>
+        </div>
 
-          <div class="table-wrap">
-            <table class="info-table">
-              <thead>
-                <tr><th scope="col">項目</th><th scope="col">内容</th></tr>
-              </thead>
-              <tbody>
-                <tr><th scope="row">診療日</th><td>毎週火曜日・金曜日</td></tr>
-                <tr><th scope="row">時間帯</th><td>午後</td></tr>
-                <tr><th scope="row">担当医師</th><td>佐々木彩乃（産婦人科主任係長）</td></tr>
-                <tr><th scope="row">予約</th><td>完全予約制。事前に受付へご相談ください</td></tr>
-                <tr><th scope="row">土曜日について</th><td>産婦人科の緊急時の診察に対応するため、新生児発達外来は行いません</td></tr>
-              </tbody>
-            </table>
-          </div>
+        <h3>曜日別の予約枠</h3>
 
-          <p><a href="reservation.html">予約案内はこちら</a></p>
-        </article>
+        <div class="table-wrap" tabindex="0" role="region"
+             aria-label="カウンセリングの曜日別予約枠">
+          <table class="wide-table">
+            <thead>
+              <tr>
+                <th scope="col">曜日</th>
+                <th scope="col">担当者</th>
+                <th scope="col">時間帯</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">月曜日</th>
+                <td>大音ましろ／アンジュ・カトリーナ／大久保希美</td>
+                <td>午前・午後</td>
+              </tr>
+              <tr>
+                <th scope="row">火曜日</th>
+                <td>大音ましろ／葉加瀬冬雪／中村里子</td>
+                <td>午前・午後</td>
+              </tr>
+              <tr>
+                <th scope="row">水曜日</th>
+                <td>大音ましろ／アンジュ・カトリーナ／大久保希美</td>
+                <td>午前・午後</td>
+              </tr>
+              <tr>
+                <th scope="row">木曜日</th>
+                <td>大音ましろ／葉加瀬冬雪／中村里子</td>
+                <td>午前・午後</td>
+              </tr>
+              <tr>
+                <th scope="row">金曜日</th>
+                <td>大音ましろ／アンジュ・カトリーナ／大久保希美</td>
+                <td>午前・午後</td>
+              </tr>
+              <tr>
+                <th scope="row">土曜日</th>
+                <td>葉加瀬冬雪</td>
+                <td>午前・午後</td>
+              </tr>
+              <tr>
+                <th scope="row">日曜日</th>
+                <td>定期予約枠なし</td>
+                <td>―</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="note">
+          曜日別配置は、学校訪問・勤務日・相談室の使用状況により調整します。
+          予約時に担当者と日時をご確認ください。
+          医師の診察とカウンセリングは別の予約枠です。
+        </p>
+
+        <h3>主な担当</h3>
+
+        <ul class="plain-list">
+          <li>大音ましろ：児童精神科・精神科カウンセリング</li>
+          <li>葉加瀬冬雪：心理相談・学校連携</li>
+          <li>アンジュ・カトリーナ：児童精神科の心理支援</li>
+          <li>大久保希美：精神科の心理支援</li>
+          <li>中村里子：こころの相談窓口「ふらの・ハートポート」</li>
+        </ul>
+
+        <p class="back-link"><a href="#page-menu">メニューへ戻る</a></p>
+      </div>
+    </section>
+
+    <section id="reservation-specialty" class="section alt">
+      <div class="container">
+        <h2>緩和ケア・遺伝カウンセリング・喫煙外来</h2>
+
+        <p>
+          <strong>
+            予約に合わせて診療日時と担当医を調整します。
+            予約者がいない場合は休診です。
+          </strong>
+        </p>
+
+        <div class="table-wrap" tabindex="0" role="region"
+             aria-label="予約専門外来の担当医">
+          <table class="wide-table">
+            <thead>
+              <tr>
+                <th scope="col">外来</th>
+                <th scope="col">担当医</th>
+                <th scope="col">診療の扱い</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">緩和ケア</th>
+                <td>長野信二／星野彩乃／原守</td>
+                <td>予約時に日時を調整。予約がない場合は休診</td>
+              </tr>
+              <tr>
+                <th scope="row">遺伝カウンセリング</th>
+                <td>田沼譲／星野彩乃／原守</td>
+                <td>予約時に日時を調整。予約がない場合は休診</td>
+              </tr>
+              <tr>
+                <th scope="row">喫煙外来</th>
+                <td>鏑木ろこ／大泉洋／田沼譲</td>
+                <td>予約時に日時を調整。予約がない場合は休診</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="note">
+          他の外来と担当時間が重ならないよう調整します。
+          来院前に予約日時をご確認ください。
+        </p>
+
+        <p class="back-link"><a href="#page-menu">メニューへ戻る</a></p>
       </div>
     </section>
 
     <section id="night-emergency" class="section">
       <div class="container">
-        <div class="section-head">
-          <h2>本院 夜間・救急</h2>
-          <p><a href="#top">ページ上部へ戻る</a></p>
-        </div>
-        <div class="table-wrap">
-          <table class="info-table">
+        <h2>本院の夜間診療・当直・救急</h2>
+
+        <div class="table-wrap" tabindex="0" role="region"
+             aria-label="本院の夜間診療・当直・救急体制">
+          <table class="wide-table">
             <thead>
-              <tr><th scope="col">区分</th><th scope="col">時間</th><th scope="col">担当</th></tr>
+              <tr>
+                <th scope="col">区分</th>
+                <th scope="col">時間・運用</th>
+                <th scope="col">担当</th>
+              </tr>
             </thead>
             <tbody>
-              <tr><th scope="row">夜間診療</th><td>17:40〜翌08:20</td><td>救急科＋各科当番医</td></tr>
-              <tr><th scope="row">救急科主任ライン</th><td>24時間</td><td>藍沢耕作 / 進藤一生 / 五条蓮 / 一橋太郎 / 星川サラ / 神崎徹</td></tr>
-              <tr><th scope="row">小児救急支援</th><td>必要時</td><td>前澤優作</td></tr>
-              <tr><th scope="row">山岳・特殊救助支援</th><td>必要時</td><td>茨城美紅</td></tr>
+              <tr>
+                <th scope="row">夜間診療枠</th>
+                <td>17:40〜21:00</td>
+                <td>早坂昇／高木裕樹／白石恵／緋山美帆子から交代配置</td>
+              </tr>
+              <tr>
+                <th scope="row">内科・総合診療科当直</th>
+                <td>当直勤務表による</td>
+                <td>早坂昇／高木裕樹／白石恵／緋山美帆子から交代配置</td>
+              </tr>
+              <tr>
+                <th scope="row">夜間救急</th>
+                <td>17:40〜翌08:20</td>
+                <td>救急科を中心に対応</td>
+              </tr>
             </tbody>
           </table>
         </div>
+
+        <p class="note">
+          上記4医師は通常外来には配置しません。
+          個人別・曜日別の夜間当番は、この予定表では指定しません。
+          夜間診療と当直の担当者は、必ずしも同じではありません。
+        </p>
+
+        <h3>救急科・支援担当</h3>
+
+        <ul class="plain-list">
+          <li>
+            救急科：
+            藍沢耕作／進藤一生／五条蓮／一橋太郎／
+            星川サラ／神崎徹／福山鉄人
+          </li>
+          <li>小児救急支援：前澤優作</li>
+          <li>山岳・特殊救助支援：茨城美紅</li>
+        </ul>
+
+        <p class="note">
+          実際の勤務者は当番表によります。
+          記載された全員が常時勤務するものではありません。
+        </p>
+
+        <p class="back-link"><a href="#page-menu">メニューへ戻る</a></p>
       </div>
     </section>
 
     <section id="tomica-weekday" class="section alt">
       <div class="container">
-        <div class="section-head">
-          <h2>トミカ分院 平日（月〜金）</h2>
-          <p><a href="#top">ページ上部へ戻る</a></p>
-        </div>
-        <div class="table-wrap">
-          <table class="schedule-table">
+        <h2>トミカ分院 平日〈月曜日〜金曜日〉</h2>
+
+        <p>施設名：トミカにじいろクリニック</p>
+
+        <p>
+          月〜木午後は緊急の場合を除き完全予約制です。
+          金曜日の通常外来は、午前・午後とも予約なしで受診できます。
+        </p>
+
+        <div class="table-wrap" tabindex="0" role="region"
+             aria-label="トミカ分院の平日診察予定表">
+          <table class="wide-table">
             <thead>
-              <tr><th scope="col">診療科</th><th scope="col">日勤 08:30〜17:30</th><th scope="col">夜間 18:00〜21:30</th><th scope="col">備考</th></tr>
+              <tr>
+                <th scope="col">診療科</th>
+                <th scope="col">午前</th>
+                <th scope="col">午後</th>
+              </tr>
             </thead>
             <tbody>
-              <tr><th scope="row">内科・整形外科</th><td>◎ 加地秀樹</td><td>—</td><td>分院長・専門医</td></tr>
-              <tr><th scope="row">循環器内科・消化器内科</th><td>◎ 奥野宗一郎</td><td>—</td><td>専門外来兼務</td></tr>
-              <tr><th scope="row">産婦人科</th><td>◎ 木村彩乃 / 田崎恵</td><td>—</td><td>平日運用</td></tr>
-              <tr><th scope="row">小児科</th><td>◎ 家長むぎ</td><td>—</td><td>分院兼務ライン</td></tr>
-              <tr><th scope="row">精神科・児童精神科</th><td>◎ 山崎育三 / 家長むぎ</td><td>—</td><td>終日</td></tr>
-              <tr><th scope="row">夜間診療当番</th><td>—</td><td>夜 家長むぎ または 江田雄二</td><td>交代制</td></tr>
-              <tr><th scope="row">救急対応</th><td>日勤対応可能医師</td><td>夜 花芽すみれ＋非常勤当直1名</td><td>24時間補完体制</td></tr>
+              <tr>
+                <th scope="row">内科・整形外科</th>
+                <td>◎ 加地秀樹</td>
+                <td>加地秀樹〈月〜木：完予／金：◎〉</td>
+              </tr>
+              <tr>
+                <th scope="row">循環器内科・消化器内科</th>
+                <td>◎ 奥野宗一郎</td>
+                <td>奥野宗一郎〈月〜木：完予／金：◎〉</td>
+              </tr>
+              <tr>
+                <th scope="row">産婦人科</th>
+                <td>◎ 木村彩乃／田崎恵</td>
+                <td>木村彩乃／田崎恵〈月〜木：完予／金：◎〉</td>
+              </tr>
+              <tr>
+                <th scope="row">小児科</th>
+                <td>◎ 朝日南アカネ</td>
+                <td>朝日南アカネ〈月〜木：完予／金：◎〉</td>
+              </tr>
+              <tr>
+                <th scope="row">精神科</th>
+                <td>◎ 山崎育三</td>
+                <td>山崎育三〈月〜木：完予／金：◎〉</td>
+              </tr>
+              <tr>
+                <th scope="row">児童精神科</th>
+                <td>◎ 家長むぎ</td>
+                <td>家長むぎ〈月〜木：完予／金：◎〉</td>
+              </tr>
             </tbody>
           </table>
         </div>
+
+        <p class="back-link"><a href="#page-menu">メニューへ戻る</a></p>
       </div>
     </section>
 
     <section id="tomica-saturday" class="section">
       <div class="container">
-        <div class="section-head">
-          <h2>トミカ分院 土曜日</h2>
-          <p><a href="#top">ページ上部へ戻る</a></p>
+        <h2>トミカ分院 土曜日</h2>
+
+        <div class="notice">
+          <p>
+            <strong>
+              土曜日の小児科一般・小児専門外来は午前で終了します。
+              午後は休診です。
+            </strong>
+          </p>
         </div>
-        <div class="table-wrap">
-          <table class="schedule-table">
+
+        <h3>土曜日の診療担当</h3>
+
+        <div class="table-wrap" tabindex="0" role="region"
+             aria-label="トミカ分院の土曜診察予定表">
+          <table class="wide-table">
             <thead>
-              <tr><th scope="col">時間帯</th><th scope="col">診療科</th><th scope="col">担当</th><th scope="col">備考</th></tr>
+              <tr>
+                <th scope="col">時間</th>
+                <th scope="col">診療科・外来</th>
+                <th scope="col">担当</th>
+                <th scope="col">予約条件</th>
+              </tr>
             </thead>
             <tbody>
-              <tr><th scope="row">08:30〜12:00</th><td>呼吸器内科・内科全般</td><td>夜乃くろむ</td><td>午前一般外来</td></tr>
-              <tr><th scope="row">08:30〜12:00</th><td>小児専門・思春期</td><td>千凛あゆむ</td><td>午前一般外来</td></tr>
-              <tr><th scope="row">08:30〜12:00</th><td>思春期・小児神経補助</td><td>角巻わため</td><td>午前のみ</td></tr>
-              <tr><th scope="row">13:00〜15:30</th><td>一般内科・整形</td><td>加地秀樹</td><td>完全予約</td></tr>
-              <tr><th scope="row">13:00〜15:30</th><td>精神科・児童精神科・小児科</td><td>家長むぎ</td><td>完全予約</td></tr>
-              <tr><th scope="row">13:00〜15:30</th><td>小児科・内科補助</td><td>紡木こかげ / 家長むぎ（交代制）</td><td>完全予約</td></tr>
-              <tr><th scope="row">15:30以降</th><td>閉鎖準備</td><td>—</td><td>17:00完全閉鎖</td></tr>
+              <tr>
+                <th scope="row">08:30〜12:00</th>
+                <td>呼吸器内科・内科全般</td>
+                <td>夜乃くろむ</td>
+                <td>予約なし可</td>
+              </tr>
+              <tr>
+                <th scope="row">08:30〜12:00</th>
+                <td>小児科一般</td>
+                <td>朝日南アカネ</td>
+                <td>予約なし可</td>
+              </tr>
+              <tr>
+                <th scope="row">08:30〜12:00</th>
+                <td>小児専門・思春期</td>
+                <td>千凛あゆむ</td>
+                <td>予約制</td>
+              </tr>
+              <tr>
+                <th scope="row">08:30〜12:00</th>
+                <td>小児神経・思春期補助</td>
+                <td>角巻わため</td>
+                <td>専門外来の予約に合わせて配置</td>
+              </tr>
+              <tr>
+                <th scope="row">13:00〜15:30</th>
+                <td>一般内科・整形外科</td>
+                <td>加地秀樹</td>
+                <td>予約なし可</td>
+              </tr>
+              <tr>
+                <th scope="row">13:00〜15:30</th>
+                <td>児童精神科</td>
+                <td>家長むぎ</td>
+                <td>予約なし可</td>
+              </tr>
+              <tr>
+                <th scope="row">午後</th>
+                <td>小児科一般・小児専門</td>
+                <td>休診</td>
+                <td>―</td>
+              </tr>
             </tbody>
           </table>
         </div>
+
+        <p class="note">
+          15:30に通常外来を終了し、その後は閉鎖準備に入ります。
+        </p>
+
+        <p class="back-link"><a href="#page-menu">メニューへ戻る</a></p>
       </div>
     </section>
 
     <section id="tomica-sunday" class="section alt">
       <div class="container">
-        <div class="section-head">
-          <h2>トミカ分院 日曜日</h2>
-          <p><a href="#top">ページ上部へ戻る</a></p>
-        </div>
-        <div class="table-wrap">
-          <table class="schedule-table">
+        <h2>トミカ分院 日曜日</h2>
+
+        <div class="table-wrap" tabindex="0" role="region"
+             aria-label="トミカ分院の日曜診察予定表">
+          <table class="wide-table">
             <thead>
-              <tr><th scope="col">時間帯</th><th scope="col">診療科</th><th scope="col">担当</th><th scope="col">備考</th></tr>
+              <tr>
+                <th scope="col">時間</th>
+                <th scope="col">診療科・外来</th>
+                <th scope="col">担当</th>
+                <th scope="col">予約条件</th>
+              </tr>
             </thead>
             <tbody>
-              <tr><th scope="row">08:30〜12:00</th><td>一般内科</td><td>早坂昇</td><td>午前診療のみ</td></tr>
-              <tr><th scope="row">08:30〜12:00</th><td>小児専門・思春期</td><td>紡木こかげ</td><td>午前診療のみ</td></tr>
-              <tr><th scope="row">12:00以降</th><td>休診</td><td>—</td><td>全館ロックダウン</td></tr>
+              <tr>
+                <th scope="row">08:30〜12:00</th>
+                <td>一般内科</td>
+                <td>長野信二</td>
+                <td>予約なし可</td>
+              </tr>
+              <tr>
+                <th scope="row">08:30〜12:00</th>
+                <td>小児専門・思春期</td>
+                <td>紡木こかげ</td>
+                <td>予約制</td>
+              </tr>
+              <tr>
+                <th scope="row">12:00以降</th>
+                <td>通常外来休診</td>
+                <td>―</td>
+                <td>―</td>
+              </tr>
             </tbody>
           </table>
         </div>
+
+        <p class="back-link"><a href="#page-menu">メニューへ戻る</a></p>
       </div>
     </section>
+
+    <section id="tomica-night" class="section">
+      <div class="container">
+        <h2>トミカ分院の夜間診療・救急</h2>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">区分</th>
+                <th scope="col">担当</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">中心担当</th>
+                <td>花芽すみれ</td>
+              </tr>
+              <tr>
+                <th scope="row">交代・支援担当</th>
+                <td>加地秀樹／奥野宗一郎／江田雄二</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          夜間診療・救急は花芽すみれ医師を中心に、
+          交代体制で対応します。
+        </p>
+
+        <p class="note">
+          実際の勤務者は当番表によります。
+          花芽すみれ医師が毎晩すべての時間帯を
+          単独で担当するものではありません。
+          家長むぎ医師は日中の児童精神科を優先します。
+        </p>
+
+        <p class="back-link"><a href="#page-menu">メニューへ戻る</a></p>
+      </div>
+    </section>
+
+    <section id="changes" class="section alt">
+      <div class="container">
+        <h2>休診・代診・予約のご案内</h2>
+
+        <ul class="plain-list">
+          <li>
+            学会・休暇・緊急対応等により、
+            担当医を変更する場合があります。
+          </li>
+          <li>
+            定期的な出張医対応は、
+            皮膚科・眼科・耳鼻咽喉科の3科です。
+          </li>
+          <li>
+            他科で担当医が不在の場合は、
+            必要に応じて院内代診または外部代診を調整します。
+          </li>
+          <li>
+            代診医が未確定の場合は、
+            休診または予約変更について案内します。
+          </li>
+          <li>
+            交代制の担当日・受付終了時刻・予約方法は、
+            各外来の案内をご確認ください。
+          </li>
+        </ul>
+
+        <a class="button" href="reservation.html">予約方法を確認する</a>
+        <a class="button" href="departments.html">診察室を確認する</a>
+
+        <p class="back-link"><a href="#top">ページ上部へ戻る</a></p>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <div class="card-grid cols-2">
-        <section class="card">
-          <h2>主なご案内</h2>
-          <ul class="plain-list">
-            <li><a href="departments.html">診療科紹介</a></li>
-            <li><a href="gairai.html">外来診察予定表</a></li>
-            <li><a href="doctors.html">医師紹介</a></li>
-            <li><a href="reservation.html">予約案内</a></li>
-          </ul>
-        </section>
-
-        <section class="card">
-          <h2>補足</h2>
-          <ul class="plain-list">
-            <li>月〜木午後の内科は、担当医が急きょ変更となる場合があります。</li>
-            <li>皮膚科・眼科・耳鼻咽喉科は水曜・金曜の出張医対応です。</li>
-            <li>緩和ケア・遺伝カウンセリング科は完全予約制です。</li>
-            <li>佐々木彩乃医師の通常診療は完全予約制です。</li>
-            <li>新生児発達外来は火曜・金曜午後です。土曜は実施しません。</li>
-            <li>水野遥医師は市立旭川病院へ出向中です。</li>
-          </ul>
-        </section>
-      </div>
-
-      <hr class="soft">
+      <p>富良野希望未来病院グループ</p>
       <p>
-        <small>
-          このサイトは架空の病院を扱う創作サイトです。
-          掲載されている診療予定・人事・所属は創作上の設定であり、
-          実在する人物・医療機関の正式な情報ではありません。
-        </small>
+        本ページは創作設定に基づくサイトです。
+        実在する人物・医療機関の所属、資格、診療体制を示すものではありません。
       </p>
-      <p>© 2026 富良野希望未来病院グループ / Furano Hope Future Hospital Group</p>
     </div>
   </footer>
+
+  <script>
+    "use strict";
+
+    /*
+     * 本院の曜日別予定表
+     *
+     * 1行の並び：
+     * [診療科, 午前, 午後, 備考]
+     *
+     * 担当者別の交代日は未指定のため、自動で割り当てません。
+     * 第2・第4木曜に固定する専門外来は、別の専門外来欄に掲載しています。
+     */
+
+    const weeklySchedules = [
+      {
+        id: "honin-monday",
+        title: "本院 月曜日",
+        rows: [
+          [
+            "内科",
+            "◎ 松前春香／高本めぐみ／樋口楓",
+            "完予・△ 鏑木ろこ または 神楽坂倫太郎",
+            "午後は交代制・主担当医1名。担当日は月間予定表で案内"
+          ],
+          [
+            "総合診療科",
+            "◎ 渡邊トドック／星川郁男",
+            "完予 渡邊トドック",
+            ""
+          ],
+          [
+            "一般外科",
+            "◎ 猪股隆／進藤一生",
+            "完予 猪股隆",
+            ""
+          ],
+          [
+            "整形外科",
+            "◎ 辻元朝子",
+            "完予 辻元朝子",
+            ""
+          ],
+          [
+            "脳神経内科・脳神経外科",
+            "◎ 澤田咲",
+            "完予 澤田咲",
+            ""
+          ],
+          [
+            "心療内科",
+            "◎ 浜川百合子",
+            "完予 浜川百合子",
+            ""
+          ],
+          [
+            "小児科一般",
+            "◎ 星川輝／黒井しば",
+            "完予・△ 蝸堂みかる",
+            "午後は主担当医1名"
+          ],
+          [
+            "小児専門・思春期",
+            "予 先斗寧／不破拓海",
+            "完予 先斗寧／五十嵐菜々／千凛あゆむ",
+            "予約専門外来"
+          ],
+          [
+            "産婦人科",
+            "◎ 四宮春樹／菊田真理恵",
+            "完予 四宮春樹／菊田真理恵",
+            ""
+          ],
+          [
+            "精神科・児童精神科",
+            "◎ 夢咲ネム／周央サンゴ",
+            "完予 夢咲ネム／周央サンゴ",
+            "フォローアップ・リエゾンを含む"
+          ],
+          [
+            "泌尿器科",
+            "予 小森明二",
+            "完予 小森明二",
+            ""
+          ]
+        ]
+      },
+      {
+        id: "honin-tuesday",
+        title: "本院 火曜日",
+        rows: [
+          [
+            "内科",
+            "◎ 松前春香／高本めぐみ／樋口楓",
+            "完予・△ 松前春香",
+            "午後は主担当医1名"
+          ],
+          [
+            "総合診療科",
+            "◎ 五島健助／山田義治",
+            "完予 山田義治",
+            ""
+          ],
+          [
+            "一般外科",
+            "◎ 栞葉るり",
+            "完予 栞葉るり",
+            ""
+          ],
+          [
+            "整形外科",
+            "◎ 辻元朝子",
+            "完予 辻元朝子",
+            ""
+          ],
+          [
+            "脳神経内科・脳神経外科",
+            "◎ 澤田咲",
+            "完予 澤田咲",
+            ""
+          ],
+          [
+            "心療内科",
+            "◎ 風間トオル",
+            "完予 風間トオル",
+            ""
+          ],
+          [
+            "小児科一般",
+            "◎ 星川輝／黒井しば",
+            "完予・△ 黒井しば",
+            "午後は主担当医1名"
+          ],
+          [
+            "小児専門・思春期",
+            "予 雲母たまこ／不破拓海",
+            "完予 蝶屋はなび／角巻わため",
+            "研修医は指導体制の下で診療"
+          ],
+          [
+            "小児科・新生児発達外来",
+            "―",
+            "完予 佐々木彩乃",
+            "小児科所属"
+          ],
+          [
+            "産婦人科",
+            "◎ 四宮春樹／菊田真理恵",
+            "完予 四宮春樹／菊田真理恵",
+            ""
+          ],
+          [
+            "精神科・児童精神科",
+            "◎ 雪村双葉／天宮こころ／笠木緑",
+            "完予 雪村双葉／天宮こころ／笠木緑",
+            "フォローアップ・リエゾンを含む"
+          ],
+          [
+            "泌尿器科",
+            "◎ 北里りさ／小森明二",
+            "完予 北里りさ／小森明二",
+            ""
+          ],
+          [
+            "ラベンダー外来",
+            "―",
+            "完予 白砂まどか",
+            "毎週火曜日午後"
+          ]
+        ]
+      },
+      {
+        id: "honin-wednesday",
+        title: "本院 水曜日",
+        rows: [
+          [
+            "内科",
+            "◎ 神楽坂倫太郎／松前春香／高本めぐみ",
+            "完予・△ 夜乃くろむ または 鏑木ろこ",
+            "午後は交代制・主担当医1名。担当日は月間予定表で案内"
+          ],
+          [
+            "総合診療科",
+            "◎ 藤原のりこ／渡邊トドック",
+            "完予 藤原のりこ",
+            ""
+          ],
+          [
+            "一般外科",
+            "◎ 猪股隆",
+            "完予 猪股隆",
+            ""
+          ],
+          [
+            "整形外科",
+            "◎ 辻元朝子",
+            "完予 辻元朝子",
+            ""
+          ],
+          [
+            "脳神経内科・脳神経外科",
+            "◎ 澤田咲",
+            "完予 澤田咲",
+            ""
+          ],
+          [
+            "心療内科",
+            "◎ 浜川百合子",
+            "完予 浜川百合子",
+            ""
+          ],
+          [
+            "小児科一般",
+            "◎ 黒井しば／蝸堂みかる",
+            "完予・△ 星川輝",
+            "午後は主担当医1名"
+          ],
+          [
+            "小児専門・思春期",
+            "予 紡木こかげ／角巻わため／周央サンゴ〈思春期〉",
+            "完予 紡木こかげ／先斗寧／石神のぞみ／周央サンゴ〈思春期〉",
+            "周央サンゴの思春期外来は水曜のみ"
+          ],
+          [
+            "産婦人科",
+            "◎ 四宮春樹／菊田真理恵 ＋ 完予 佐々木彩乃",
+            "完予 四宮春樹／菊田真理恵／佐々木彩乃",
+            "佐々木彩乃の通常診療は終日完全予約制"
+          ],
+          [
+            "精神科・児童精神科",
+            "◎ 夢咲ネム／竹田康",
+            "完予 夢咲ネム／竹田康",
+            "周央サンゴは思春期外来を担当"
+          ],
+          [
+            "泌尿器科",
+            "予 小森明二",
+            "完予 小森明二",
+            ""
+          ]
+        ]
+      },
+      {
+        id: "honin-thursday",
+        title: "本院 木曜日",
+        rows: [
+          [
+            "内科",
+            "◎ 高本めぐみ／樋口楓",
+            "完予・△ 松前春香 または 樋口楓",
+            "午後は交代制・主担当医1名。担当日は月間予定表で案内"
+          ],
+          [
+            "総合診療科",
+            "◎・△ 星川郁男",
+            "完予・△ 星川郁男",
+            "主担当医1名"
+          ],
+          [
+            "一般外科",
+            "◎ 栞葉るり",
+            "完予 栞葉るり",
+            ""
+          ],
+          [
+            "整形外科",
+            "◎ 辻元朝子",
+            "完予 辻元朝子",
+            ""
+          ],
+          [
+            "脳神経内科・脳神経外科",
+            "◎ 澤田咲",
+            "完予 澤田咲",
+            ""
+          ],
+          [
+            "心療内科",
+            "◎ 風間トオル",
+            "完予 風間トオル",
+            ""
+          ],
+          [
+            "小児科一般",
+            "◎ 星川輝／蝸堂みかる",
+            "完予・△ 蝸堂みかる",
+            "午後は主担当医1名"
+          ],
+          [
+            "小児専門・思春期",
+            "予 小々波いるか／田沼譲",
+            "完予 先斗寧／千凛あゆむ／石神のぞみ",
+            "予約専門外来"
+          ],
+          [
+            "産婦人科",
+            "◎ 四宮春樹／菊田真理恵",
+            "完予 四宮春樹／菊田真理恵",
+            ""
+          ],
+          [
+            "精神科・児童精神科",
+            "◎ 夢咲ネム／笠木緑／周央サンゴ",
+            "完予 夢咲ネム／笠木緑／周央サンゴ",
+            "フォローアップ・リエゾンを含む"
+          ],
+          [
+            "泌尿器科",
+            "◎ 北里りさ／小森明二",
+            "完予 北里りさ／小森明二",
+            ""
+          ],
+          [
+            "血管外科・血液内科・心臓外科",
+            "―",
+            "完予 白砂まどか〈第2・第4木曜日のみ〉",
+            "毎月第2・第4木曜日午後"
+          ]
+        ]
+      },
+      {
+        id: "honin-friday",
+        title: "本院 金曜日",
+        rows: [
+          [
+            "内科",
+            "◎ 神楽坂倫太郎／高本めぐみ／五島健助",
+            "◎ 神楽坂倫太郎／高本めぐみ／五島健助",
+            "午前・午後とも担当医3名"
+          ],
+          [
+            "総合診療科",
+            "◎ 渡邊トドック／山田義治",
+            "◎ 山田義治",
+            ""
+          ],
+          [
+            "一般外科",
+            "◎ 猪股隆／進藤一生",
+            "◎ 猪股隆",
+            ""
+          ],
+          [
+            "整形外科",
+            "◎ 辻元朝子",
+            "◎ 辻元朝子",
+            ""
+          ],
+          [
+            "脳神経内科・脳神経外科",
+            "◎ 澤田咲",
+            "◎ 澤田咲",
+            ""
+          ],
+          [
+            "心療内科",
+            "休",
+            "休",
+            ""
+          ],
+          [
+            "小児科一般",
+            "◎ 星川輝／黒井しば／角巻わため",
+            "◎ 星川輝／黒井しば／角巻わため",
+            "午前・午後とも担当医3名"
+          ],
+          [
+            "小児専門・思春期",
+            "予 紡木こかげ／先斗寧／不破拓海",
+            "予 紡木こかげ／先斗寧／不破拓海",
+            "金曜日も予約制"
+          ],
+          [
+            "小児科・新生児発達外来",
+            "―",
+            "完予 佐々木彩乃",
+            "金曜日も完全予約制"
+          ],
+          [
+            "産婦人科",
+            "◎ 赤羽祐司／菊田真理恵",
+            "◎ 赤羽祐司／菊田真理恵",
+            ""
+          ],
+          [
+            "精神科・児童精神科",
+            "◎ 竹田康／天宮こころ／笠木緑／雪村双葉",
+            "◎ 竹田康／天宮こころ／笠木緑／雪村双葉",
+            "フォローアップ・リエゾンを含む"
+          ],
+          [
+            "泌尿器科",
+            "◎ 北里りさ",
+            "◎ 北里りさ",
+            ""
+          ]
+        ]
+      },
+      {
+        id: "honin-saturday",
+        title: "本院 土曜日",
+        rows: [
+          [
+            "内科",
+            "◎ 白砂まどか／高本めぐみ／五島健助",
+            "◎ 白砂まどか／高本めぐみ／五島健助",
+            "午前・午後とも担当医3名"
+          ],
+          [
+            "総合診療科",
+            "◎ 星川郁男／藤原のりこ",
+            "◎ 星川郁男／藤原のりこ",
+            ""
+          ],
+          [
+            "一般外科",
+            "◎ 猪股隆／栞葉るり",
+            "◎ 猪股隆／栞葉るり",
+            ""
+          ],
+          [
+            "整形外科",
+            "休",
+            "休",
+            ""
+          ],
+          [
+            "脳神経内科・脳神経外科",
+            "休",
+            "休",
+            "土日の定期外来なし"
+          ],
+          [
+            "心療内科",
+            "◎ 浜川百合子／風間トオル",
+            "◎ 浜川百合子／風間トオル",
+            ""
+          ],
+          [
+            "小児科一般",
+            "◎ 星川輝／黒井しば ＋ 一ノ瀬うるは〈補助医〉",
+            "◎ 星川輝／黒井しば ＋ 一ノ瀬うるは〈補助医〉",
+            "担当医2名＋補助医1名"
+          ],
+          [
+            "小児専門・思春期",
+            "予 小々波いるか／五十嵐菜々",
+            "予 石神のぞみ／五十嵐菜々",
+            "土曜日も予約制"
+          ],
+          [
+            "産婦人科",
+            "週により担当変更。下の「産婦人科の土曜・日曜担当」を参照",
+            "週により担当変更。下の「産婦人科の土曜・日曜担当」を参照",
+            "佐々木彩乃は完全予約制"
+          ],
+          [
+            "精神科・児童精神科",
+            "◎ 夢咲ネム／周央サンゴ／天宮こころ",
+            "◎ 夢咲ネム／周央サンゴ／天宮こころ",
+            "フォローアップ・リエゾンを含む"
+          ],
+          [
+            "泌尿器科",
+            "◎ 北里りさ",
+            "◎ 北里りさ",
+            ""
+          ]
+        ]
+      },
+      {
+        id: "honin-sunday",
+        title: "本院 日曜日",
+        rows: [
+          [
+            "内科",
+            "◎・△ 松前春香",
+            "◎・△ 松前春香",
+            "総合診療科との共通1診"
+          ],
+          [
+            "総合診療科",
+            "内科との共通外来：松前春香",
+            "内科との共通外来：松前春香",
+            "内科と合わせて担当医1名・予約なし可"
+          ],
+          [
+            "一般外科",
+            "休",
+            "休",
+            ""
+          ],
+          [
+            "整形外科",
+            "休",
+            "休",
+            ""
+          ],
+          [
+            "脳神経内科・脳神経外科",
+            "休",
+            "休",
+            "土日の定期外来なし"
+          ],
+          [
+            "心療内科",
+            "休",
+            "休",
+            ""
+          ],
+          [
+            "小児科一般",
+            "◎・△ 小々波いるか",
+            "◎・△ 蝶屋はなび",
+            "予約なし可"
+          ],
+          [
+            "小児専門・思春期",
+            "休",
+            "休",
+            "本院の定期専門外来なし"
+          ],
+          [
+            "産婦人科",
+            "予 週により担当変更。下の週別担当表を参照",
+            "予 週により担当変更。下の週別担当表を参照",
+            "佐々木彩乃は完全予約制"
+          ],
+          [
+            "精神科・児童精神科",
+            "予 雪村双葉",
+            "予 雪村双葉",
+            "日曜日は予約制"
+          ],
+          [
+            "泌尿器科",
+            "休",
+            "休",
+            ""
+          ]
+        ]
+      }
+    ];
+
+    /*
+     * 皮膚科・眼科・耳鼻咽喉科：
+     * 火・水・金の週3日、各科それぞれ出張医1名。
+     */
+
+    function getVisitingRows(dayIndex) {
+      const isOpen = [1, 2, 4].includes(dayIndex);
+
+      return ["皮膚科", "眼科", "耳鼻咽喉科"].map((department) => {
+        if (!isOpen) {
+          return [
+            department,
+            "休",
+            "休",
+            "火・水・金のみ診療"
+          ];
+        }
+
+        return [
+          department,
+          "◎・出 出張医1名",
+          dayIndex === 4
+            ? "◎・出 出張医1名"
+            : "完予・出 出張医1名",
+          "各科それぞれ出張医1名。担当医名は月間予定表で案内"
+        ];
+      });
+    }
+
+    function makeCell(tagName, text) {
+      const cell = document.createElement(tagName);
+      cell.textContent = text || "―";
+
+      if (tagName === "th") {
+        cell.scope = "row";
+      }
+
+      return cell;
+    }
+
+    function renderWeeklySchedules() {
+      const target = document.getElementById("weekly-schedules");
+      const fragment = document.createDocumentFragment();
+
+      weeklySchedules.forEach((day, dayIndex) => {
+        const section = document.createElement("section");
+        section.id = day.id;
+        section.className = dayIndex % 2 === 0
+          ? "section"
+          : "section alt";
+
+        const container = document.createElement("div");
+        container.className = "container";
+
+        const heading = document.createElement("h2");
+        heading.id = `${day.id}-heading`;
+        heading.textContent = day.title;
+        section.setAttribute("aria-labelledby", heading.id);
+
+        const hint = document.createElement("p");
+        hint.className = "scroll-hint";
+        hint.textContent =
+          "表が画面に収まらない場合は横にスクロールできます。";
+
+        const wrap = document.createElement("div");
+        wrap.className = "table-wrap";
+        wrap.tabIndex = 0;
+        wrap.setAttribute("role", "region");
+        wrap.setAttribute("aria-label", `${day.title}の診察予定表`);
+
+        const table = document.createElement("table");
+        table.className = "schedule-table";
+
+        const thead = document.createElement("thead");
+        const headerRow = document.createElement("tr");
+
+        ["診療科", "午前", "午後", "備考"].forEach((label) => {
+          const th = document.createElement("th");
+          th.scope = "col";
+          th.textContent = label;
+          headerRow.appendChild(th);
+        });
+
+        thead.appendChild(headerRow);
+
+        const tbody = document.createElement("tbody");
+        const rows = [
+          ...day.rows,
+          ...getVisitingRows(dayIndex)
+        ];
+
+        rows.forEach((rowData) => {
+          const tr = document.createElement("tr");
+
+          rowData.forEach((value, columnIndex) => {
+            tr.appendChild(
+              makeCell(columnIndex === 0 ? "th" : "td", value)
+            );
+          });
+
+          tbody.appendChild(tr);
+        });
+
+        table.append(thead, tbody);
+        wrap.appendChild(table);
+
+        const note = document.createElement("p");
+        note.className = "note";
+        note.textContent = dayIndex < 4
+          ? "午後は緊急の場合を除き完全予約制です。カウンセリング・予約調整型の専門外来は、この下の専用案内をご確認ください。"
+          : "予約専門外来・完全予約制外来は、通常外来とは予約条件が異なります。各外来欄をご確認ください。";
+
+        const back = document.createElement("p");
+        back.className = "back-link";
+
+        const backLink = document.createElement("a");
+        backLink.href = "#page-menu";
+        backLink.textContent = "メニューへ戻る";
+        back.appendChild(backLink);
+
+        container.append(heading, hint, wrap, note, back);
+        section.appendChild(container);
+        fragment.appendChild(section);
+      });
+
+      target.replaceChildren(fragment);
+    }
+
+    renderWeeklySchedules();
+  </script>
+
 </body>
 </html>
