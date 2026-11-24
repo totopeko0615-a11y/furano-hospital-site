@@ -3,294 +3,123 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>医師・スタッフ紹介｜富良野希望未来病院グループ</title>
-<meta name="description" content="創作サイト・富良野希望未来病院グループの医師、スタッフ、経営陣、外部監査委員会をご紹介します。">
+<title>医師紹介コメント｜富良野希望未来病院グループ</title>
+<meta name="description" content="創作サイト・富良野希望未来病院グループの医師・スタッフ紹介コメント、経営陣、外部監査委員会を掲載しています。">
 <meta name="theme-color" content="#245c51">
 <style>
-:root{
-  --green:#245c51;
-  --dark:#173f37;
-  --light:#edf5f1;
-  --purple:#655080;
-  --ink:#263d36;
-  --muted:#52665d;
-  --line:#d6e2db;
-  --bg:#f7f9f6;
-}
+:root{--main:#245c51;--dark:#173f37;--light:#edf5f1;--purple:#655080;--purple-light:#f3eef8;--ink:#263d36;--muted:#52665d;--line:#d6e2db;--background:#f7f9f6}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:24px}
-body{
-  margin:0;
-  background:var(--bg);
-  color:var(--ink);
-  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
-  font-size:16px;
-  line-height:1.85;
-  overflow-wrap:anywhere;
-}
-a{color:var(--green);text-underline-offset:3px}
-a:hover{text-decoration-thickness:2px}
-a:focus-visible,summary:focus-visible{
-  outline:3px solid #a76413;
-  outline-offset:4px;
-}
-.wrap{width:min(1120px,calc(100% - 32px));margin-inline:auto}
-.skip{
-  position:absolute;
-  left:12px;
-  top:-100px;
-  padding:12px;
-  background:white;
-  z-index:10;
-}
+body{margin:0;color:var(--ink);background:var(--background);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;font-size:16px;line-height:1.85;overflow-wrap:anywhere}
+a{color:var(--main);text-underline-offset:3px}
+a:focus-visible{outline:3px solid #a76413;outline-offset:4px}
+.container{width:min(1120px,calc(100% - 32px));margin-inline:auto}
+.skip{position:absolute;top:-100px;left:12px;padding:12px;background:white;z-index:10}
 .skip:focus{top:12px}
-.fiction{
-  padding:10px 0;
-  color:white;
-  background:var(--dark);
-  font-size:.8rem;
-}
+.fiction{padding:8px 0;color:white;background:var(--dark);font-size:.8rem}
 .fiction p{margin:0}
-header{background:white;border-bottom:1px solid var(--line)}
-.header-inner{
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  justify-content:space-between;
-  gap:18px;
-  padding-block:20px;
-}
-.brand{color:var(--ink);text-decoration:none;font-weight:bold}
-.brand small{display:block;color:var(--muted);font-weight:normal}
-.global-nav{display:flex;flex-wrap:wrap;gap:5px}
-.global-nav a{
-  padding:8px 10px;
-  border-radius:8px;
-  color:var(--ink);
-  font-size:.88rem;
-  text-decoration:none;
-}
-.global-nav a:hover,.global-nav [aria-current="page"]{
-  background:var(--light);
-}
+.site-header{background:white;border-bottom:1px solid var(--line)}
+.header-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px;padding-block:20px}
+.brand{color:var(--ink);text-decoration:none}
+.brand strong{display:block;font-size:1.12rem}
+.brand span{display:block;color:var(--muted);font-size:.8rem}
+.global-nav{display:flex;flex-wrap:wrap;gap:6px}
+.global-nav a{display:block;padding:8px 10px;border-radius:8px;color:var(--ink);font-size:.88rem;text-decoration:none}
+.global-nav a:hover,.global-nav [aria-current="page"]{background:var(--light)}
 .global-nav [aria-current="page"]{font-weight:bold}
-.hero{
-  padding:30px 0 40px;
-  background:linear-gradient(125deg,#eef6ed,#edf5f2 65%,#f2edf8);
-}
-.breadcrumb{margin:0 0 20px;font-size:.86rem;color:var(--muted)}
-.eyebrow{color:var(--purple);font-size:.88rem;font-weight:bold}
-h1{
-  margin:0 0 16px;
-  font-size:clamp(1.8rem,4vw,2.7rem);
-  line-height:1.5;
-}
-h2{
-  margin:0 0 16px;
-  font-size:clamp(1.35rem,3vw,1.8rem);
-  line-height:1.5;
-}
-h3{margin:0 0 8px;font-size:1.18rem;line-height:1.6}
+.hero{padding:48px 0;background:radial-gradient(circle at 90% 15%,#e6ddf3,transparent 40%),linear-gradient(125deg,#eef6ed,#edf5f2)}
+.eyebrow{margin:0 0 12px;color:var(--purple);font-size:.88rem;font-weight:bold}
+.breadcrumb{margin-bottom:20px;color:var(--muted);font-size:.86rem}
+h1{margin:0 0 20px;font-size:clamp(1.9rem,4vw,2.8rem);line-height:1.5}
+h2{margin:0 0 16px;font-size:clamp(1.4rem,3vw,1.8rem);line-height:1.5}
+h3{margin:0 0 10px;font-size:1.17rem;line-height:1.6}
 p{margin:0 0 14px}
 p:last-child{margin-bottom:0}
-.section{padding:32px 0}
-.section.white{background:white}
-.section-heading{margin-bottom:22px}
+.section{padding:38px 0}
+.white{background:white}
+.section-heading{margin-bottom:24px}
 .section-heading p{color:var(--muted)}
-.tag{
-  display:inline-block;
-  margin-bottom:12px;
-  padding:3px 10px;
-  border-radius:6px;
-  color:var(--green);
-  background:var(--light);
-  font-size:.8rem;
-  font-weight:bold;
-}
-.tag.purple{color:var(--purple);background:#f3eef8}
-.notice{
-  padding:22px;
-  border:1px solid #dfc79d;
-  border-left:5px solid #a66c22;
-  border-radius:12px;
-  background:#fff6e7;
-}
-.note{color:var(--muted);font-size:.88rem}
-.jump{
-  display:grid;
-  grid-template-columns:repeat(4,minmax(0,1fr));
-  gap:10px;
-}
-.jump a{
-  display:block;
-  padding:12px;
-  border:1px solid var(--line);
-  border-radius:9px;
-  background:white;
-  text-decoration:none;
-  font-size:.9rem;
-  font-weight:bold;
-}
-.jump a:hover{background:var(--light)}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:18px;
-}
-.person,.panel{
-  min-width:0;
-  padding:23px;
-  border:1px solid var(--line);
-  border-radius:15px;
-  background:white;
-  box-shadow:0 6px 20px rgba(28,62,49,.035);
-}
-.person h3{color:var(--green)}
-.role{
-  margin:0 0 15px;
-  padding-bottom:12px;
-  border-bottom:1px solid var(--line);
-  color:var(--muted);
-  font-size:.85rem;
-}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.card{display:flex;flex-direction:column;min-width:0;padding:24px;border:1px solid var(--line);border-radius:16px;background:white;box-shadow:0 8px 24px rgba(28,62,49,.04)}
+.card h3{color:var(--main)}
+.role{margin:0 0 15px;padding-bottom:12px;border-bottom:1px solid var(--line);color:var(--muted);font-size:.85rem}
 .message{margin:0}
-.message::before{
-  content:"MESSAGE";
-  display:block;
-  margin-bottom:7px;
-  color:var(--purple);
-  font-size:.7rem;
-  font-weight:bold;
-  letter-spacing:.09em;
-}
-.panel+.panel{margin-top:20px}
-.table-wrap{
-  overflow-x:auto;
-  border:1px solid var(--line);
-  border-radius:10px;
-}
-table{width:100%;border-collapse:collapse;font-size:.93rem}
-th,td{
-  padding:12px 14px;
-  border-bottom:1px solid var(--line);
-  text-align:left;
-  vertical-align:top;
-}
+.message::before{content:"紹介メッセージ";display:block;margin-bottom:8px;color:var(--purple);font-size:.78rem;font-weight:bold}
+.tag{display:inline-block;padding:3px 10px;margin-bottom:12px;border-radius:6px;color:var(--dark);background:var(--light);font-size:.8rem;font-weight:bold}
+.tag.purple{color:var(--purple);background:var(--purple-light)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.button{display:inline-flex;justify-content:center;align-items:center;min-height:48px;padding:11px 18px;border:1px solid var(--main);border-radius:9px;color:white;background:var(--main);font-weight:bold;text-decoration:none}
+.button.secondary{color:var(--main);background:white}
+.jump{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.jump a{display:block;padding:12px;border:1px solid var(--line);border-radius:9px;background:white;font-size:.88rem;font-weight:bold;text-decoration:none}
+.jump a:hover{background:var(--light)}
+.notice{padding:24px;border:1px solid #dfc79d;border-left:6px solid #a66c22;border-radius:12px;background:#fff6e7}
+.note{color:var(--muted);font-size:.9rem}
+.panel{padding:24px;margin-top:20px;border:1px solid var(--line);border-radius:16px;background:white}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:white}
+table{width:100%;border-collapse:collapse;font-size:.94rem}
+th,td{padding:13px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
 thead th{background:var(--light)}
 tbody th{width:40%;background:#f6faf7}
 tr:last-child>*{border-bottom:0}
-.audit-heading{margin:25px 0 12px;font-size:1.1rem}
-.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
-.button{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:46px;
-  padding:10px 17px;
-  border:1px solid var(--green);
-  border-radius:9px;
-  color:white;
-  background:var(--green);
-  font-weight:bold;
-  text-decoration:none;
-}
-.button.secondary{color:var(--green);background:white}
-.back{margin-top:22px;text-align:right;font-size:.88rem}
-footer{padding:30px 0;color:white;background:var(--dark);font-size:.88rem}
-footer a{color:white}
-.footer-links{display:flex;flex-wrap:wrap;gap:12px 18px;margin:18px 0}
-@media(max-width:800px){
-  .jump{grid-template-columns:repeat(2,minmax(0,1fr))}
-}
-@media(max-width:650px){
-  .grid{grid-template-columns:1fr}
-  .person,.panel,.notice{padding:18px}
-  .global-nav{width:100%}
-  .global-nav a{padding:7px 8px;font-size:.82rem}
-  .section{padding:26px 0}
-  th,td{padding:10px}
-  .button{flex:1 1 180px}
-}
-@media(prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-}
-@media print{
-  .global-nav,.jump,.actions,.back,.skip{display:none}
-  body,.hero,.section,footer{background:white;color:black}
-  .wrap{width:100%}
-  .grid{display:block}
-  .person{margin-bottom:12px;box-shadow:none;break-inside:avoid}
-  .panel{box-shadow:none}
-  .table-wrap{overflow:visible}
-  thead{display:table-header-group}
-  tr{break-inside:avoid}
-  h2,h3{break-after:avoid}
-  footer a{color:black}
-}
+.back{margin-top:24px;text-align:right;font-size:.9rem}
+.site-footer{padding:30px 0;color:white;background:var(--dark);font-size:.9rem}
+.site-footer a{color:white}
+.footer-links{display:flex;flex-wrap:wrap;gap:12px 20px;margin:18px 0}
+@media(max-width:900px){.jump{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}.hero{padding:32px 0}.section{padding:28px 0}.card,.notice,.panel{padding:20px}.global-nav{width:100%}.global-nav a{padding:8px;font-size:.82rem}.button{flex:1 1 180px}.brand strong{font-size:1.04rem}th,td{padding:10px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{.skip,.global-nav,.actions,.jump,.back{display:none}body,.hero,.section,.site-footer{color:black;background:white}.container{width:100%}.grid{display:block}.card{margin-bottom:14px;box-shadow:none;break-inside:avoid}.site-footer a{color:black}.table-wrap{overflow:visible}thead{display:table-header-group}tr{break-inside:avoid}}
 </style>
 </head>
-
 <body id="top">
 <a class="skip" href="#main">本文へ移動</a>
 
 <div class="fiction">
-<div class="wrap">
-<p>創作サイトです。人物の所属・資格・役職・発言、自治体や医療機関との関係、財務情報は創作上の設定です。実際の受診・予約には利用できません。</p>
+<div class="container">
+<p>創作設定に基づくサイトです。人物の所属・資格・役職・コメントは創作設定です。実際の受診・医療相談・予約には利用できません。</p>
 </div>
 </div>
 
-<header>
-<div class="wrap header-inner">
+<header class="site-header">
+<div class="container header-inner">
 <a class="brand" href="index.html">
-富良野希望未来病院グループ
-<small>本院・トミカにじいろクリニック</small>
+<strong>富良野希望未来病院グループ</strong>
+<span>本院・トミカにじいろクリニック</span>
 </a>
 <nav class="global-nav" aria-label="メインメニュー">
 <a href="index.html">ホーム</a>
 <a href="news.html">お知らせ</a>
 <a href="departments.html">診療科紹介</a>
 <a href="gairai.html">外来診察予定表</a>
-<a href="doctors.html" aria-current="page">医師紹介</a>
+<a href="doctors.html" aria-current="page">医師紹介コメント</a>
 <a href="reservation.html">予約案内</a>
 </nav>
 </div>
 </header>
 
 <main id="main">
-
-<div class="hero">
-<div class="wrap">
+<section class="hero">
+<div class="container">
 <nav class="breadcrumb" aria-label="現在地">
-<a href="index.html">ホーム</a> ／ 医師・スタッフ紹介
+<a href="index.html">ホーム</a> ／ 医師紹介コメント
 </nav>
-<p class="eyebrow">本院・分院・運営体制</p>
-<h1>医師・スタッフ紹介</h1>
+<p class="eyebrow">医師・スタッフからのメッセージ</p>
+<h1>医師紹介コメント</h1>
 <p>地域の医療を支える医師・スタッフの役割と、診療や相談支援に込めた思いをご紹介します。</p>
-<p class="note">人事・監査体制：2026年11月24日改定。紹介コメントは、ご提供の創作設定をもとに掲載用に編集しています。</p>
+<p class="note">役職・監査体制：2026年11月24日改定。コメントは提供された創作設定をもとに掲載用に編集しています。</p>
 <div class="actions">
-<a class="button" href="#leaders">病院経営陣</a>
+<a class="button" href="#leaders">紹介コメントを見る</a>
 <a class="button secondary" href="#audit">外部監査委員会</a>
-<a class="button secondary" href="gairai.html">外来診察予定表</a>
-</div>
-</div>
-</div>
-
-<section class="section">
-<div class="wrap">
-<div class="notice">
-<h2>外部監査委員会の再編について</h2>
-<p><strong>創作設定上の発令日時：2026年11月24日（火）18:54</strong></p>
-<p>本院建物の老朽化対策として計画する<strong>21億4,566万円の補修工事</strong>と、借金ゼロ化後のガバナンス強化・不正防止の徹底を目的に、委員会を拡充・再編しました。</p>
-<p>委員長代理・副委員長代理・不正防止担当者を新設。朝日南アカネが分院病院監査委員長に新任し、小児科外来医長を兼務します。</p>
-<p class="note">工事計画・財務状況・行政の参加を含め、すべて創作上の設定です。</p>
+<a class="button secondary" href="index.html">ホームへ戻る</a>
 </div>
 </div>
 </section>
 
 <section id="menu" class="section white">
-<div class="wrap">
-<h2>紹介メニュー</h2>
-<nav class="jump" aria-label="ページ内メニュー">
+<div class="container">
+<h2>診療科・所属から探す</h2>
+<nav class="jump" aria-label="紹介メニュー">
 <a href="#leaders">病院経営陣</a>
 <a href="#internal">内科・外科・整形外科</a>
 <a href="#pediatrics">小児科・思春期</a>
@@ -304,124 +133,124 @@ footer a{color:white}
 <a href="#secondment">広域出向</a>
 <a href="#audit">外部監査委員会</a>
 </nav>
-<p class="note" style="margin-top:16px">兼務者の紹介コメントは、主な役職の欄にまとめています。診療日・担当時間・予約条件は外来診察予定表をご確認ください。</p>
+<p class="note" style="margin-top:16px">兼務者のコメントは主な役職の欄にまとめています。診療日・予約条件は外来診察予定表をご確認ください。</p>
 </div>
 </section>
 
 <section id="leaders" class="section">
-<div class="wrap">
+<div class="container">
 <div class="section-heading">
 <span class="tag">病院経営陣</span>
-<h2>地域医療と病院運営を支えるメンバー</h2>
+<h2>地域医療と病院運営を支える</h2>
 </div>
 <div class="grid">
 
-<article class="person">
+<article class="card">
 <h3>紡木 こかげ</h3>
 <p class="role">病院長／思春期科・小児科外来医長</p>
 <p class="message">借金ゼロでの再出発を、地域医療を守る新たな一歩に。建物の補修計画と相互支援体制を進め、本院とトミカ分院の両方で、安心して受診できる環境づくりに取り組みます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>四宮 春樹</h3>
 <p class="role">副病院長／産婦人科主任部長</p>
 <p class="message">お母さんと赤ちゃんの安全、そして仲間の安心を大切にしています。経営の健全化と診療の質を両立させ、持続可能な病院を目指します。忙しい日のジャムパンも、大切な活力です。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>鏑木 ろこ</h3>
 <p class="role">副病院長／内科主任部長〈循環器内科〉・喫煙外来担当</p>
 <p class="message">内科・循環器診療から病院運営まで、現場に向き合う姿勢を大切にしています。限られた人員でも支え合える仕組みを整え、地域の皆さんと職員の両方を支えます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>藍沢 耕作</h3>
 <p class="role">病院長代理／救急科主任部長</p>
 <p class="message">目の前の命に、できることを尽くす。そのために必要な判断と連携を、一つずつ積み重ねます。救急の現場でも病院運営でも、患者さんの安全を判断の中心に置きます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>大泉 洋</h3>
 <p class="role">病院長代理／内科医員・喫煙外来担当</p>
 <p class="message">診療も人材育成も、本院と分院の連携も、まずは現場に足を運ぶことから。持ち前の行動力で仲間をつなぎ、相談しやすく、働き続けやすい病院を目指します。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>進藤 一生</h3>
 <p class="role">副病院長代理／救急科主任係長</p>
 <p class="message">緊急性を的確に見極め、必要な治療へ迅速につなぐことを大切にしています。一人の判断だけに頼らず、チームで情報を共有し、救急医療を支える体制を整えます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>石神 のぞみ</h3>
 <p class="role">副病院長代理／思春期科最高統括責任者・小児科全般主任部長</p>
 <p class="message">子どもたちの診療と、病院全体の持続可能な運営。その両方を見据え、本院と分院の役割分担や行政との連携を調整します。現場の声を、実際に機能する仕組みへつなげます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>蝸堂 みかる</h3>
 <p class="role">最高顧問／別館臨床最高執行責任者〈COO〉・小児科全般主任部長・児童精神・特殊外科連撃統括医〈創作役職〉</p>
-<p class="message">小児科の診療から別館の運営まで、現場を支える役割を担っています。忙しいときほど安全確認と声の掛け合いを忘れず、子どもたちと職員を支える存在でありたいと思っています。</p>
+<p class="message">小児科の診療から別館の運営まで、現場を支えています。忙しいときほど安全確認と声の掛け合いを忘れず、子どもたちと職員を支える存在でありたいと思っています。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>先斗 寧</h3>
 <p class="role">新病院担当・病院改革委員／思春期科主任部長・小児外科主任部長</p>
 <p class="message">デジタル化は、患者さんと職員の負担を減らすためにあります。予約や情報共有の仕組みを見直し、専門診療と働きやすさを両立できる病院改革を進めます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>渡邊 トドック</h3>
 <p class="role">外来医長〈名誉病院長〉／総合診療科主任部長</p>
 <p class="message">どこに相談すればよいか迷う症状も、まずはお話を聞かせてください。分院からの紹介や複数の病気を抱える方の相談を受け止め、必要な診療科や地域の支援へつなぎます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>周央 サンゴ</h3>
 <p class="role">精神科・児童精神科外来医長〈病院意見係〉／思春期科特任主任教授・児童精神科連携担当</p>
-<p class="message">富良野の皆さんと子どもたちを、これからもこの場所で支えたい。その思いを大切に、話しやすい雰囲気づくりに取り組みます。言葉にならない気持ちにも耳を傾け、一緒に次の一歩を考えます。🌸</p>
+<p class="message">富良野の皆さんと子どもたちを、この場所で支えたい。その思いを大切に、話しやすい雰囲気づくりに取り組みます。言葉にならない気持ちにも耳を傾け、一緒に次の一歩を考えます。🌸</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>黒井 しば</h3>
 <p class="role">病院経営改革・病院運営委員会 委員長／小児科全般主任部長補佐・児童精神科専門医</p>
 <p class="message">無駄を見直すことと、必要な医療を守ることは、どちらも大切です。現場の困りごとを拾い上げ、小児科の診療と病院運営の両面から、無理なく続けられる体制をつくります。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>蝶屋 はなび</h3>
 <p class="role">学校連携・行政連携委員長／小児科・周産期・慢性期マルチタスク統括特任部長・こどもとこころの相談最高顧問</p>
-<p class="message">病院だけでなく、学校や家庭で過ごす時間にも目を向けたいと考えています。教育・行政・医療のつながりを生かし、子どもとご家族が孤立せず、相談を続けられる環境を支えます。</p>
+<p class="message">病院だけでなく、学校や家庭で過ごす時間にも目を向けています。教育・行政・医療のつながりを生かし、子どもとご家族が孤立せず、相談を続けられる環境を支えます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>栞葉 るり</h3>
 <p class="role">新病院担当者／外科主任部長代理・思春期科・小児外科・小児神経担当</p>
-<p class="message">突然の不調や不安に、まずは落ち着いて向き合うことを大切にしています。自分の役割と専門性を踏まえ、必要に応じて適切な医師へつなぎながら、チームで患者さんを支えます。</p>
+<p class="message">突然の不調や不安に、落ち着いて向き合うことを大切にしています。自分の役割と専門性を踏まえ、必要に応じて適切な医師へつなぎながら、チームで支えます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>五十嵐 菜々</h3>
 <p class="role">診療科再編・日程等再編担当者／思春期科主任部長代理・小児外科主任部長代理</p>
-<p class="message">診療科や予定表の再編では、現場の効率だけでなく、患者さんの通いやすさも大切にしています。変更が分かりやすく伝わり、診療のつながりが途切れないよう調整を重ねます。</p>
+<p class="message">診療科や予定表の再編では、現場の効率だけでなく、通いやすさも大切にしています。変更が分かりやすく伝わり、診療のつながりが途切れないよう調整を重ねます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>夜乃 くろむ</h3>
 <p class="role">医療サポート科相談室長／呼吸器内科主任係長代理・総合診療科・整形外科災害連携官</p>
-<p class="message">これまでの現場経験を生かし、診療と相談支援の間をつなぎます。体の症状だけでなく、受診や生活の困りごとも一緒に整理し、本院・分院の仲間と協力して支えます。</p>
+<p class="message">現場経験を生かし、診療と相談支援の間をつなぎます。体の症状だけでなく、受診や生活の困りごとも一緒に整理し、本院・分院の仲間と協力して支えます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>白砂 まどか</h3>
 <p class="role">医療サポート科カウンセラー兼相談室長／血管外科・血液内科・心臓外科主任部長・ラベンダー外来統括責任者</p>
-<p class="message">医療とこころの相談、その間にある言葉にしづらい不安も大切に受け止めます。専門診療と相談室の連携を通じて、患者さんとご家族を支えるクッションのような存在を目指します。</p>
+<p class="message">医療とこころの相談、その間にある言葉にしづらい不安も大切に受け止めます。専門診療と相談室の連携を通じて、ご家族を支えるクッションのような存在を目指します。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>浜川 百合子</h3>
 <p class="role">病院監査委員長／心療内科主任部長〈初代〉</p>
-<p class="message">診療では一人ひとりの負担に目を向け、監査では病院運営の透明性を大切にしています。それぞれの役割を意識しながら、安心して相談できる病院づくりに取り組みます。</p>
+<p class="message">診療では一人ひとりの負担に目を向け、監査では運営の透明性を大切にしています。それぞれの役割を意識し、安心して相談できる病院づくりに取り組みます。</p>
 </article>
 
 </div>
@@ -430,84 +259,84 @@ footer a{color:white}
 </section>
 
 <section id="internal" class="section white">
-<div class="wrap">
+<div class="container">
 <div class="section-heading">
 <span class="tag">内科・外科・整形外科</span>
 <h2>日々の体調管理から専門診療まで</h2>
-<p>鏑木ろこ・大泉洋・栞葉るり・夜乃くろむ・白砂まどかのコメントは、病院経営陣の欄に掲載しています。</p>
+<p>経営陣を兼務する医師のコメントは、病院経営陣の欄に掲載しています。</p>
 </div>
 <div class="grid">
 
-<article class="person">
+<article class="card">
 <h3>猪股 隆</h3>
 <p class="role">外科主任部長</p>
-<p class="message">手術と外来のどちらでも、十分な説明と安全な診療を大切にしています。スタッフ同士で支え合いながら、患者さんが納得して治療を選べる外科を目指します。</p>
+<p class="message">手術と外来のどちらでも、十分な説明と安全な診療を大切にしています。スタッフ同士で支え合いながら、納得して治療を選べる外科を目指します。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>五島 健助</h3>
 <p class="role">消化器内科主任部長代理</p>
-<p class="message">離島医療で培った経験を生かし、限られた条件の中でも必要な医療につなぐことを大切にしています。症状だけでなく、生活背景にも目を向けた診療に取り組みます。</p>
+<p class="message">離島医療で培った経験を生かし、限られた条件の中でも必要な医療につなぐことを大切にしています。生活背景にも目を向けた診療に取り組みます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>神楽坂 倫太郎</h3>
 <p class="role">主任係長代理〈消化器内科〉</p>
-<p class="message">消化器の不調や検査への不安に、分かりやすい説明で応えたいと考えています。迅速さだけを追わず、確認すべきことを丁寧に確認する診療を心がけます。</p>
+<p class="message">消化器の不調や検査への不安に、分かりやすい説明で応えます。迅速さだけを追わず、確認すべきことを丁寧に確認する診療を心がけます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>高本 めぐみ</h3>
 <p class="role">循環器内科主任部長</p>
-<p class="message">心臓や血管の病気は、日々の生活とのつながりも大切です。症状や検査結果を一緒に確認し、患者さんが無理なく続けられる治療や健康管理を考えます。</p>
+<p class="message">心臓や血管の病気は、生活とのつながりも大切です。症状や検査結果を一緒に確認し、無理なく続けられる治療や健康管理を考えます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>澤田 咲</h3>
 <p class="role">神経内科主任部長〈脳神経内科・外科担当〉／外部監査委員会 代理・不正防止担当</p>
-<p class="message">脳や神経の症状には、丁寧な聞き取りと慎重な評価が欠かせません。専門診療と不正防止の役割の双方で、説明と記録を大切にした対応を心がけます。</p>
+<p class="message">脳や神経の症状には、丁寧な聞き取りと慎重な評価が欠かせません。診療と不正防止の双方で、説明と記録を大切にした対応を心がけます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>辻元 朝子</h3>
 <p class="role">整形外科主任係長〈常勤医〉</p>
-<p class="message">痛みやけがで、日常生活のできることが減る不安に寄り添います。仕事や家庭での動き方も伺いながら、回復と生活への復帰を一緒に目指します。</p>
+<p class="message">痛みやけがで、生活のできることが減る不安に寄り添います。仕事や家庭での動き方も伺いながら、回復と生活への復帰を一緒に目指します。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>松前 春香</h3>
 <p class="role">内科・消化器内科 主任係長代理／15倍速内視鏡室監査官〈創作役職〉</p>
-<p class="message">おなかの不調や内視鏡検査の不安を、少しでも相談しやすくしたいと思っています。検査の目的や流れを説明し、安全確認を重ねながら向き合います。</p>
+<p class="message">おなかの不調や内視鏡検査の不安を、相談しやすくしたいと思っています。検査の目的や流れを説明し、安全確認を重ねて向き合います。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>早坂 昇</h3>
 <p class="role">内科医員／夜間診療・内科・総合診療科当直</p>
-<p class="message">日中も夜間も、体調を崩したときの不安は大きいものです。必要な評価と適切な引き継ぎを行い、緊急性に応じた診療で地域の安心を支えます。</p>
+<p class="message">日中も夜間も、体調を崩したときの不安は大きいものです。必要な評価と適切な引き継ぎを行い、緊急性に応じた診療で安心を支えます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>高木 裕樹</h3>
 <p class="role">内科医員／夜間診療・内科・総合診療科当直</p>
-<p class="message">急な体調変化にも落ち着いて対応し、必要な治療へつなぎます。受け入れ体制や専門性を確認しながら、院内外の仲間と連携して支えます。</p>
+<p class="message">急な体調変化にも落ち着いて対応し、必要な治療へつなぎます。受け入れ体制や専門性を確認し、院内外の仲間と連携して支えます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>樋口 楓</h3>
 <p class="role">内科医員／行政連携担当〈創作設定〉</p>
-<p class="message">医療と暮らしは、切り離せないものだと考えています。内科診療に加え、子どもやご家族への支援の視点も生かし、必要な相談先へつながるお手伝いをします。</p>
+<p class="message">医療と暮らしは、切り離せないものです。内科診療に加え、子どもやご家族への支援の視点も生かし、必要な相談先につなぐお手伝いをします。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>白石 恵</h3>
 <p class="role">内科医員／夜間診療・内科・総合診療科当直</p>
-<p class="message">小さな変化に目を向ける観察と、丁寧な初期対応を大切にしています。夜間の受診でも状況を説明し、患者さんとご家族の不安を和らげられるよう努めます。</p>
+<p class="message">小さな変化に目を向ける観察と、丁寧な初期対応を大切にしています。夜間も状況を説明し、ご家族の不安を和らげられるよう努めます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>緋山 美帆子</h3>
 <p class="role">内科医員／夜間診療・内科・総合診療科当直</p>
-<p class="message">忙しい場面ほど、基本の確認を確実に。症状の変化や診療情報を丁寧に共有し、夜間もチームで安全を守る診療に取り組みます。</p>
+<p class="message">忙しい場面ほど、基本の確認を確実に。症状の変化や診療情報を共有し、夜間もチームで安全を守る診療に取り組みます。</p>
 </article>
 
 </div>
@@ -516,42 +345,42 @@ footer a{color:white}
 </section>
 
 <section id="pediatrics" class="section">
-<div class="wrap">
+<div class="container">
 <div class="section-heading">
 <span class="tag">小児科・思春期</span>
 <h2>子どもたちの成長とご家族を支える</h2>
-<p>経営陣を兼務する医師は、病院経営陣の欄に紹介しています。新生児発達外来担当の佐々木彩乃は、産婦人科の欄に掲載しています。</p>
+<p>経営陣兼務者は経営陣の欄、新生児発達外来担当の佐々木彩乃は産婦人科の欄に掲載しています。</p>
 </div>
 <div class="grid">
 
-<article class="person">
+<article class="card">
 <h3>小々波 いるか</h3>
 <p class="role">思春期科主任係長／小児科全般主任係長代理</p>
-<p class="message">お子さんの症状だけでなく、ご家族が気づいた「いつもとの違い」も大切にしています。成長の段階に合わせて説明し、相談できる身近な存在を目指します。</p>
+<p class="message">お子さんの症状だけでなく、ご家族が気づいた「いつもとの違い」も大切にしています。成長に合わせて説明し、相談できる身近な存在を目指します。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>不破 拓海</h3>
 <p class="role">小児糖尿病・内分泌・新生児科新生児発達科主任部長</p>
-<p class="message">成長やホルモン、血糖管理の悩みは、ご家庭ごとに異なります。専門的な内容も分かりやすく伝え、学校や日常生活を見据えた支援を一緒に考えます。</p>
+<p class="message">成長やホルモン、血糖管理の悩みは、ご家庭ごとに異なります。専門的な内容も分かりやすく伝え、学校生活も見据えた支援を考えます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>星川 輝</h3>
 <p class="role">小児科全般主任係長</p>
-<p class="message">子どもたちの元気と、ご家族の安心を支えたい。その気持ちを忘れず、明るく話しかけやすい診療を心がけています。仲間と協力し、一人ひとりの変化に向き合います。</p>
+<p class="message">子どもたちの元気と、ご家族の安心を支えたい。その気持ちを忘れず、明るく話しかけやすい診療を心がけ、一人ひとりの変化に向き合います。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>千凛 あゆむ</h3>
 <p class="role">本館・別館小児科最高顧問／院内総選挙管理委員長</p>
-<p class="message">基本を大切にし、確かな手順を積み重ねることが、安心できる小児医療につながります。本院・分院の連携と若手の支援を通じて、地域の子どもたちを支えます。</p>
+<p class="message">基本を大切にし、確かな手順を積み重ねることが安心につながります。本院・分院の連携と若手の支援を通じて、地域の子どもたちを支えます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>角巻 わため</h3>
 <p class="role">小児神経科担当医／児童精神科研修中</p>
-<p class="message">体の成長とこころの育ちは、どちらも大切に見守りたいものです。先輩医師から学びながら、お子さんのペースとご家族の思いに寄り添う診療を心がけます。</p>
+<p class="message">体の成長とこころの育ちを、どちらも大切に見守ります。先輩医師から学びながら、お子さんのペースとご家族の思いに寄り添います。</p>
 </article>
 
 </div>
@@ -560,54 +389,54 @@ footer a{color:white}
 </section>
 
 <section id="emergency" class="section white">
-<div class="wrap">
+<div class="container">
 <div class="section-heading">
 <span class="tag">救急科</span>
 <h2>突然の病気やけがに、チームで向き合う</h2>
-<p>藍沢耕作・進藤一生のコメントは、病院経営陣の欄に掲載しています。</p>
+<p>藍沢耕作・進藤一生は、病院経営陣の欄に掲載しています。</p>
 </div>
 <div class="grid">
 
-<article class="person">
+<article class="card">
 <h3>五条 蓮</h3>
 <p class="role">救急科主任部長代理／AI手術担当医〈創作設定〉</p>
-<p class="message">新しい技術を活用するときこそ、適応の判断と安全確認を大切にします。技術だけに頼らず、チームの判断と連携を重ね、救急診療の質の向上に取り組みます。</p>
+<p class="message">新しい技術を活用するときこそ、適応の判断と安全確認を大切にします。技術だけに頼らず、チームの判断と連携を重ねます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>一橋 太郎</h3>
 <p class="role">救急科主任部長代理／総合診療科主任係長</p>
-<p class="message">救急と総合診療の両方の視点から、患者さんの状態を幅広く捉えます。緊急の対応が必要な場面でも、その後の診療や暮らしにつながる引き継ぎを大切にします。</p>
+<p class="message">救急と総合診療の視点から、患者さんの状態を幅広く捉えます。緊急の場面でも、その後の診療や暮らしにつながる引き継ぎを大切にします。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>星川 サラ</h3>
 <p class="role">救急科主任部長代理〈救急科専門医〉</p>
-<p class="message">雪国の救急では、天候や移動の難しさも考える必要があります。仲間と備えを共有し、突然のけがや病気に落ち着いて対応できる体制を支えます。</p>
+<p class="message">雪国の救急では、天候や移動の難しさも考える必要があります。仲間と備えを共有し、突然のけがや病気に対応できる体制を支えます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>神崎 徹</h3>
 <p class="role">別館救急科〈ER〉主任係長代理／特殊外科突撃当直医〈創作役職〉</p>
-<p class="message">急な変化が起きたときこそ、状況を整理し、声を掛け合うことを大切にしています。救急の現場と院内の安全確保を、チームの一員として支えます。</p>
+<p class="message">急な変化のときこそ、状況を整理し、声を掛け合うことを大切にしています。救急の現場と院内の安全を、チームの一員として支えます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>前澤 優作</h3>
 <p class="role">救急科医員〈小児救急先行医〉</p>
-<p class="message">小さな子どもは、不調を十分に言葉で伝えられないこともあります。ご家族のお話と体のサインを丁寧に確認し、必要な診療へつなぐことに力を尽くします。</p>
+<p class="message">小さな子どもは、不調を十分に言葉にできないこともあります。ご家族のお話と体のサインを確認し、必要な診療につなぎます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>茨城 美紅</h3>
 <p class="role">救急科医員〈山岳救助担当医〉</p>
 <p class="message">山の救助では、現場の安全と医療の判断を両立することが重要です。関係機関と連携し、厳しい環境でも必要な支援を届けられるよう備えます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>福山 鉄人</h3>
 <p class="role">救急科医員</p>
-<p class="message">これまで培った観察の視点を、救急の初期対応にも生かします。患者さんの小さな変化に目を向け、仲間と情報を共有しながら診療に取り組みます。</p>
+<p class="message">培ってきた観察の視点を、救急の初期対応にも生かします。小さな変化に目を向け、仲間と情報を共有しながら診療に取り組みます。</p>
 </article>
 
 </div>
@@ -616,43 +445,43 @@ footer a{color:white}
 </section>
 
 <section id="obstetrics" class="section">
-<div class="wrap">
+<div class="container">
 <div class="section-heading">
 <span class="tag">産婦人科</span>
 <h2>一人ひとりの思いと、家族の歩みに寄り添う</h2>
-<p>四宮春樹のコメントは、病院経営陣の欄に掲載しています。</p>
+<p>四宮春樹は、病院経営陣の欄に掲載しています。</p>
 </div>
 <div class="grid">
 
-<article class="person">
+<article class="card">
 <h3>佐々木 彩乃</h3>
 <p class="role">産婦人科主任係長／新生児発達外来担当医・精神科診療支援／外部監査委員会 代理・不正防止担当</p>
-<p class="message">研修や地域での経験を胸に、富良野の医療を支えます。産婦人科、新生児発達外来、精神科の診療支援を通じて、ご家族の歩みに寄り添います。監査の役割でも誠実な対応を大切にします。</p>
+<p class="message">研修や地域での経験を胸に、富良野の医療を支えます。産婦人科、新生児発達外来、精神科の診療支援を通じて、ご家族の歩みに寄り添います。監査にも誠実に取り組みます。</p>
 <p class="note" style="margin-top:12px"><strong>通常診療は完全予約制です。</strong>新生児発達外来は小児科所属です。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>赤羽 葉雪</h3>
 <p class="role">産婦人科医員〈カウンセリング担当〉</p>
-<p class="message">妊娠や出産にまつわる気持ちは、人それぞれです。うれしさだけでなく、不安や迷いも安心して話せるよう、ご本人とご家族の思いを大切にします。</p>
+<p class="message">妊娠や出産にまつわる気持ちは、人それぞれです。うれしさだけでなく、不安や迷いも話せるよう、ご本人とご家族の思いを大切にします。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>赤羽 祐司</h3>
 <p class="role">産婦人科医員</p>
-<p class="message">お母さんと赤ちゃんを支えるため、日々の診療とチーム内の引き継ぎを大切にしています。スタッフも無理なく働ける、継続して頼れる産婦人科を目指します。</p>
+<p class="message">お母さんと赤ちゃんを支えるため、日々の診療と引き継ぎを大切にしています。スタッフも無理なく働ける、継続して頼れる産婦人科を目指します。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>雲母 たまこ</h3>
 <p class="role">産婦人科医員・研修医／その他臨床</p>
-<p class="message">先輩医師の指導の下、一つひとつの経験から丁寧に学んでいます。分からないことを曖昧にせず確認し、患者さんとご家族に誠実に向き合える医師を目指します。</p>
+<p class="message">先輩医師の指導の下、一つひとつの経験から学んでいます。分からないことを曖昧にせず確認し、ご家族にも誠実に向き合える医師を目指します。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>菊田 真理恵</h3>
 <p class="role">産婦人科 日中外来特任主任部長〈日勤帯〉</p>
-<p class="message">日中の外来を支えながら、若い先生たちが相談しやすい環境づくりにも取り組みます。緊張する受診の日も、少し気持ちがほぐれるような、温かい声掛けを大切にしています。</p>
+<p class="message">日中の外来を支え、若い先生たちが相談しやすい環境をつくります。緊張する受診の日も、少し気持ちがほぐれるような温かい声掛けを大切にしています。</p>
 </article>
 
 </div>
@@ -661,165 +490,165 @@ footer a{color:white}
 </section>
 
 <section id="psychiatry" class="section white">
-<div class="wrap">
+<div class="container">
 <div class="section-heading">
 <span class="tag purple">精神科・児童精神科・心理支援</span>
 <h2>話すことから、一緒に考える</h2>
-<p>周央サンゴのコメントは病院経営陣の欄に掲載しています。フォローアップ・リエゾンは精神科・児童精神科に統合しています。</p>
+<p>周央サンゴは経営陣の欄に掲載。フォローアップ・リエゾンは精神科・児童精神科に統合しています。</p>
 </div>
 <div class="grid">
 
-<article class="person">
+<article class="card">
 <h3>夢咲 ネム</h3>
 <p class="role">精神科主任部長</p>
-<p class="message">眠りやストレスの悩みには、体調、生活、こころの状態が重なっていることがあります。お話を伺い、一人ひとりに合った治療や生活上の工夫を一緒に考えます。</p>
+<p class="message">眠りやストレスの悩みには、体調、生活、こころの状態が重なっていることがあります。お話を伺い、治療や生活上の工夫を一緒に考えます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>笠木 緑</h3>
 <p class="role">児童精神科・精神科主任係長</p>
-<p class="message">診療とフォローアップ、院内のリエゾン支援が途切れずにつながるよう調整します。患者さんとご家族、スタッフの声を大切にし、相談を続けられる現場を支えます。</p>
+<p class="message">診療とフォローアップ、院内のリエゾン支援がつながるよう調整します。患者さんとご家族、スタッフの声を大切にし、相談を続けられる現場を支えます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>雪村 双葉</h3>
 <p class="role">児童精神科主任部長</p>
-<p class="message">子どもの変化に、ご家族だけで向き合い続ける必要はありません。困りごとを一緒に整理し、連携先とも協力しながら、成長を長い目で支えます。</p>
+<p class="message">子どもの変化に、ご家族だけで向き合い続ける必要はありません。困りごとを整理し、連携先とも協力して、成長を長い目で支えます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>中村 里子</h3>
-<p class="role">こころの相談窓口「ふらの・ハートポート」専任外来医長代理</p>
-<p class="message">何から話せばよいか分からないときも、そのままお越しください。医療と心理支援の視点からお話を整理し、今必要な相談やケアへつながるお手伝いをします。</p>
+<p class="role">「ふらの・ハートポート」専任外来医長代理</p>
+<p class="message">何から話せばよいか分からないときも、そのままお越しください。医療と心理支援の視点から整理し、必要な相談やケアにつなぎます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>竹田 康</h3>
 <p class="role">思春期科・こころの専門医／児童精神科主任部長代理／外部監査委員会 代理・不正防止担当</p>
-<p class="message">思春期の悩みには、すぐに答えが出ないものもあります。周央サンゴ先生をはじめとする仲間と連携し、ご本人の気持ちを尊重して伴走します。不正防止にも責任を持って取り組みます。</p>
+<p class="message">思春期の悩みには、すぐに答えが出ないものもあります。周央サンゴ先生たちと連携し、ご本人の気持ちを尊重して伴走します。不正防止にも責任を持って取り組みます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>天宮 こころ</h3>
 <p class="role">児童精神科主任教授〈特任〉／周産期・循環器内科連撃統括医〈創作役職〉</p>
-<p class="message">こころとからだの両方を見つめる視点を大切にしています。子どもたちとご家族が安心して相談できるよう、関連する診療科と協力して支援を考えます。</p>
+<p class="message">こころとからだの両方を見つめる視点を大切にしています。子どもたちとご家族が相談できるよう、関連する診療科と協力して支援を考えます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>葉加瀬 冬雪</h3>
 <p class="role">専任心理士／広域学校連携スクールカウンセラー</p>
-<p class="message">学校での困りごとや、いじめ・孤立への不安も、ひとりで抱え込まなくて大丈夫です。ご本人の気持ちとプライバシーを大切にし、必要な支援につなぎます。</p>
+<p class="message">学校での困りごとや、いじめ・孤立への不安も、ひとりで抱え込まなくて大丈夫です。気持ちとプライバシーを大切にし、必要な支援につなぎます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>アンジュ・カトリーナ</h3>
 <p class="role">別館児童精神科 専任主任心理士</p>
-<p class="message">うまく言葉にできなくても、話がまとまっていなくても大丈夫です。あなたのペースで話せる時間を大切にし、迷いや困りごとを一緒に整理していきます。</p>
+<p class="message">言葉にできなくても、話がまとまっていなくても大丈夫です。あなたのペースで話せる時間を大切にし、迷いや困りごとを一緒に整理します。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>大久保 希美</h3>
 <p class="role">別館精神科 専任心理士</p>
-<p class="message">仕事や暮らしの中で積み重なった疲れを、安心して置ける場所でありたいと思っています。医師とも連携し、ご自身に合う対処を一緒に探します。</p>
+<p class="message">仕事や暮らしの中で積み重なった疲れを、安心して置ける場所でありたいと思っています。医師とも連携し、ご自身に合う対処を探します。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>大音 ましろ</h3>
 <p class="role">別館児童精神科・精神科カウンセラー</p>
-<p class="message">言葉にならない小さな不安にも、じっくり耳を傾けます。すぐに答えを出そうとせず、安心して気持ちを話せる時間を、ご本人のペースに合わせて大切にします。</p>
+<p class="message">言葉にならない不安にも、じっくり耳を傾けます。すぐに答えを出そうとせず、安心して気持ちを話せる時間を、ご本人のペースで大切にします。</p>
 </article>
 
 </div>
-<p class="note" style="margin-top:18px">カウンセリングは予約を基本とします。緊急性が高い場合は、対応可能な担当者との調整を行います。</p>
+<p class="note" style="margin-top:16px">カウンセリングは予約が基本です。緊急性が高い場合は、対応可能な担当者との調整を行います。</p>
 <p class="back"><a href="#menu">紹介メニューへ戻る</a></p>
 </div>
 </section>
 
 <section id="specialty" class="section">
-<div class="wrap">
+<div class="container">
 <div class="section-heading">
 <span class="tag">専門外来</span>
 <h2>緩和ケア・遺伝カウンセリング・喫煙外来</h2>
 </div>
 <div class="grid">
 
-<article class="person">
+<article class="card">
 <h3>長野 信二</h3>
 <p class="role">緩和ケア主任部長〈消化器内科専門医〉／分院一般内科担当</p>
-<p class="message">体の痛みだけでなく、不安や生活上の困りごとにも目を向けます。ご本人が大切にしたいことを伺い、ご家族や関係する職種と協力して、日々の過ごしやすさを支えます。</p>
+<p class="message">体の痛みだけでなく、不安や暮らしの困りごとにも目を向けます。大切にしたいことを伺い、ご家族や関係職種と協力して、日々の過ごしやすさを支えます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>田沼 譲</h3>
 <p class="role">遺伝カウンセリング主任部長〈小児専門医〉／喫煙外来主任部長</p>
-<p class="message">遺伝や健康に関する情報は、受け止め方も希望も人それぞれです。分かりやすい説明と、ご本人の選択を尊重する姿勢を大切にします。喫煙外来でも、取り組み方を一緒に考えます。</p>
+<p class="message">健康に関する情報は、受け止め方も希望も人それぞれです。分かりやすい説明と、ご本人の選択を尊重する姿勢を大切にします。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>星野 彩乃</h3>
 <p class="role">遺伝カウンセリング〈産婦人科〉・緩和ケア担当医</p>
-<p class="message">治療や将来について考えるとき、ご本人とご家族の思いを丁寧に伺います。遺伝カウンセリングと緩和ケアの両面から、納得できる選択を支えます。</p>
+<p class="message">治療や将来について考えるとき、ご本人とご家族の思いを伺います。遺伝カウンセリングと緩和ケアの両面から、納得できる選択を支えます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>原 守</h3>
 <p class="role">遺伝カウンセリング・緩和ケア予約担当医／外科・小児外科サポート</p>
-<p class="message">予約の調整も診療の支援も、安心して治療を続けるための大切な仕事です。患者さんの希望と診療体制をすり合わせ、相談から受診までの流れを支えます。</p>
+<p class="message">予約の調整も診療の支援も、治療を続けるための大切な仕事です。患者さんの希望と診療体制をすり合わせ、相談から受診までの流れを支えます。</p>
 </article>
 
 </div>
-<div class="panel" style="margin-top:20px">
+<div class="panel">
 <h3>皮膚科・眼科・耳鼻咽喉科</h3>
-<p>大学病院・提携医療機関からの出張医による専門外来です。地域で専門的な診療を受けられるよう、関係機関と連携して対応します。</p>
-<p class="note">診療曜日・担当医は外来診察予定表をご確認ください。緩和ケア・遺伝カウンセリング・喫煙外来は、予約に合わせて日時を調整します。</p>
+<p>出張医による専門外来です。地域で専門的な診療を受けられるよう、関係機関と連携します。診療曜日・担当医は外来診察予定表をご確認ください。</p>
+<p class="note">緩和ケア・遺伝カウンセリング・喫煙外来は予約に合わせて日時を調整します。鏑木ろこ・大泉洋も喫煙外来を担当します。</p>
 </div>
 <p class="back"><a href="#menu">紹介メニューへ戻る</a></p>
 </div>
 </section>
 
 <section id="general" class="section white">
-<div class="wrap">
+<div class="container">
 <div class="section-heading">
 <span class="tag">総合診療科・泌尿器科・心療内科</span>
-<h2>相談しづらい悩みも、まずはお話しください</h2>
-<p>渡邊トドック・浜川百合子のコメントは、病院経営陣の欄に掲載しています。</p>
+<h2>相談しづらい悩みも、お話しください</h2>
+<p>渡邊トドック・浜川百合子は、病院経営陣の欄に掲載しています。</p>
 </div>
 <div class="grid">
 
-<article class="person">
+<article class="card">
 <h3>星川 郁男</h3>
 <p class="role">総合診療科最高顧問／臨床研修特任指導教授</p>
-<p class="message">症状だけでなく、その方の暮らしやこれまでの経過も大切な手がかりです。総合診療の視点を若い世代と共有しながら、地域に根ざした医療を支えます。</p>
+<p class="message">症状だけでなく、その方の暮らしや経過も大切な手がかりです。総合診療の視点を若い世代と共有し、地域に根ざした医療を支えます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>藤原 のりこ</h3>
 <p class="role">総合診療科医員</p>
-<p class="message">複数の不調が重なるときも、まずはお話を一緒に整理することから始めます。診療や支援の間をつなぎ、地域で暮らし続けるためのお手伝いをします。</p>
+<p class="message">複数の不調が重なるときも、お話を整理することから始めます。診療や支援の間をつなぎ、地域で暮らし続けるためのお手伝いをします。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>山田 義治</h3>
 <p class="role">総合診療科医員</p>
-<p class="message">これまでの現場経験を生かし、幅広い症状の初期対応に取り組みます。専門科への紹介が必要な場合も、その理由を説明し、次の診療へ丁寧につなぎます。</p>
+<p class="message">現場経験を生かし、幅広い症状の初期対応に取り組みます。専門科への紹介が必要な場合も理由を説明し、次の診療へ丁寧につなぎます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>小森 明二</h3>
 <p class="role">別館総合診療特任部長代理／泌尿器科主任部長</p>
-<p class="message">排尿に関する悩みは、生活の負担になっていても相談しづらいことがあります。プライバシーと話しやすさを大切にし、総合診療とも連携して対応します。</p>
+<p class="message">排尿の悩みは、生活の負担でも相談しづらいことがあります。プライバシーと話しやすさを大切にし、総合診療とも連携して対応します。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>北里 りさ</h3>
 <p class="role">泌尿器科主任係長／「お悩みゼロ・安心アクセス」特任統括官</p>
-<p class="message">恥ずかしさや不安から受診をためらう方にも、安心して相談していただけるよう心がけています。説明や診察の進め方にご希望があれば、お知らせください。</p>
+<p class="message">恥ずかしさや不安から受診をためらう方にも、相談しやすい診療を心がけます。説明や診察の進め方にご希望があれば、お知らせください。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>風間 トオル</h3>
 <p class="role">心療内科主任部長代理</p>
-<p class="message">ストレスと体の不調が重なるとき、症状も気持ちも丁寧に伺います。必要な評価を行い、生活の状況も踏まえて、ご本人のペースで取り組める治療を考えます。</p>
+<p class="message">ストレスと体の不調が重なるとき、症状も気持ちも伺います。必要な評価を行い、生活の状況も踏まえて、ご本人のペースで取り組める治療を考えます。</p>
 </article>
 
 </div>
@@ -828,66 +657,66 @@ footer a{color:white}
 </section>
 
 <section id="tomica" class="section">
-<div class="wrap">
+<div class="container">
 <div class="section-heading">
 <span class="tag">トミカ分院</span>
 <h2>トミカにじいろクリニック</h2>
-<p>本院と支え合いながら、地域に身近な診療と相談の窓口を担います。</p>
+<p>本院と支え合い、地域に身近な診療と相談の窓口を担います。</p>
 </div>
 <div class="grid">
 
-<article class="person">
+<article class="card">
 <h3>加地 秀樹</h3>
 <p class="role">トミカ分院長</p>
-<p class="message">地域の皆さんが、これからも身近な場所で医療を受けられるように。本院との相互支援と分院の健全な運営を進め、現場の声を生かしたクリニックを目指します。</p>
+<p class="message">地域の皆さんが、これからも身近な場所で医療を受けられるように。本院との相互支援と健全な運営を進め、現場の声を生かした分院を目指します。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>家長 むぎ</h3>
 <p class="role">副分院長／小児科・児童精神科主任部長代理・こどもとこころの相談最高統括指導医</p>
-<p class="message">学校やフリースクール、行政とのつながりを生かし、子どもたちが安心して過ごせる環境を支えます。ご家族や地域の声も受け止め、診療と暮らしをつなぎます。</p>
+<p class="message">学校やフリースクール、行政とのつながりを生かし、子どもたちの環境を支えます。ご家族や地域の声も受け止め、診療と暮らしをつなぎます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>奥野 宗一郎</h3>
 <p class="role">分院長・副分院長代理／循環器内科・消化器内科担当／外部監査委員会委員</p>
-<p class="message">循環器と消化器の診療に加え、分院運営と本院との連携を支えます。経験とデータの両方を生かし、日々の診療が無理なく続く体制づくりに取り組みます。</p>
+<p class="message">循環器と消化器の診療に加え、分院運営と本院との連携を支えます。経験とデータを生かし、日々の診療が無理なく続く体制をつくります。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>田崎 恵</h3>
 <p class="role">産婦人科主任部長代理</p>
-<p class="message">地域で妊娠・出産や婦人科の相談を続けられるよう、外来と本院との連携を大切にしています。不安なことを相談しやすい、身近な窓口でありたいと思っています。</p>
+<p class="message">地域で妊娠・出産や婦人科の相談を続けられるよう、外来と本院との連携を大切にします。不安なことを相談できる身近な窓口を目指します。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>江田 雄二</h3>
 <p class="role">総合診療科〈小児科担当〉／外部監査委員会副委員長</p>
-<p class="message">診療や夜間救急の支援を通じて、トミカの皆さんの安心を支えます。監査では運営の透明性と説明責任を大切にし、信頼される分院づくりに取り組みます。</p>
+<p class="message">診療や夜間救急の支援を通じて、トミカの安心を支えます。監査では透明性と説明責任を大切にし、信頼される分院づくりに取り組みます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>山崎 育三</h3>
 <p class="role">精神科・児童精神科部長・係長代理／外部監査委員会委員長</p>
-<p class="message">患者さんとご家族の苦しさに、急がず丁寧に向き合います。委員長としても改革の経過を確認し、診療を支える仕組みが誠実に運用されるよう努めます。</p>
+<p class="message">患者さんとご家族の苦しさに、急がず向き合います。委員長として改革の経過を確認し、診療を支える仕組みが誠実に運用されるよう努めます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>木村 彩乃</h3>
 <p class="role">産婦人科外来医長</p>
-<p class="message">お母さんとお子さん、ご家族の小さな不安にも目を向けます。体調の変化を丁寧に確認し、必要な場合は本院や関係する医療機関と連携します。</p>
+<p class="message">お母さんとお子さん、ご家族の小さな不安にも目を向けます。体調の変化を確認し、必要な場合は本院や関係医療機関と連携します。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>花芽 すみれ</h3>
-<p class="role">トミカ分院救急科主任部長／分院経営戦略・広報担当者</p>
-<p class="message">大学での教育・診療経験を地域へ還元する思いで、分院の救急医療に取り組みます。経営戦略と広報の担当としても、現場の取り組みや受診案内を分かりやすく伝えます。</p>
+<p class="role">トミカ分院救急科主任部長／経営戦略・広報担当者</p>
+<p class="message">教育・診療経験を地域へ還元する思いで、救急医療に取り組みます。経営戦略と広報の担当としても、現場の取り組みや受診案内を分かりやすく伝えます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>朝日南 アカネ</h3>
 <p class="role">トミカ分院小児科医・外来医長／分院病院監査委員長〈新任〉</p>
-<p class="message">大学での経験を生かし、地域の子どもたちの成長を身近な場所で支えます。本院との相互支援を大切にするとともに、監査でも信頼される分院づくりに取り組みます。</p>
+<p class="message">大学での経験を生かし、地域の子どもたちの成長を支えます。本院との相互支援を大切にし、監査でも信頼される分院づくりに取り組みます。</p>
 </article>
 
 </div>
@@ -896,56 +725,56 @@ footer a{color:white}
 </section>
 
 <section id="training" class="section white">
-<div class="wrap">
+<div class="container">
 <div class="section-heading">
 <span class="tag">研修・連携支援</span>
-<h2>学びと調整で、診療を支える</h2>
+<h2>学びと調整で診療を支える</h2>
 </div>
 <div class="grid">
 
-<article class="person">
+<article class="card">
 <h3>一ノ瀬 うるは</h3>
 <p class="role">小児科・児童精神科・ラベンダー外来専任研修医</p>
-<p class="message">先輩方の診療から学び、分からないことは必ず確認する姿勢を大切にしています。指導体制の下で経験を積み、子どもたちとご家族に寄り添える医師を目指します。</p>
+<p class="message">先輩方の診療から学び、分からないことは必ず確認します。指導体制の下で経験を積み、子どもたちとご家族に寄り添える医師を目指します。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>七瀬 すず菜</h3>
 <p class="role">総合診療科・ラベンダー外来・救急トリアージ支援室／医療コーディネーター</p>
-<p class="message">受診や予約の流れが分かりにくいとき、相談先に迷うときの橋渡しを担います。医療・心理・事務の各担当と連携し、患者さんの声を受け止めながら調整します。</p>
+<p class="message">予約の流れが分かりにくいとき、相談先に迷うときの橋渡しを担います。医療・心理・事務の担当と連携し、患者さんの声を受け止めて調整します。</p>
 </article>
 
 </div>
-<p class="note" style="margin-top:16px">研修・補助診療は指導体制の下で行います。雲母たまこの紹介は産婦人科の欄に掲載しています。</p>
+<p class="note" style="margin-top:16px">研修・補助診療は指導体制の下で行います。雲母たまこは産婦人科の欄に掲載しています。</p>
 <p class="back"><a href="#menu">紹介メニューへ戻る</a></p>
 </div>
 </section>
 
 <section id="secondment" class="section">
-<div class="wrap">
+<div class="container">
 <div class="section-heading">
 <span class="tag">広域出向・地域連携</span>
-<h2>地域を越えて、医療のつながりを支える</h2>
-<p class="note">以下の出向・所属・役職は創作設定です。実際の大学・医療機関における在籍や連携を示すものではありません。</p>
+<h2>地域を越えて医療のつながりを支える</h2>
+<p>出向先・所属・役職は創作設定です。実際の医療機関への在籍や連携を示しません。</p>
 </div>
 <div class="grid">
 
-<article class="person">
+<article class="card">
 <h3>空澄 セナ</h3>
 <p class="role">旭川医科大学病院 精神医学講座へ出向〈創作設定〉／小児科・児童精神科主任係長代理</p>
-<p class="message">出向先で学びを深めながら、富良野とトミカの仲間との連携を大切にしています。地域をまたぐ支援が必要な子どもとご家族を、継続して見守れる体制に貢献します。</p>
+<p class="message">出向先で学びを深め、富良野とトミカの仲間との連携を大切にしています。地域をまたぐ支援が必要な子どもとご家族を、継続して見守る体制に貢献します。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>目黒 連</h3>
 <p class="role">旭川医科大学病院 精神医学講座へ出向〈創作設定〉／思春期・小児神経発達外来特任部長・新・重症児童ケア統括官</p>
-<p class="message">重い病気や発達上の課題がある子どもたちを、地域全体で支える視点を大切にしています。本院・分院と情報を共有し、長期的なフォローにつなげます。</p>
+<p class="message">重い病気や発達上の課題がある子どもたちを、地域全体で支える視点を大切にします。本院・分院と情報を共有し、長期的なフォローにつなげます。</p>
 </article>
 
-<article class="person">
+<article class="card">
 <h3>水野 遥</h3>
 <p class="role">市立旭川病院 産婦人科へ出向〈創作設定〉／産婦人科主任係長</p>
-<p class="message">富良野での診療を仲間へつなぎ、出向先でも周産期医療に取り組みます。地域を越えて相談し合える関係を大切にし、お母さんと赤ちゃんを支える医療の輪を広げます。</p>
+<p class="message">富良野での診療を仲間へつなぎ、出向先でも周産期医療に取り組みます。地域を越えて相談できる関係を大切にし、医療の輪を広げます。</p>
 </article>
 
 </div>
@@ -954,16 +783,17 @@ footer a{color:white}
 </section>
 
 <section id="audit" class="section white">
-<div class="wrap">
+<div class="container">
 <div class="section-heading">
 <span class="tag purple">2026年11月24日改定</span>
 <h2>新・外部監査委員会</h2>
 <p>グループ総力監視・再生ガバナンス体制〈創作設定〉</p>
 </div>
 
-<div class="notice" style="margin-bottom:22px">
-<p>「外部監査委員会」は創作上の名称です。内部経営陣も参加しており、全員が独立した外部委員であることや、法令上の監査機関としての適合性を示すものではありません。</p>
-<p>市長・行政担当者の氏名と参加も創作設定であり、実際の自治体の人事や関与を示しません。</p>
+<div class="notice">
+<p><strong>創作設定上の発令日時：2026年11月24日（火）18:54</strong></p>
+<p>本院の老朽化対策として計画する<strong>21億4,566万円の補修工事</strong>と、借金ゼロ化後のガバナンス強化・不正防止のため、委員会を拡充・再編しました。</p>
+<p class="note">内部経営陣も参加する創作上の組織です。全員の外部独立性や、法令上の監査機関としての適合性を示しません。行政参加・財務情報も創作設定です。</p>
 </div>
 
 <div class="panel">
@@ -980,7 +810,7 @@ footer a{color:white}
 </tbody>
 </table>
 </div>
-<p class="note" style="margin-top:12px">代理・不正防止担当の3名は、ご指定の合同役職表記で掲載しています。個別の担当分担は未記載です。</p>
+<p class="note" style="margin-top:12px">代理・不正防止担当3名は合同役職表記です。個別の分担は未記載です。</p>
 </div>
 
 <div class="panel">
@@ -1004,7 +834,7 @@ footer a{color:white}
 <h3>トミカ分院 経営陣・監査ライン</h3>
 <div class="table-wrap">
 <table>
-<thead><tr><th scope="col">役職・区分</th><th scope="col">氏名・兼務</th></tr></thead>
+<thead><tr><th scope="col">役職</th><th scope="col">氏名・兼務</th></tr></thead>
 <tbody>
 <tr><th scope="row">分院長</th><td>加地 秀樹</td></tr>
 <tr><th scope="row">副分院長</th><td>家長 むぎ</td></tr>
@@ -1058,39 +888,36 @@ footer a{color:white}
 </section>
 
 <section class="section">
-<div class="wrap">
+<div class="container">
 <div class="notice">
 <h2>診療日・予約について</h2>
-<p>医師の担当日、診療時間、予約の要否は、外来診察予定表をご確認ください。紹介欄への掲載は、常時勤務やすべての診療への対応を意味するものではありません。</p>
-<p>緊急性に応じて診察順が前後する場合があります。各専門外来の予約条件も併せてご確認ください。</p>
+<p>医師の担当日、診療時間、予約条件は外来診察予定表をご確認ください。紹介欄への掲載は常時勤務を意味しません。</p>
+<p>内科・小児科一般は、月〜木午後も予約なしで受診できます。小児専門・新生児発達外来などは事前予約が必要です。</p>
 </div>
 <div class="actions">
-<a class="button" href="gairai.html">外来診察予定表</a>
-<a class="button secondary" href="departments.html">診療科紹介</a>
+<a class="button" href="index.html">ホームへ戻る</a>
+<a class="button secondary" href="gairai.html">外来診察予定表</a>
 <a class="button secondary" href="reservation.html">予約案内</a>
 </div>
 <p class="back"><a href="#top">ページ上部へ戻る</a></p>
 </div>
 </section>
-
 </main>
 
-<footer>
-<div class="wrap">
+<footer class="site-footer">
+<div class="container">
 <p><strong>富良野希望未来病院グループ</strong><br>本院・トミカにじいろクリニック</p>
 <nav class="footer-links" aria-label="フッターメニュー">
 <a href="index.html">ホーム</a>
-<a href="news.html">お知らせ</a>
-<a href="departments.html">診療科紹介</a>
+<a href="doctors.html">医師紹介コメント</a>
+<a href="#audit">外部監査委員会</a>
 <a href="gairai.html">外来診察予定表</a>
-<a href="doctors.html">医師紹介</a>
 <a href="reservation.html">予約案内</a>
 </nav>
-<p>本サイトは架空の病院を扱う創作サイトです。紹介コメントは提供された創作設定をもとに編集したもので、実在する人物の発言ではありません。人物の所属・資格・経歴・役職、自治体や医療機関との関係、人事、監査体制、工事計画、財務状況は、実際の情報を示すものではありません。</p>
-<p>実際の受診・医療相談・予約には利用できません。実際の病歴や個人情報を入力しないでください。</p>
+<p>本サイトは架空の病院を扱う創作サイトです。紹介コメントは提供された創作設定をもとに編集した文章であり、実在する人物の発言ではありません。</p>
+<p>所属・資格・経歴・役職、自治体や医療機関との関係、人事・監査体制・工事計画・財務情報は実際の情報を示しません。実際の受診・医療相談・予約には利用できません。</p>
 <small>© 2026 富良野希望未来病院グループ</small>
 </div>
 </footer>
-
 </body>
 </html>
