@@ -2,458 +2,420 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>医師・運営体制紹介 | 富良野希望未来病院グループ</title>
-
-<meta
-  name="description"
-  content="創作サイト・富良野希望未来病院グループの医師・運営体制紹介。診療科別医師、本院・分院の経営陣、2026年11月24日改定の外部監査委員会名簿を掲載しています。"
->
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>医師・運営体制紹介｜富良野希望未来病院グループ</title>
 <meta name="theme-color" content="#245c51">
-
 <style>
-:root {
-  --main: #245c51;
-  --dark: #173f37;
-  --light: #edf5f1;
-  --purple: #655080;
-  --purple-light: #f3eef8;
-  --ink: #263d36;
-  --muted: #52665d;
-  --line: #d6e2db;
-  --background: #f7f9f6;
-  --radius: 16px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 24px;
-}
-
-body {
-  margin: 0;
-  color: var(--ink);
-  background: var(--background);
-  font-family:
-    -apple-system, BlinkMacSystemFont,
-    "Hiragino Kaku Gothic ProN", "Yu Gothic",
-    Meiryo, sans-serif;
-  font-size: 16px;
-  line-height: 1.85;
-  overflow-wrap: anywhere;
-}
-
-a {
-  color: var(--main);
-  text-underline-offset: .2em;
-}
-
-a:hover {
-  text-decoration-thickness: 2px;
-}
-
-a:focus-visible,
-input:focus-visible,
-button:focus-visible,
-[tabindex]:focus-visible {
-  outline: 3px solid #a76413;
-  outline-offset: 4px;
-}
-
-button,
-input {
-  font: inherit;
-}
-
-[hidden] {
-  display: none !important;
-}
-
-.container {
-  width: min(1120px, calc(100% - 32px));
-  margin-inline: auto;
-}
-
-.skip-link {
-  position: absolute;
-  top: -100px;
-  left: 12px;
-  z-index: 100;
-  padding: 12px 18px;
-  background: white;
-}
-
-.skip-link:focus {
-  top: 12px;
-}
-
-.fiction-banner {
-  padding: 8px 0;
-  color: white;
-  background: var(--dark);
-  font-size: .8rem;
-}
-
-.fiction-banner p {
-  margin: 0;
-}
-
-.site-header {
-  border-bottom: 1px solid var(--line);
-  background: white;
-}
-
-.header-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 18px;
-  padding-block: 20px;
-}
-
-.brand {
-  color: var(--ink);
-  text-decoration: none;
-}
-
-.brand strong {
-  display: block;
-  font-size: 1.12rem;
-  letter-spacing: .03em;
-}
-
-.brand span {
-  display: block;
-  color: var(--muted);
-  font-size: .8rem;
-}
-
-.global-nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.global-nav a {
-  display: block;
-  padding: 8px 10px;
-  border-radius: 8px;
-  color: var(--ink);
-  font-size: .9rem;
-  text-decoration: none;
-}
-
-.global-nav a:hover,
-.global-nav [aria-current="page"] {
-  background: var(--light);
-}
-
-.global-nav [aria-current="page"] {
-  font-weight: bold;
-}
-
-.hero {
-  padding: 28px 0 40px;
-  background:
-    radial-gradient(circle at 90% 15%, #e6ddf3, transparent 40%),
-    linear-gradient(125deg, #eef6ed, #edf5f2);
-}
-
-.breadcrumbs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 9px;
-  margin: 0 0 24px;
-  padding: 0;
-  list-style: none;
-  color: var(--muted);
-  font-size: .86rem;
-}
-
-.eyebrow {
-  margin: 0 0 12px;
-  color: var(--purple);
-  font-size: .88rem;
-  font-weight: bold;
-  letter-spacing: .08em;
-}
-
-h1 {
-  margin: 0 0 18px;
-  font-size: clamp(1.8rem, 4vw, 2.7rem);
-  line-height: 1.5;
-}
-
-h2 {
-  margin: 0 0 16px;
-  font-size: clamp(1.4rem, 3vw, 1.8rem);
-  line-height: 1.5;
-}
-
-h3 {
-  margin: 0 0 16px;
-  font-size: 1.15rem;
-  line-height: 1.6;
-}
-
-.hero p {
-  max-width: 850px;
-}
-
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 22px;
-}
-
-.button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 46px;
-  padding: 10px 18px;
-  border: 1px solid var(--main);
-  border-radius: 9px;
-  color: white;
-  background: var(--main);
-  font-weight: bold;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.button.secondary {
-  color: var(--main);
-  background: white;
-}
-
-.section {
-  padding: 34px 0;
-  scroll-margin-top: 24px;
-}
-
-.section.white {
-  background: white;
-}
-
-.section-heading {
-  margin-bottom: 24px;
-}
-
-.section-heading p {
-  margin: 0;
-  color: var(--muted);
-}
-
-.card {
-  min-width: 0;
-  padding: 24px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: white;
-  box-shadow: 0 8px 24px rgba(28, 62, 49, .04);
-}
-
-.card + .card,
-.roster-group + .roster-group {
-  margin-top: 22px;
-}
-
-.tag {
-  display: inline-block;
-  margin-bottom: 12px;
-  padding: 3px 10px;
-  border-radius: 6px;
-  color: var(--dark);
-  background: var(--light);
-  font-size: .8rem;
-  font-weight: bold;
-}
-
-.tag.purple {
-  color: #584174;
-  background: var(--purple-light);
-}
-
-.notice {
-  padding: 24px;
-  border: 1px solid #dfc79d;
-  border-left: 6px solid #a66c22;
-  border-radius: 12px;
-  background: #fff6e7;
-}
-
-.notice p {
-  margin: 10px 0 0;
-}
-
-.notice p:first-child {
-  margin-top: 0;
-}
-
-.info-box {
-  margin-top: 20px;
-  padding: 18px;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  background: var(--light);
-}
-
-.info-box.purple {
-  background: var(--purple-light);
-}
-
-.info-box p {
-  margin: 0;
-}
-
-.info-box p + p {
-  margin-top: 10px;
-}
-
-.jump-links {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 10px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.jump-links a {
-  display: block;
-  height: 100%;
-  padding: 13px;
-  border: 1px solid var(--line);
-  border-radius: 9px;
-  background: white;
-  font-size: .91rem;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.jump-links a:hover {
-  background: var(--light);
-}
-
-.search-label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-}
-
-.search-row {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.search-row input {
-  flex: 1 1 280px;
-  min-width: 0;
-  padding: 12px;
-  border: 1px solid #81998b;
-  border-radius: 8px;
-  color: var(--ink);
-  background: white;
-}
-
-.search-status {
-  margin: 12px 0 0;
-  color: var(--muted);
-  font-size: .9rem;
-}
-
-.table-wrap {
-  overflow-x: auto;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  background: white;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: .94rem;
-}
-
-th,
-td {
-  padding: 13px 15px;
-  border-bottom: 1px solid var(--line);
-  text-align: left;
-  vertical-align: top;
-}
-
-thead th {
-  background: var(--light);
-}
-
-tbody th {
-  width: 26%;
-  background: #f6faf7;
-}
-
-tr:last-child > * {
-  border-bottom: 0;
-}
-
-.audit-table tbody th {
-  width: 40%;
-}
-
-.note {
-  color: var(--muted);
-  font-size: .9rem;
-}
-
-.clean-list {
-  margin: 12px 0;
-  padding-left: 1.4em;
-}
-
-.clean-list li + li {
-  margin-top: 8px;
-}
-
-.back {
-  margin: 24px 0 0;
-  text-align: right;
-  font-size: .9rem;
-}
-
-.site-footer {
-  padding: 30px 0;
-  color: white;
-  background: var(--dark);
-  font-size: .9rem;
-}
-
-.site-footer a {
-  color: white;
-}
-
-.site-footer p {
-  margin: 0 0 12px;
-}
-
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 20px;
-  padding: 0;
-  list-style: none;
-}
-
-@media (max-width: 800px) {
-  .jump-links {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:20px}
+body{margin:0;background:#f7f9f6;color:#263d36;font-family:-apple-system,BlinkMacSystemFont,"Yu Gothic",Meiryo,sans-serif;line-height:1.85;overflow-wrap:anywhere}
+a{color:#245c51;text-underline-offset:3px}
+a:focus-visible{outline:3px solid #a76413;outline-offset:4px}
+.wrap{width:min(1120px,calc(100% - 32px));margin:auto}
+.fiction,footer{background:#173f37;color:white;padding:14px 0}
+.fiction{font-size:.8rem}
+header{background:white;border-bottom:1px solid #d6e2db}
+.head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;padding:20px 0}
+.brand{color:#263d36;text-decoration:none;font-weight:bold}
+.brand small{display:block;font-weight:normal;color:#52665d}
+nav{display:flex;flex-wrap:wrap;gap:8px}
+nav a{padding:8px 10px;border-radius:8px;text-decoration:none;font-size:.9rem}
+nav a:hover,nav a[aria-current]{background:#edf5f1}
+.hero{padding:36px 0;background:linear-gradient(125deg,#eef6ed,#f2edf8)}
+h1{font-size:clamp(1.7rem,4vw,2.6rem);line-height:1.5;margin:0 0 14px}
+h2{font-size:1.5rem;line-height:1.5;margin:0 0 18px}
+h3{font-size:1.1rem;margin:24px 0 12px}
+section{padding:30px 0}
+.card{padding:24px;margin-bottom:20px;background:white;border:1px solid #d6e2db;border-radius:16px}
+.notice{padding:22px;background:#fff6e7;border:1px solid #dfc79d;border-left:6px solid #a66c22;border-radius:12px}
+.notice p:first-child{margin-top:0}
+.notice p:last-child{margin-bottom:0}
+.menu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.menu a{display:block;background:white;border:1px solid #d6e2db;border-radius:9px;padding:12px;text-decoration:none;font-weight:bold}
+.table{overflow-x:auto;border:1px solid #d6e2db;border-radius:10px}
+table{width:100%;border-collapse:collapse;font-size:.94rem}
+th,td{padding:12px;border-bottom:1px solid #d6e2db;text-align:left;vertical-align:top}
+thead th{background:#edf5f1}
+tbody th{width:32%;background:#f6faf7}
+tr:last-child>*{border-bottom:0}
+.note{font-size:.9rem;color:#52665d}
+.tag{display:inline-block;padding:3px 10px;border-radius:6px;background:#edf5f1;color:#245c51;font-size:.85rem}
+.back{text-align:right;font-size:.9rem}
+footer a{color:white}
+.skip{position:absolute;top:-100px;left:12px;background:white;padding:10px}
+.skip:focus{top:10px}
+@media(max-width:600px){
+.menu{grid-template-columns:repeat(2,minmax(0,1fr))}
+.card{padding:16px}
+th,td{padding:10px}
+tbody th{width:36%}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{
+nav,.menu,.back,.skip{display:none}
+body,.hero,footer{background:white;color:black}
+.wrap{width:100%}
+.card{border:0;padding:0}
+.table{overflow:visible}
+tr{break-inside:avoid}
+thead{display:table-header-group}
+}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">本文へ移動</a>
+
+<div class="fiction">
+<div class="wrap">
+創作サイトです。人物の所属・資格・役職、自治体の参加、財務情報はすべて創作上の設定です。実際の受診・予約には利用できません。
+</div>
+</div>
+
+<header>
+<div class="wrap head">
+<a class="brand" href="index.html">
+富良野希望未来病院グループ
+<small>本院・トミカにじいろクリニック</small>
+</a>
+<nav aria-label="メインメニュー">
+<a href="index.html">ホーム</a>
+<a href="news.html">お知らせ</a>
+<a href="departments.html">診療科紹介</a>
+<a href="gairai.html">外来診察予定表</a>
+<a href="doctors.html" aria-current="page">医師紹介</a>
+<a href="reservation.html">予約案内</a>
+</nav>
+</div>
+</header>
+
+<main id="main">
+<div class="hero">
+<div class="wrap">
+<p><a href="index.html">ホーム</a> ／ 医師・運営体制紹介</p>
+<h1>医師・運営体制紹介</h1>
+<p>本院・分院の医師、経営陣、相談支援担当者、外部監査委員会をご紹介します。</p>
+<span class="tag">人事・監査体制：2026年11月24日改定</span>
+</div>
+</div>
+
+<section>
+<div class="wrap">
+<div class="notice">
+<h2>外部監査委員会を再編しました</h2>
+<p>
+<strong>創作設定上の発令日時：2026年11月24日（火）18:54</strong>
+</p>
+<p>
+本院建物の老朽化対策として計画する<strong>21億4,566万円の補修工事</strong>および、借金ゼロ化後のガバナンス強化・不正防止徹底のため、委員会を拡充・再編しました。
+</p>
+<p>
+委員長代理・副委員長代理・不正防止担当者を新設し、朝日南アカネが分院病院監査委員長に新任。小児科外来医長を兼務します。
+</p>
+<p>
+本院・分院、法務・税務、両市の行政担当者が参加する「グループ総力監視・再生ガバナンス体制」とします。
+</p>
+</div>
+</div>
+</section>
+
+<div class="wrap">
+<nav class="menu" aria-label="ページ内メニュー">
+<a href="#leaders">本院経営陣</a>
+<a href="#audit">外部監査委員会</a>
+<a href="#doctors">診療科別医師</a>
+<a href="#support">心理・相談支援</a>
+<a href="#tomica">トミカ分院</a>
+<a href="#others">研修・出向・専門外来</a>
+</nav>
+</div>
+
+<section id="leaders">
+<div class="wrap">
+<div class="card">
+<h2>本院経営陣</h2>
+<div class="table">
+<table>
+<thead><tr><th scope="col">役職</th><th scope="col">氏名</th></tr></thead>
+<tbody>
+<tr><th scope="row">病院長</th><td>紡木 こかげ</td></tr>
+<tr><th scope="row">副病院長</th><td>四宮 春樹／鏑木 ろこ</td></tr>
+<tr><th scope="row">病院長代理</th><td>藍沢 耕作／大泉 洋</td></tr>
+<tr><th scope="row">副病院長代理</th><td>進藤 一生／石神 のぞみ</td></tr>
+<tr><th scope="row">最高顧問</th><td>蝸堂 みかる</td></tr>
+<tr><th scope="row">新病院担当・病院改革委員</th><td>先斗 寧</td></tr>
+<tr><th scope="row">外来医長（名誉病院長）</th><td>渡邊 トドック</td></tr>
+<tr><th scope="row">精神科・児童精神科外来医長（病院意見係）</th><td>周央 サンゴ</td></tr>
+<tr><th scope="row">病院経営改革・病院運営委員会 委員長</th><td>黒井 しば</td></tr>
+<tr><th scope="row">学校連携・行政連携委員長</th><td>蝶屋 はなび</td></tr>
+<tr><th scope="row">新病院担当者</th><td>栞葉 るり</td></tr>
+<tr><th scope="row">診療科再編・日程等再編担当者</th><td>五十嵐 菜々</td></tr>
+<tr><th scope="row">医療サポート科相談室長</th><td>夜乃 くろむ</td></tr>
+<tr><th scope="row">医療サポート科カウンセラー兼相談室長</th><td>白砂 まどか</td></tr>
+<tr><th scope="row">病院監査委員長</th><td>浜川 百合子</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+
+<section id="audit">
+<div class="wrap">
+<div class="card">
+<span class="tag">2026年11月24日改定</span>
+<h2>新・外部監査委員会</h2>
+<p class="note">
+「外部監査委員会」は創作上の名称です。内部経営陣も参加する設定であり、全員が独立した外部委員であることや、法令上の監査機関としての適合性を示すものではありません。
+</p>
+
+<h3>監査執行トップ・不正防止ライン</h3>
+<div class="table">
+<table>
+<thead><tr><th scope="col">役職</th><th scope="col">氏名・兼務</th></tr></thead>
+<tbody>
+<tr><th scope="row">委員長</th><td>山崎 育三</td></tr>
+<tr><th scope="row">副委員長</th><td>江田 雄二</td></tr>
+<tr><th scope="row">委員長代理・副委員長代理・不正防止担当者</th><td>澤田 咲<br>神経内科主任部長</td></tr>
+<tr><th scope="row">委員長代理・副委員長代理・不正防止担当者</th><td>佐々木 彩乃<br>産婦人科主任係長 兼 新生児発達外来担当医</td></tr>
+<tr><th scope="row">委員長代理・副委員長代理・不正防止担当者</th><td>竹田 康<br>思春期科・こころの専門医／児童精神科主任部長代理</td></tr>
+</tbody>
+</table>
+</div>
+<p class="note">代理・不正防止担当の3名は合同役職表記とし、個別の分担は未記載です。</p>
+
+<h3>法務・税務・行政ライン</h3>
+<div class="table">
+<table>
+<thead><tr><th scope="col">役職・区分</th><th scope="col">氏名</th></tr></thead>
+<tbody>
+<tr><th scope="row">顧問税理士</th><td>野村 恵美</td></tr>
+<tr><th scope="row">顧問弁護士</th><td>福田 準／一木 裕樹／高宮 まり</td></tr>
+<tr><th scope="row">トミカ市長〈創作設定〉</th><td>龍巻 ちせ</td></tr>
+<tr><th scope="row">トミカ市担当者〈創作設定〉</th><td>赤井 照美／長友 博之／藤原 廣木／美郷 直也</td></tr>
+<tr><th scope="row">富良野市長〈創作設定〉</th><td>町田 ちま</td></tr>
+<tr><th scope="row">富良野市担当者〈創作設定〉</th><td>樋口 楓／石川 月見／斉藤 忠郷</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>トミカ分院 経営陣・監査ライン</h3>
+<div class="table">
+<table>
+<thead><tr><th scope="col">役職</th><th scope="col">氏名・兼務</th></tr></thead>
+<tbody>
+<tr><th scope="row">分院長</th><td>加地 秀樹</td></tr>
+<tr><th scope="row">副分院長</th><td>家長 むぎ</td></tr>
+<tr><th scope="row">分院経営戦略担当者・広報担当者</th><td>花芽 すみれ</td></tr>
+<tr><th scope="row">分院病院監査委員長〈新任〉</th><td>朝日南 アカネ<br>小児科外来医長兼務</td></tr>
+<tr><th scope="row">委員</th><td>奥野 宗一郎<br>分院長・副分院長代理</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>富良野本院 経営陣ライン〈理事〉</h3>
+<div class="table">
+<table>
+<thead><tr><th scope="col">本院役職</th><th scope="col">理事氏名</th></tr></thead>
+<tbody>
+<tr><th scope="row">病院長</th><td>紡木 こかげ</td></tr>
+<tr><th scope="row">副病院長</th><td>四宮 春樹／鏑木 ろこ</td></tr>
+<tr><th scope="row">病院長代理</th><td>藍沢 耕作／大泉 洋</td></tr>
+<tr><th scope="row">副病院長代理</th><td>進藤 一生／石神 のぞみ</td></tr>
+<tr><th scope="row">最高顧問</th><td>蝸堂 みかる</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>富良野本院 経営陣ライン〈委員〉</h3>
+<div class="table">
+<table>
+<thead><tr><th scope="col">本院役職・担当</th><th scope="col">委員氏名</th></tr></thead>
+<tbody>
+<tr><th scope="row">新病院担当・病院改革委員</th><td>先斗 寧</td></tr>
+<tr><th scope="row">外来医長（名誉病院長）</th><td>渡邊 トドック</td></tr>
+<tr><th scope="row">精神科・児童精神科外来医長（病院意見係）</th><td>周央 サンゴ</td></tr>
+<tr><th scope="row">病院経営改革・病院運営委員会 委員長</th><td>黒井 しば</td></tr>
+<tr><th scope="row">学校連携・行政連携委員長</th><td>蝶屋 はなび</td></tr>
+<tr><th scope="row">新病院担当者</th><td>栞葉 るり</td></tr>
+<tr><th scope="row">診療科再編・日程等再編担当者</th><td>五十嵐 菜々</td></tr>
+<tr><th scope="row">医療サポート科相談室長</th><td>夜乃 くろむ</td></tr>
+<tr><th scope="row">医療サポート科カウンセラー兼相談室長</th><td>白砂 まどか</td></tr>
+<tr><th scope="row">病院監査委員長</th><td>浜川 百合子</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+
+<section id="doctors">
+<div class="wrap">
+<div class="card">
+<h2>診療科別 医師紹介</h2>
+<p class="note">兼務者は複数の診療科に掲載しています。担当日は外来診察予定表をご確認ください。</p>
+<div class="table">
+<table>
+<thead><tr><th scope="col">診療科・区分</th><th scope="col">医師・担当者</th></tr></thead>
+<tbody>
+<tr><th scope="row">内科</th><td>鏑木 ろこ／五島 健助／神楽坂 倫太郎／高本 めぐみ／松前 春香／夜乃 くろむ／樋口 楓／大泉 洋</td></tr>
+<tr><th scope="row">夜間診療・内科当直</th><td>早坂 昇／高木 裕樹／白石 恵／緋山 美帆子</td></tr>
+<tr><th scope="row">一般外科</th><td>猪股 隆／栞葉 るり／進藤 一生</td></tr>
+<tr><th scope="row">整形外科</th><td>辻元 朝子</td></tr>
+<tr><th scope="row">脳神経内科・脳神経外科</th><td>澤田 咲〈神経内科主任部長〉</td></tr>
+<tr><th scope="row">血管外科・血液内科・心臓外科／ラベンダー外来</th><td>白砂 まどか</td></tr>
+<tr><th scope="row">小児科一般・小児専門・思春期</th><td>紡木 こかげ／星川 輝／黒井 しば／蝸堂 みかる／先斗 寧／五十嵐 菜々／石神 のぞみ／小々波 いるか／不破 拓海／千凛 あゆむ／角巻 わため／蝶屋 はなび／栞葉 るり／周央 サンゴ</td></tr>
+<tr><th scope="row">新生児発達外来〈小児科所属〉</th><td>佐々木 彩乃<br>毎週火曜・金曜午後／完全予約制／土曜実施なし</td></tr>
+<tr><th scope="row">産婦人科</th><td>四宮 春樹／佐々木 彩乃／赤羽 葉雪／赤羽 祐司／雲母 たまこ／菊田 真理恵</td></tr>
+<tr><th scope="row">精神科・児童精神科</th><td>夢咲 ネム／周央 サンゴ／先斗 寧／雪村 双葉／竹田 康／天宮 こころ／笠木 緑／佐々木 彩乃〈診療支援〉</td></tr>
+<tr><th scope="row">総合診療科</th><td>渡邊 トドック／星川 郁男／藤原 のりこ／山田 義治</td></tr>
+<tr><th scope="row">泌尿器科</th><td>小森 明二／北里 りさ</td></tr>
+<tr><th scope="row">心療内科</th><td>浜川 百合子／風間 トオル</td></tr>
+<tr><th scope="row">救急科・救急支援</th><td>藍沢 耕作／進藤 一生／五条 蓮／一橋 太郎／星川 サラ／神崎 徹／前澤 優作／茨城 美紅／福山 鉄人</td></tr>
+<tr><th scope="row">皮膚科・眼科・耳鼻咽喉科</th><td>火曜・水曜・金曜に各科それぞれ出張医1名。氏名は月間予定表で案内します。</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>佐々木 彩乃 医師について</h3>
+<p>
+産婦人科主任係長 兼 新生児発達外来担当医。
+外部監査委員会の委員長代理・副委員長代理・不正防止担当者を兼務します。
+<strong>通常診療は曜日・診療科を問わず完全予約制です。</strong>
+</p>
+<p>
+産婦人科は水曜および第3・第4・第5土曜・日曜、
+新生児発達外来は毎週火曜・金曜午後の担当です。
+詳しい時間帯は外来診察予定表をご確認ください。
+</p>
+</div>
+</div>
+</section>
+
+<section id="support">
+<div class="wrap">
+<div class="card">
+<h2>心理・相談支援</h2>
+<div class="table">
+<table>
+<thead><tr><th scope="col">氏名</th><th scope="col">担当</th></tr></thead>
+<tbody>
+<tr><th scope="row">大音 ましろ</th><td>精神科・児童精神科カウンセリング</td></tr>
+<tr><th scope="row">中村 里子</th><td>こころの相談窓口「ふらの・ハートポート」</td></tr>
+<tr><th scope="row">葉加瀬 冬雪</th><td>専任心理士・学校連携スクールカウンセラー</td></tr>
+<tr><th scope="row">アンジュ・カトリーナ</th><td>別館児童精神科 専任主任心理士</td></tr>
+<tr><th scope="row">大久保 希美</th><td>別館精神科 専任心理士</td></tr>
+<tr><th scope="row">夜乃 くろむ</th><td>医療サポート科相談室長</td></tr>
+<tr><th scope="row">白砂 まどか</th><td>医療サポート科カウンセラー兼相談室長</td></tr>
+</tbody>
+</table>
+</div>
+<p>
+カウンセリングは予約が基本です。緊急性が高い場合は、空いているカウンセラーで対応を調整します。
+</p>
+<p class="note">フォローアップ・リエゾンは精神科・児童精神科に統合しています。</p>
+</div>
+</div>
+</section>
+
+<section id="tomica">
+<div class="wrap">
+<div class="card">
+<h2>トミカにじいろクリニック</h2>
+<div class="table">
+<table>
+<thead><tr><th scope="col">役職・担当</th><th scope="col">氏名</th></tr></thead>
+<tbody>
+<tr><th scope="row">分院長</th><td>加地 秀樹</td></tr>
+<tr><th scope="row">副分院長</th><td>家長 むぎ</td></tr>
+<tr><th scope="row">分院長・副分院長代理</th><td>奥野 宗一郎</td></tr>
+<tr><th scope="row">分院経営戦略・広報</th><td>花芽 すみれ</td></tr>
+<tr><th scope="row">分院病院監査委員長・小児科外来医長</th><td>朝日南 アカネ</td></tr>
+<tr><th scope="row">産婦人科</th><td>木村 彩乃／田崎 恵</td></tr>
+<tr><th scope="row">精神科</th><td>山崎 育三</td></tr>
+<tr><th scope="row">夜間診療・救急支援</th><td>花芽 すみれ／加地 秀樹／奥野 宗一郎／江田 雄二</td></tr>
+<tr><th scope="row">本院からの連携担当</th><td>早坂 昇／紡木 こかげ／千凛 あゆむ／角巻 わため／夜乃 くろむ／長野 信二</td></tr>
+</tbody>
+</table>
+</div>
+<p class="note">名簿への掲載は常時勤務を意味しません。診療日・担当は外来診察予定表をご確認ください。</p>
+</div>
+</div>
+</section>
+
+<section id="others">
+<div class="wrap">
+<div class="card">
+<h2>予約専門外来・研修・出向</h2>
+
+<h3>予約に合わせて日時を調整する外来</h3>
+<div class="table">
+<table>
+<thead><tr><th scope="col">外来</th><th scope="col">担当医</th></tr></thead>
+<tbody>
+<tr><th scope="row">緩和ケア</th><td>長野 信二／星野 彩乃／原 守</td></tr>
+<tr><th scope="row">遺伝カウンセリング</th><td>田沼 譲／星野 彩乃／原 守</td></tr>
+<tr><th scope="row">喫煙外来</th><td>鏑木 ろこ／大泉 洋／田沼 譲</td></tr>
+</tbody>
+</table>
+</div>
+<p>予約時に担当医・日時を調整します。予約者がいない場合は休診です。</p>
+
+<h3>研修・連携支援</h3>
+<div class="table">
+<table>
+<thead><tr><th scope="col">氏名</th><th scope="col">担当</th></tr></thead>
+<tbody>
+<tr><th scope="row">一ノ瀬 うるは</th><td>小児科・児童精神科・ラベンダー外来研修／小児科一般補助医</td></tr>
+<tr><th scope="row">七瀬 すず菜</th><td>総合診療科・ラベンダー外来・救急トリアージ連携支援</td></tr>
+<tr><th scope="row">雲母 たまこ</th><td>産婦人科研修・補助診療</td></tr>
+</tbody>
+</table>
+</div>
+<p class="note">研修・補助診療は指導体制の下で行います。</p>
+
+<h3>出向中医師〈創作設定〉</h3>
+<div class="table">
+<table>
+<thead><tr><th scope="col">氏名</th><th scope="col">所属・状況</th></tr></thead>
+<tbody>
+<tr><th scope="row">空澄 セナ</th><td>小児科・児童精神科主任係長代理／出向中</td></tr>
+<tr><th scope="row">目黒 連</th><td>思春期・小児神経発達外来特任部長／出向中</td></tr>
+<tr><th scope="row">水野 遥</th><td>産婦人科医／市立旭川病院へ出向中〈創作設定〉</td></tr>
+</tbody>
+</table>
+</div>
+<p class="note">実在する医療機関への在籍・出向を示すものではありません。</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<div class="notice">
+<h2>受診のご案内</h2>
+<p><strong>内科・小児科一般は月曜日から木曜日の午後も予約なしで受診できます。</strong></p>
+<p><strong>緊急性の高い方を優先します。</strong>症状や状態により診察順が前後する場合があります。</p>
+<p>小児専門・思春期外来、新生児発達外来などは予約が必要です。分院の土曜午後は小児科休診です。</p>
+<p><a href="gairai.html">外来診察予定表を見る</a> ／ <a href="reservation.html">予約案内</a></p>
+</div>
+<p class="back"><a href="#top">ページ上部へ戻る</a></p>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<p><strong>富良野希望未来病院グループ</strong></p>
+<p>本院・トミカにじいろクリニック</p>
+<p>
+本サイトは架空の病院を扱う創作サイトです。
+人物の所属・資格・役職、人事、自治体の参加、監査体制、工事計画、財務状況は創作上の設定です。
+実在する人物・自治体・医療機関の正式な情報ではありません。
+</p>
+<p>実際の受診・医療相談・予約には利用できません。</p>
+<p><a href="index.html">ホーム</a> ／ <a href="gairai.html">外来診察予定表</a> ／ <a href="departments.html">診療科紹介</a></p>
+<small>© 2026 富良野希望未来病院グループ</small>
+</div>
+</footer>
+</body>
+</html>
