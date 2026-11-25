@@ -4,93 +4,87 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>富良野希望未来病院グループ</title>
-<meta name="description" content="創作サイト・富良野希望未来病院グループ。外来診察予定表、医師紹介コメント、診療科、施設、運営体制をご案内します。">
+<meta name="description" content="創作サイト。外来診察予定表、医師紹介、予約方法をご案内します。小児専門外来は午前中予約なし可。医師指定は予約をお願いします。">
 <meta name="theme-color" content="#245c51">
 <style>
-:root{--main:#245c51;--dark:#173f37;--light:#edf5f1;--purple:#655080;--purple-light:#f3eef8;--ink:#263d36;--muted:#52665d;--line:#d6e2db;--background:#f7f9f6}
+:root{--main:#245c51;--dark:#173f37;--light:#edf5f1;--purple:#655080;--line:#d6e2db;--ink:#263d36;--muted:#52665d}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:24px}
-body{margin:0;color:var(--ink);background:var(--background);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;font-size:16px;line-height:1.85;overflow-wrap:anywhere}
+body{margin:0;background:#f7f9f6;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Yu Gothic",Meiryo,sans-serif;line-height:1.85;overflow-wrap:anywhere}
 a{color:var(--main);text-underline-offset:3px}
 a:focus-visible,summary:focus-visible{outline:3px solid #a76413;outline-offset:4px}
-.container{width:min(1120px,calc(100% - 32px));margin-inline:auto}
-.skip{position:absolute;top:-100px;left:12px;padding:12px;background:white;z-index:10}
+.container{width:min(1120px,calc(100% - 32px));margin:auto}
+.skip{position:absolute;top:-100px;left:12px;padding:12px;background:white;z-index:100}
 .skip:focus{top:12px}
-.fiction{padding:8px 0;color:white;background:var(--dark);font-size:.8rem}
+.fiction{padding:9px 0;background:var(--dark);color:white;font-size:.8rem}
 .fiction p{margin:0}
-.site-header{background:white;border-bottom:1px solid var(--line)}
-.header-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px;padding-block:20px}
-.brand{color:var(--ink);text-decoration:none}
+header{background:white;border-bottom:1px solid var(--line)}
+.header-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px;padding:20px 0}
+.brand{text-decoration:none;color:var(--ink)}
 .brand strong{display:block;font-size:1.12rem}
 .brand span{display:block;color:var(--muted);font-size:.8rem}
-.global-nav{display:flex;flex-wrap:wrap;gap:6px}
-.global-nav a{display:block;padding:8px 10px;border-radius:8px;color:var(--ink);font-size:.88rem;text-decoration:none}
-.global-nav a:hover,.global-nav [aria-current="page"]{background:var(--light)}
-.global-nav [aria-current="page"]{font-weight:bold}
-.hero{padding:48px 0;background:radial-gradient(circle at 90% 15%,#e6ddf3,transparent 40%),linear-gradient(125deg,#eef6ed,#edf5f2)}
-.hero-grid{display:grid;grid-template-columns:1.5fr 1fr;align-items:center;gap:30px}
-.eyebrow{margin:0 0 12px;color:var(--purple);font-size:.88rem;font-weight:bold}
-h1{margin:0 0 20px;font-size:clamp(1.9rem,4vw,2.8rem);line-height:1.5}
-h2{margin:0 0 16px;font-size:clamp(1.4rem,3vw,1.8rem);line-height:1.5}
-h3{margin:12px 0;font-size:1.17rem;line-height:1.6}
+nav.links{display:flex;flex-wrap:wrap;gap:5px}
+nav.links a{padding:8px 10px;border-radius:8px;text-decoration:none;color:var(--ink);font-size:.88rem}
+nav.links a:hover,nav.links [aria-current]{background:var(--light)}
+.hero{padding:44px 0;background:radial-gradient(circle at 90% 15%,#e6ddf3,transparent 40%),linear-gradient(125deg,#eef6ed,#edf5f2)}
+h1{margin:0 0 18px;font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.5}
+h2{margin:0 0 18px;font-size:clamp(1.35rem,3vw,1.8rem);line-height:1.5}
+h3{margin:12px 0;font-size:1.16rem}
 p{margin:0 0 14px}
 p:last-child{margin-bottom:0}
-.section{padding:38px 0}
+.eyebrow{color:var(--purple);font-size:.88rem;font-weight:bold}
+.section{padding:34px 0}
 .white{background:white}
-.section-heading{margin-bottom:24px}
-.section-heading p{color:var(--muted)}
 .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
-.card{display:flex;flex-direction:column;min-width:0;padding:24px;border:1px solid var(--line);border-radius:16px;background:white;box-shadow:0 8px 24px rgba(28,62,49,.04)}
+.card{display:flex;flex-direction:column;min-width:0;padding:24px;border:1px solid var(--line);border-radius:16px;background:white;box-shadow:0 6px 20px rgba(28,62,49,.04)}
 .card-link{margin-top:auto;padding-top:14px;border-top:1px solid var(--line);font-weight:bold}
-.tag{display:inline-block;align-self:flex-start;padding:3px 10px;border-radius:6px;color:var(--dark);background:var(--light);font-size:.8rem;font-weight:bold}
-.tag.purple{color:var(--purple);background:var(--purple-light)}
-.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
-.button{display:inline-flex;justify-content:center;align-items:center;min-height:48px;padding:11px 18px;border:1px solid var(--main);border-radius:9px;color:white;background:var(--main);font-weight:bold;text-decoration:none}
+.tag{display:inline-block;align-self:flex-start;padding:3px 10px;background:var(--light);color:var(--main);border-radius:6px;font-size:.8rem;font-weight:bold}
+.tag.purple{background:#f3eef8;color:var(--purple)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:11px 18px;border:1px solid var(--main);border-radius:9px;color:white;background:var(--main);font-weight:bold;text-decoration:none}
 .button.secondary{color:var(--main);background:white}
 .notice{padding:24px;border:1px solid #dfc79d;border-left:6px solid #a66c22;border-radius:12px;background:#fff6e7}
-.notice h2{font-size:1.4rem}
-.note{color:var(--muted);font-size:.9rem}
+.note{color:var(--muted);font-size:.88rem}
 .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:white}
 table{width:100%;border-collapse:collapse;font-size:.94rem}
-th,td{padding:13px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th,td{padding:12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
 th{background:var(--light)}
 tr:last-child>*{border-bottom:0}
 ul{padding-left:1.4em}
 li+li{margin-top:8px}
 dl{margin:0}
-dt{margin-top:14px;color:var(--main);font-weight:bold}
+dt{margin-top:14px;font-weight:bold;color:var(--main)}
 dt:first-child{margin-top:0}
-dd{margin:4px 0 0;font-size:.93rem}
-details{padding:17px 0;border-bottom:1px solid var(--line)}
+dd{margin:4px 0 0}
+details{padding:16px 0;border-bottom:1px solid var(--line)}
 summary{cursor:pointer;font-weight:bold}
 details p{margin-top:12px}
-.back{margin-top:24px;text-align:right;font-size:.9rem}
-.site-footer{padding:30px 0;color:white;background:var(--dark);font-size:.9rem}
-.site-footer a{color:white}
-.footer-links{display:flex;flex-wrap:wrap;gap:12px 20px;margin:18px 0}
-@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:600px){.grid,.grid.two{grid-template-columns:1fr}.hero{padding:32px 0}.section{padding:28px 0}.card,.notice{padding:20px}.global-nav{width:100%}.global-nav a{padding:8px;font-size:.82rem}.button{flex:1 1 180px}.brand strong{font-size:1.04rem}}
+footer{padding:28px 0;background:var(--dark);color:white;font-size:.88rem}
+footer a{color:white}
+.footer-links{display:flex;flex-wrap:wrap;gap:12px 18px;margin:18px 0}
+.back{text-align:right;margin-top:24px}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.grid,.grid.two{grid-template-columns:1fr}.card,.notice{padding:19px}.section{padding:26px 0}.hero{padding:30px 0}nav.links{width:100%}nav.links a{padding:7px;font-size:.82rem}.button{flex:1 1 180px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-@media print{.skip,.global-nav,.actions,.back{display:none}body,.hero,.section,.site-footer{color:black;background:white}.container{width:100%}.hero-grid,.grid,.grid.two{display:block}.card{margin-bottom:14px;box-shadow:none;break-inside:avoid}.site-footer a{color:black}.table-wrap{overflow:visible}}
+@media print{.skip,nav.links,.actions,.back{display:none}body,.hero,.section,footer{background:white;color:black}.container{width:100%}.grid,.grid.two{display:block}.card{margin-bottom:14px;box-shadow:none;break-inside:avoid}footer a{color:black}}
 </style>
 </head>
 <body id="top">
 <a class="skip" href="#main">本文へ移動</a>
-
 <div class="fiction">
 <div class="container">
-<p>創作設定に基づくサイトです。実際の受診・医療相談・予約には利用できません。実際の病歴や個人情報を入力しないでください。</p>
+<p>創作サイトです。実際の受診・医療相談・予約には利用できません。実際の病歴や個人情報を入力しないでください。</p>
 </div>
 </div>
 
-<header class="site-header">
+<header>
 <div class="container header-inner">
 <a class="brand" href="index.html">
 <strong>富良野希望未来病院グループ</strong>
 <span>本院・トミカにじいろクリニック</span>
 </a>
-<nav class="global-nav" aria-label="メインメニュー">
+<nav class="links" aria-label="メインメニュー">
 <a href="index.html" aria-current="page">ホーム</a>
 <a href="news.html">お知らせ</a>
 <a href="departments.html">診療科紹介</a>
@@ -103,19 +97,129 @@ details p{margin-top:12px}
 
 <main id="main">
 <section class="hero">
-<div class="container hero-grid">
-<div>
+<div class="container">
 <p class="eyebrow">地域に寄り添う、からだとこころの医療</p>
 <h1>一人ひとりに寄り添い、<br>からだとこころを支える。</h1>
-<p>内科・外科・小児科・産婦人科・精神科・総合診療科・救急科などが連携し、患者さんとご家族を支える医療を目指します。</p>
+<p>本院とトミカ分院が連携し、患者さんとご家族を支える医療を目指します。</p>
 <div class="actions">
 <a class="button" href="gairai.html">外来診察予定表</a>
 <a class="button secondary" href="doctors.html">医師紹介コメント</a>
+<a class="button secondary" href="news.html#outpatient-update">診療体制変更のお知らせ</a>
 </div>
 </div>
-<aside class="card" aria-labelledby="hours-title">
-<span class="tag">診療時間のご案内</span>
-<h2 id="hours-title">診療時間・夜間救急</h2>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="notice">
+<p class="eyebrow">診療体制変更のご案内</p>
+<h2>小児専門外来は、午前中も予約なしで受診できます</h2>
+<p><strong>小児専門・思春期外来の午前診療を、予約なしでも受診できる運用に変更します。</strong>午後は引き続き予約制です。</p>
+<p><strong>医師を指定する場合：</strong>予定表に掲載されている医師は予約をお取りください。掲載されていない医師の診察希望は、代表電話へお問い合わせください。</p>
+<p class="note">新生児発達外来と佐々木彩乃医師の通常診療は、引き続き完全予約制です。</p>
+<div class="actions">
+<a class="button" href="news.html#outpatient-update">変更内容を詳しく見る</a>
+<a class="button secondary" href="gairai.html#rules">予約ルールを確認</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section white">
+<div class="container">
+<h2>火曜日・木曜日の担当医変更</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th scope="col">曜日・診療科</th><th scope="col">午前</th><th scope="col">午後</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">火曜日・小児専門</th><td>雲母たまこ／不破拓海／<strong>蝸堂みかる</strong></td><td>蝶屋はなび／角巻わため</td></tr>
+<tr><th scope="row">木曜日・小児専門</th><td>小々波いるか／田沼譲／<strong>栞葉るり</strong></td><td>先斗寧／千凛あゆむ／石神のぞみ</td></tr>
+<tr><th scope="row">木曜日・一般外科</th><td><strong>白砂まどか</strong></td><td>栞葉るり</td></tr>
+</tbody>
+</table>
+</div>
+<p class="note" style="margin-top:14px">小児専門の午前は予約なし可。医師指定は予約が必要です。研修医は指導体制の下で診療します。</p>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<h2>お知らせ</h2>
+<div class="grid">
+<article class="card">
+<span class="tag purple">診療体制変更</span>
+<h3>小児専門の午前受付・担当医変更</h3>
+<p>午前の予約なし受診と、火曜・木曜の担当医についてご案内します。</p>
+<a class="card-link" href="news.html#outpatient-update">お知らせを見る →</a>
+</article>
+<article class="card">
+<span class="tag">医師指定</span>
+<h3>希望する医師の診察について</h3>
+<p>予定表に掲載されている医師は予約を、掲載されていない医師は代表電話への問い合わせをお願いします。</p>
+<a class="card-link" href="news.html#reservation-guide">医師指定の案内を見る →</a>
+</article>
+<article class="card">
+<span class="tag">病院運営</span>
+<h3>料金改定・自由診療・節電</h3>
+<p>入院費・特別室料金、自由診療、節電への取り組みをご案内します。</p>
+<a class="card-link" href="news.html#hospital-management">運営のお知らせを見る →</a>
+</article>
+</div>
+</div>
+</section>
+
+<section class="section white">
+<div class="container">
+<h2>受診・医師紹介のご案内</h2>
+<div class="grid">
+<article class="card">
+<span class="tag">診療日・担当医</span>
+<h3>外来診察予定表</h3>
+<p>本院・分院の曜日別担当医と予約条件をご確認いただけます。</p>
+<a class="card-link" href="gairai.html">外来診察予定表を見る →</a>
+</article>
+<article class="card">
+<span class="tag purple">メッセージ</span>
+<h3>医師紹介コメント</h3>
+<p>医師・心理職・相談支援スタッフが大切にしている思いをご紹介します。</p>
+<a class="card-link" href="doctors.html">紹介コメントを見る →</a>
+</article>
+<article class="card">
+<span class="tag">診療内容</span>
+<h3>診療科紹介</h3>
+<p>各診療科と専門外来の診療内容をご案内します。</p>
+<a class="card-link" href="departments.html">診療科紹介を見る →</a>
+</article>
+<article class="card">
+<span class="tag">予約・相談</span>
+<h3>予約案内</h3>
+<p>今回の変更内容は、お知らせと外来診察予定表の案内を優先してください。</p>
+<a class="card-link" href="news.html#reservation-guide">最新の予約案内を見る →</a>
+</article>
+<article class="card">
+<span class="tag">本院・分院</span>
+<h3>病院経営陣・トミカ分院</h3>
+<p>病院運営と地域医療を支えるメンバーをご紹介します。</p>
+<a class="card-link" href="doctors.html#tomica">トミカ分院の紹介を見る →</a>
+</article>
+<article class="card">
+<span class="tag">運営体制</span>
+<h3>外部監査委員会</h3>
+<p>監査・不正防止、法務・税務・行政の担当を掲載しています。</p>
+<a class="card-link" href="doctors.html#audit">外部監査委員会を見る →</a>
+</article>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<h2>診療時間・受診の基本ルール</h2>
+<div class="grid two">
+<article class="card">
+<h3>診療時間</h3>
 <div class="table-wrap">
 <table>
 <tbody>
@@ -125,175 +229,42 @@ details p{margin-top:12px}
 </tbody>
 </table>
 </div>
-<p class="note" style="margin-top:14px">診療科・曜日で異なります。分院の土曜・日曜は個別の診療時間を優先します。受付終了時刻は各外来の案内をご確認ください。</p>
-</aside>
-</div>
-</section>
-
-<section class="section">
-<div class="container">
-<div class="notice">
-<h2>内科・小児科一般は、午後も予約なしで受診できます</h2>
-<p><strong>月曜日から木曜日の午後も、内科・小児科一般は予約なしで受診できます。</strong>金曜日・土曜日の通常外来も予約なしで受診できます。本院の月〜木午後は、各科の主担当医1名体制です。</p>
-<p><strong>緊急性の高い方を優先して診療します。</strong>症状により診察順が前後します。待っている間に体調が悪化した方は、職員へお知らせください。</p>
-<p class="note">小児専門・思春期外来、新生児発達外来などは事前予約が必要です。分院の土曜午後は小児科休診です。</p>
-</div>
-</div>
-</section>
-
-<section id="doctor-guide" class="section white">
-<div class="container">
-<div class="section-heading">
-<p class="eyebrow">医師・スタッフからのメッセージ</p>
-<h2>私たちの思いと、医療を支える体制</h2>
-<p>診療で大切にしていることや、地域医療への思いをご紹介します。</p>
-</div>
-<div class="grid">
-<article class="card">
-<span class="tag purple">紹介コメント</span>
-<h3>医師・スタッフ紹介</h3>
-<p>本院・分院の医師、心理職、相談支援担当者からのメッセージを掲載しています。</p>
-<a class="card-link" href="doctors.html">医師紹介コメントを見る →</a>
+<p class="note" style="margin-top:14px">診療科・曜日で異なります。分院の土曜・日曜は個別の時間を優先します。</p>
 </article>
 <article class="card">
-<span class="tag">病院運営</span>
-<h3>病院経営陣</h3>
-<p>病院長・副病院長をはじめ、本院の改革・運営・連携を担うメンバーをご紹介します。</p>
-<a class="card-link" href="doctors.html#leaders">病院経営陣を見る →</a>
-</article>
-<article class="card">
-<span class="tag">2026年11月24日改定</span>
-<h3>外部監査委員会</h3>
-<p>再編後の監査・不正防止体制と、法務・税務・行政の担当者を掲載しています。</p>
-<a class="card-link" href="doctors.html#audit">新・外部監査委員会を見る →</a>
-</article>
-</div>
-<p class="note" style="margin-top:16px">人物・役職・コメント・自治体の参加などは創作設定です。</p>
-</div>
-</section>
-
-<section class="section">
-<div class="container">
-<div class="section-heading">
-<h2>受診のご案内</h2>
-<p>ご希望の情報をお選びください。</p>
-</div>
-<div class="grid">
-<article class="card">
-<span class="tag">診療日・担当医</span>
-<h3>外来診察予定表</h3>
-<p>本院・分院の曜日別担当医、診療体制、予約条件をご案内します。</p>
-<a class="card-link" href="gairai.html">外来診察予定表を見る →</a>
-</article>
-<article class="card">
-<span class="tag">診療内容</span>
-<h3>診療科紹介</h3>
-<p>内科、小児科、産婦人科、精神科など、各診療科と専門外来をご案内します。</p>
-<a class="card-link" href="departments.html">診療科紹介を見る →</a>
-</article>
-<article class="card">
-<span class="tag purple">予約・専門外来</span>
-<h3>予約案内</h3>
-<p>事前予約が必要な外来や、予約に関する案内をご確認いただけます。</p>
-<a class="card-link" href="reservation.html">予約案内を見る →</a>
-</article>
-<article class="card">
-<span class="tag">本院・分院</span>
-<h3>トミカ分院の紹介</h3>
-<p>トミカにじいろクリニックの医師と、地域医療へのメッセージをご紹介します。</p>
-<a class="card-link" href="doctors.html#tomica">分院のメンバーを見る →</a>
-</article>
-<article class="card">
-<span class="tag">病院からのご案内</span>
-<h3>お知らせ</h3>
-<p>料金改定、自由診療、節電や病院運営などのお知らせを掲載しています。</p>
-<a class="card-link" href="news.html">お知らせを見る →</a>
-</article>
-<article class="card">
-<span class="tag">本院・別館・分院</span>
-<h3>館内・施設案内</h3>
-<p>本院、別館、トミカ分院のフロア構成をご案内します。</p>
-<a class="card-link" href="#facilities">館内案内を見る →</a>
-</article>
-</div>
-</div>
-</section>
-
-<section class="section white">
-<div class="container">
-<div class="section-heading"><h2>病院からのお知らせ</h2></div>
-<div class="grid two">
-<article class="card">
-<span class="tag purple">重要なお知らせ</span>
-<h3>入院費改定・自由診療開始・節電について</h3>
-<p>入院費・特別室料金の改定、自由診療の開始、院内の節電に関するお知らせを掲載しています。</p>
-<a class="card-link" href="news.html">お知らせの詳細を見る →</a>
-</article>
-<article class="card">
-<span class="tag">創作設定上の組織改定</span>
-<h3>外部監査委員会を再編しました</h3>
-<p>2026年11月24日付の構成を掲載。代理・不正防止担当を新設し、本院・分院の体制を拡充しました。</p>
-<a class="card-link" href="doctors.html#audit">委員会名簿を見る →</a>
-</article>
-</div>
-</div>
-</section>
-
-<section class="section">
-<div class="container">
-<div class="section-heading"><h2>予約・専門外来の基本ルール</h2></div>
-<div class="grid two">
-<article class="card">
-<span class="tag">通常外来</span>
-<h3>予約なしで受診できる外来</h3>
+<h3>予約・医師指定について</h3>
 <ul>
-<li>内科・小児科一般は、月〜木午後も予約なしで受診できます。</li>
-<li>金・土の通常外来も予約なしで受診できます。休診科・予約専門外来は除きます。</li>
-<li>日曜は、開設している内科・小児科一般が対象です。</li>
-<li>緊急性の高い方を優先して診療します。</li>
-</ul>
-</article>
-<article class="card">
-<span class="tag purple">予約制・完全予約制</span>
-<h3>事前予約が必要な外来</h3>
-<ul>
-<li>月〜木午後の内科・小児科一般以外は、緊急の場合を除き完全予約制です。</li>
-<li>小児専門・思春期外来は予約制です。</li>
-<li>佐々木彩乃医師の通常診療、新生児発達外来は完全予約制です。</li>
-<li>カウンセリングは予約が基本です。緊急性が高い場合は対応を調整します。</li>
+<li>内科・小児科一般は、月〜木午後も予約なし可。</li>
+<li>小児専門・思春期外来は、午前予約なし可・午後予約制。</li>
+<li>予定表に掲載の医師を指定する場合は予約が必要です。</li>
+<li>予定表にない医師の診察希望は代表電話へご相談ください。</li>
+<li>新生児発達外来・佐々木彩乃医師は完全予約制です。</li>
 </ul>
 </article>
 </div>
-<p class="note" style="margin-top:16px">緩和ケア・遺伝カウンセリング・喫煙外来は予約に合わせて日時を調整します。予約者がいない場合は休診です。</p>
-<div class="actions">
-<a class="button" href="gairai.html">外来診察予定表で確認</a>
-<a class="button secondary" href="reservation.html">予約案内</a>
-</div>
+<p class="note" style="margin-top:16px">緊急性の高い方を優先します。診察順が前後する場合があります。待機中に体調が悪化した方は職員へお知らせください。</p>
 </div>
 </section>
 
 <section id="facilities" class="section white">
 <div class="container">
-<div class="section-heading">
 <h2>本院・別館・トミカ分院</h2>
-<p>創作設定上のフロア案内です。診察場所は各外来の案内をご確認ください。</p>
-</div>
 <div class="grid">
 <article class="card">
 <span class="tag">本院</span>
-<h3>本院のフロア案内</h3>
+<h3>本院フロア案内</h3>
 <dl>
-<dt>1階</dt><dd>内科・一般外科・整形外科・小児科・思春期外来・総合診療科・泌尿器科・心療内科・検査室・受付・売店・医療サポートセンター</dd>
+<dt>1階</dt><dd>内科・一般外科・整形外科・小児科・思春期外来・総合診療科・泌尿器科・心療内科・検査・受付・売店・医療サポートセンター</dd>
 <dt>2階</dt><dd>皮膚科・眼科・耳鼻咽喉科・産婦人科・緩和ケア・遺伝カウンセリング・喫煙外来</dd>
-<dt>3階</dt><dd>リハビリテーション・検査室・医局・会議室</dd>
+<dt>3階</dt><dd>リハビリテーション・検査・医局・会議室</dd>
 <dt>4〜10階</dt><dd>入院病棟</dd>
 </dl>
 </article>
 <article class="card">
 <span class="tag purple">別館</span>
-<h3>別館のフロア案内</h3>
+<h3>別館フロア案内</h3>
 <dl>
-<dt>1階</dt><dd>精神科・児童精神科・カウンセリングルーム〈全診療科共有〉・救急科・感染症疑い外来〈総合診療科〉・医療サポート室・受付・相談ルーム</dd>
+<dt>1階</dt><dd>精神科・児童精神科・カウンセリング・救急科・感染症疑い外来・医療サポート室・受付・相談ルーム</dd>
 <dt>2階</dt><dd>医局・カウンセリングルーム・会議室</dd>
 <dt>3階</dt><dd>空きスペース</dd>
 <dt>4〜10階</dt><dd>入院病棟</dd>
@@ -304,13 +275,12 @@ details p{margin-top:12px}
 <h3>トミカにじいろクリニック</h3>
 <dl>
 <dt>1階</dt><dd>小児科・救急科・内科・産婦人科・受付・売店</dd>
-<dt>2階</dt><dd>カウンセリングルーム・精神科・児童精神科・医局・会議室</dd>
+<dt>2階</dt><dd>カウンセリング・精神科・児童精神科・医局・会議室</dd>
 <dt>3階</dt><dd>臨時受け入れスペース</dd>
 </dl>
-<p class="note" style="margin-top:20px">土曜の小児科は午前で終了します。日曜の通常外来は12:00までです。</p>
+<p class="note" style="margin-top:18px">土曜の小児科は午前で終了。日曜の通常外来は12:00までです。</p>
 </article>
 </div>
-<p class="note" style="margin-top:16px">フォローアップ・リエゾンは精神科・児童精神科に統合しています。</p>
 </div>
 </section>
 
@@ -318,42 +288,36 @@ details p{margin-top:12px}
 <div class="container">
 <h2>よくあるご質問</h2>
 <details>
-<summary>月〜木午後も予約なしで受診できますか？</summary>
-<p>内科・小児科一般は予約なしで受診できます。緊急性により診察順が前後します。小児専門・新生児発達外来などは予約が必要です。</p>
+<summary>小児専門外来は予約が必要ですか？</summary>
+<p>午前中は予約なしで受診できます。医師を指定する場合は予約をお願いします。午後は引き続き予約制です。新生児発達外来は完全予約制です。</p>
 </details>
 <details>
-<summary>医師の紹介コメントはどこで見られますか？</summary>
-<p><a href="doctors.html">医師紹介コメントのページ</a>に、医師・スタッフの役職とメッセージを掲載しています。</p>
+<summary>希望する医師が予定表に載っていません。</summary>
+<p>代表電話へお問い合わせください。診察の可否や日時を調整します。</p>
 </details>
 <details>
-<summary>担当医・診療日はどこで確認できますか？</summary>
-<p><a href="gairai.html">外来診察予定表</a>をご確認ください。紹介欄への掲載は常時勤務を意味しません。</p>
+<summary>予定表に掲載の医師を指定できますか？</summary>
+<p>医師を指定する場合は、予約をお取りください。予約なし受診で特定の医師を確約するものではありません。</p>
 </details>
 <details>
-<summary>どの診療科を選べばよいですか？</summary>
-<p><a href="departments.html">診療科紹介</a>をご確認ください。総合診療科も曜日・時間帯によって予約条件が異なります。</p>
-</details>
-<details>
-<summary>カウンセリングは予約が必要ですか？</summary>
-<p>予約が基本です。緊急性が高い場合は対応を調整します。医師の診察とは別の予約枠です。</p>
+<summary>医師紹介コメントはどこで見られますか？</summary>
+<p><a href="doctors.html">医師紹介コメント</a>をご覧ください。</p>
 </details>
 <p class="back"><a href="#top">ページ上部へ戻る</a></p>
 </div>
 </section>
 </main>
 
-<footer class="site-footer">
+<footer>
 <div class="container">
 <p><strong>富良野希望未来病院グループ</strong><br>本院・トミカにじいろクリニック</p>
 <nav class="footer-links" aria-label="フッターメニュー">
 <a href="index.html">ホーム</a>
-<a href="doctors.html">医師紹介コメント</a>
-<a href="doctors.html#audit">外部監査委員会</a>
+<a href="news.html">お知らせ</a>
 <a href="gairai.html">外来診察予定表</a>
-<a href="reservation.html">予約案内</a>
+<a href="doctors.html">医師紹介コメント</a>
 </nav>
-<p>本サイトは架空の病院を扱う創作サイトです。人物の所属・資格・役職・発言、自治体や医療機関との関係、人事・財務情報は創作設定であり、実際の情報ではありません。</p>
-<p>実際の受診・医療相談・予約には利用できません。</p>
+<p>本サイトは創作サイトです。人物・所属・資格・診療体制・財務情報・連絡先は創作設定です。実際の受診・医療相談・予約には利用できません。</p>
 <small>© 2026 富良野希望未来病院グループ</small>
 </div>
 </footer>
