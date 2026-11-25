@@ -1,476 +1,222 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>お知らせ | 富良野希望未来病院グループ</title>
-
-  <meta
-    name="description"
-    content="富良野希望未来病院グループのお知らせ。入院費改定、自由診療開始、節電へのご協力、予約案内を掲載しています。"
-  >
-
-  <link rel="stylesheet" href="style.css">
-
-  <style>
-    .news-content {
-      line-height: 1.9;
-      overflow-wrap: anywhere;
-    }
-
-    .news-content h3 {
-      margin-top: 30px;
-    }
-
-    .news-content li {
-      margin-bottom: 10px;
-    }
-
-    .news-badge {
-      display: inline-block;
-      padding: 5px 12px;
-      margin-bottom: 12px;
-      border-radius: 20px;
-      background: #e7f3ef;
-      color: #245b49;
-      font-size: 0.9rem;
-      font-weight: bold;
-    }
-
-    .news-note {
-      padding: 16px 20px;
-      margin: 20px 0;
-      border: 1px solid #d7e1ee;
-      border-radius: 12px;
-      background: #f5f8fc;
-      line-height: 1.8;
-    }
-
-    .news-message {
-      padding: 20px;
-      margin: 24px 0;
-      border-left: 5px solid #39836d;
-      border-radius: 8px;
-      background: #f0f8f4;
-    }
-
-    .news-table-wrap {
-      max-width: 100%;
-      overflow-x: auto;
-      margin: 20px 0;
-    }
-
-    .news-table {
-      width: 100%;
-      border-collapse: collapse;
-      background: #fff;
-    }
-
-    .news-table caption {
-      margin-bottom: 10px;
-      text-align: left;
-      font-weight: bold;
-    }
-
-    .news-table th,
-    .news-table td {
-      padding: 14px;
-      border: 1px solid #d7e1ee;
-      text-align: left;
-      vertical-align: top;
-    }
-
-    .news-table thead th {
-      background: #eef4fa;
-    }
-
-    .news-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 24px;
-    }
-
-    .fiction-note {
-      font-size: 0.9rem;
-      color: #526173;
-      line-height: 1.8;
-    }
-
-    #hospital-management,
-    #reservation-guide {
-      scroll-margin-top: 100px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>お知らせ｜富良野希望未来病院グループ</title>
+<meta name="description" content="創作サイト。小児専門外来の午前予約なし化、担当医変更、医師指定の予約方法、病院運営のお知らせを掲載しています。">
+<meta name="theme-color" content="#245c51">
+<style>
+:root{--main:#245c51;--dark:#173f37;--light:#edf5f1;--purple:#655080;--line:#d6e2db;--ink:#263d36;--muted:#52665d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;background:#f7f9f6;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Yu Gothic",Meiryo,sans-serif;line-height:1.85;overflow-wrap:anywhere}
+a{color:var(--main);text-underline-offset:3px}
+a:focus-visible{outline:3px solid #a76413;outline-offset:4px}
+.container{width:min(1120px,calc(100% - 32px));margin:auto}
+.skip{position:absolute;top:-100px;left:12px;padding:12px;background:white;z-index:100}
+.skip:focus{top:12px}
+.fiction{padding:9px 0;background:var(--dark);color:white;font-size:.8rem}
+.fiction p{margin:0}
+header{background:white;border-bottom:1px solid var(--line)}
+.header-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px;padding:20px 0}
+.brand{text-decoration:none;color:var(--ink)}
+.brand strong{display:block;font-size:1.12rem}
+.brand span{display:block;color:var(--muted);font-size:.8rem}
+nav.links{display:flex;flex-wrap:wrap;gap:5px}
+nav.links a{padding:8px 10px;border-radius:8px;text-decoration:none;color:var(--ink);font-size:.88rem}
+nav.links a:hover,nav.links [aria-current]{background:var(--light)}
+.hero{padding:40px 0;background:radial-gradient(circle at 90% 15%,#e6ddf3,transparent 40%),linear-gradient(125deg,#eef6ed,#edf5f2)}
+h1{margin:0 0 18px;font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.5}
+h2{margin:0 0 18px;font-size:clamp(1.35rem,3vw,1.8rem);line-height:1.5}
+h3{margin:24px 0 12px;font-size:1.15rem}
+p{margin:0 0 14px}
+p:last-child{margin-bottom:0}
+.section{padding:30px 0}
+.card{padding:26px;border:1px solid var(--line);border-radius:16px;background:white}
+.tag{display:inline-block;padding:3px 10px;margin-bottom:14px;background:#f3eef8;color:var(--purple);border-radius:6px;font-size:.8rem;font-weight:bold}
+.notice{padding:20px;margin:18px 0;border:1px solid #dfc79d;border-left:5px solid #a66c22;border-radius:12px;background:#fff6e7}
+.note{color:var(--muted);font-size:.88rem}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table{width:100%;border-collapse:collapse;font-size:.94rem}
+th,td{padding:13px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+thead th{background:var(--light)}
+tbody th{background:#f6faf7}
+tr:last-child>*{border-bottom:0}
+ul{padding-left:1.4em}
+li+li{margin-top:10px}
+.menu{display:flex;flex-wrap:wrap;gap:10px}
+.menu a{padding:10px 14px;border:1px solid var(--line);border-radius:9px;background:white;text-decoration:none}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:10px 17px;border:1px solid var(--main);border-radius:9px;background:var(--main);color:white;font-weight:bold;text-decoration:none}
+.button.secondary{background:white;color:var(--main)}
+footer{padding:28px 0;background:var(--dark);color:white;font-size:.88rem}
+footer a{color:white}
+.footer-links{display:flex;flex-wrap:wrap;gap:12px 18px;margin:18px 0}
+@media(max-width:600px){.card{padding:19px}.section{padding:24px 0}nav.links{width:100%}nav.links a{padding:7px;font-size:.82rem}.button{flex:1 1 180px}th,td{padding:10px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{.skip,nav.links,.menu,.actions{display:none}body,.hero,footer{background:white;color:black}.container{width:100%}.card{border:0;padding:0}.table-wrap{overflow:visible}footer a{color:black}}
+</style>
 </head>
-
 <body id="top">
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="logo">
-        <span class="logo-main">富良野希望未来病院グループ</span>
-        <span class="logo-sub">Furano Hope Future Hospital Group</span>
-      </div>
+<a class="skip" href="#main">本文へ移動</a>
+<div class="fiction">
+<div class="container">
+<p>創作サイトです。掲載する診療体制・料金・連絡先は創作設定であり、実際の受診・医療相談・予約には利用できません。</p>
+</div>
+</div>
 
-      <nav class="global-nav" aria-label="メインメニュー">
-        <ul>
-          <li><a href="index.html">ホーム</a></li>
-          <li><a href="news.html" aria-current="page">お知らせ</a></li>
-          <li><a href="departments.html">診療科紹介</a></li>
-          <li><a href="gairai.html">外来診察予定表</a></li>
-          <li><a href="doctors.html">医師紹介</a></li>
-          <li><a href="reservation.html">予約案内</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<header>
+<div class="container header-inner">
+<a class="brand" href="index.html">
+<strong>富良野希望未来病院グループ</strong>
+<span>本院・トミカにじいろクリニック</span>
+</a>
+<nav class="links" aria-label="メインメニュー">
+<a href="index.html">ホーム</a>
+<a href="news.html" aria-current="page">お知らせ</a>
+<a href="departments.html">診療科紹介</a>
+<a href="gairai.html">外来診察予定表</a>
+<a href="doctors.html">医師紹介コメント</a>
+<a href="reservation.html">予約案内</a>
+</nav>
+</div>
+</header>
 
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <p class="eyebrow">病院からのご案内</p>
-        <h1>お知らせ</h1>
+<main id="main">
+<section class="hero">
+<div class="container">
+<p><a href="index.html">ホーム</a> ／ お知らせ</p>
+<h1>お知らせ</h1>
+<p>診療体制・医師指定の予約方法・病院運営についてご案内します。</p>
+</div>
+</section>
 
-        <p class="page-lead">
-          富良野希望未来病院グループの病院運営、
-          料金改定、診療に関するお知らせを掲載しています。
-        </p>
+<section class="section">
+<div class="container">
+<nav class="menu" aria-label="お知らせ一覧">
+<a href="#outpatient-update">小児専門・担当医変更</a>
+<a href="#reservation-guide">医師指定・代表電話</a>
+<a href="#hospital-management">料金・自由診療・節電</a>
+</nav>
+</div>
+</section>
 
-        <p class="news-note fiction-note">
-          本サイトは架空の病院を扱う創作サイトです。
-          掲載する料金・診療体制・経営状況・連絡先は創作上の設定であり、
-          実在する医療機関の正式な情報ではありません。
-          実際の受診・医療相談には利用できません。
-        </p>
-      </div>
-    </section>
+<section id="outpatient-update" class="section">
+<div class="container">
+<article class="card">
+<span class="tag">診療体制変更</span>
+<h2>小児専門外来の午前受付方法と、火曜・木曜の担当医変更について</h2>
+<p>小児専門・思春期外来の午前診療は、各診療科に合わせて<strong>予約なしでも受診できる運用</strong>に変更します。</p>
+<div class="notice">
+<p><strong>小児専門・思春期外来：午前は予約なし可／午後は予約制</strong></p>
+<p>特定の医師を指定して受診する場合は、午前でも予約をお取りください。</p>
+<p>新生児発達外来と佐々木彩乃医師の通常診療は、引き続き完全予約制です。</p>
+</div>
 
-    <section class="section">
-      <div class="container">
-        <article class="card">
-          <h2>お知らせ一覧・ページ内メニュー</h2>
-          <ul class="link-list">
-            <li>
-              <a href="#hospital-management">
-                【重要】入院費改定・自由診療開始・節電へのご協力のお願い
-              </a>
-            </li>
-            <li>
-              <a href="#reservation-guide">
-                予約制外来のご案内
-              </a>
-            </li>
-          </ul>
-        </article>
-      </div>
-    </section>
+<h3>火曜日・木曜日の担当医</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th scope="col">曜日・診療科</th><th scope="col">午前</th><th scope="col">午後</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">火曜日・小児専門</th><td>雲母たまこ／不破拓海／<strong>蝸堂みかる</strong></td><td>蝶屋はなび／角巻わため</td></tr>
+<tr><th scope="row">木曜日・小児専門</th><td>小々波いるか／田沼譲／<strong>栞葉るり</strong></td><td>先斗寧／千凛あゆむ／石神のぞみ</td></tr>
+<tr><th scope="row">木曜日・一般外科</th><td><strong>白砂まどか</strong></td><td>栞葉るり</td></tr>
+</tbody>
+</table>
+</div>
+<p class="note" style="margin-top:14px">既存の小児専門担当医を残し、火曜午前に蝸堂みかる、木曜午前に栞葉るりを追加します。雲母たまこ医師は指導体制の下で診療します。</p>
+<p>木曜午前の一般外科は、栞葉るりから白砂まどかへ変更します。木曜午後は引き続き栞葉るりが担当します。</p>
+<p class="note">本欄は改定内容の案内です。適用開始日は別途案内します。</p>
+<div class="actions">
+<a class="button" href="gairai.html">変更後の外来診察予定表</a>
+<a class="button secondary" href="#reservation-guide">医師指定の予約案内</a>
+</div>
+</article>
+</div>
+</section>
 
-    <section
-      id="hospital-management"
-      class="section alt"
-      aria-labelledby="management-title"
-    >
-      <div class="container">
-        <article class="card news-content">
-          <span class="news-badge">重要なお知らせ</span>
+<section id="reservation-guide" class="section">
+<div class="container">
+<article class="card">
+<span class="tag">医師指定・受診相談</span>
+<h2>希望する医師の診察について</h2>
+<ul>
+<li><strong>外来診察予定表に掲載されている医師を指定する場合：</strong>予約をお取りください。</li>
+<li><strong>外来診察予定表に掲載されていない医師の診察を希望する場合：</strong>代表電話へお問い合わせください。診察の可否や日時を調整します。</li>
+<li><strong>医師を指定しない場合：</strong>予約なし受診が可能な診療科・時間帯は、予約なしで受診できます。</li>
+</ul>
+<div class="notice">
+<p><strong>代表電話〈創作設定〉：1155-2431-1177</strong></p>
+<p class="note">架空の連絡先です。実際に発信しないでください。</p>
+</div>
+<p>お問い合わせの際は、希望する診療科・医師名・日時をお伝えください。予定表への掲載や問い合わせによって、希望する医師の診察を確約するものではありません。</p>
+<p>緊急性の高い方を優先するため、予約・受付の順番と診察順が前後する場合があります。</p>
+<div class="actions">
+<a class="button" href="gairai.html#rules">受診ルールを見る</a>
+<a class="button secondary" href="doctors.html">医師紹介コメント</a>
+</div>
+</article>
+</div>
+</section>
 
-          <h2 id="management-title">
-            入院費改定・自由診療開始・節電へのご協力のお願い
-          </h2>
+<section id="hospital-management" class="section">
+<div class="container">
+<article class="card">
+<span class="tag">病院運営・創作設定</span>
+<h2>入院費改定・自由診療開始・節電へのご協力のお願い</h2>
+<p>借入金の完済を新たな出発点として、安定した病院運営を継続するため、料金の見直しと節電に取り組みます。</p>
 
-          <p>
-            日頃より富良野希望未来病院の運営に
-            ご理解とご協力を賜り、誠にありがとうございます。
-          </p>
+<h3>入院費・特別室料金</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th scope="col">区分</th><th scope="col">旧価格／1日</th><th scope="col">改定後／1日</th></tr></thead>
+<tbody>
+<tr><th scope="row">入院費</th><td>500円</td><td>3,000円</td></tr>
+<tr><th scope="row">特別室</th><td>1,600円</td><td>5,600円</td></tr>
+</tbody>
+</table>
+</div>
+<p class="note" style="margin-top:14px">適用開始日、税込・税別、料金に含まれる費用、特別室料金との合算方法は未掲載です。表示額は入院中の支払総額を示すものではありません。</p>
 
-          <p>
-            当院は、このたび借入金を完済いたしました。
-            皆さまのご理解とご協力に、心より感謝申し上げます。
-          </p>
+<h3>自由診療</h3>
+<p>価格の目安は<strong>5,500〜100,000円程度</strong>です。診療科や内容によって異なり、一律の料金や上限額ではありません。実施前に内容・総額・追加費用を確認する設定です。</p>
 
-          <p>
-            今後は新たな赤字を出さず、
-            安定した病院運営を継続するため、
-            入院費の改定、自由診療の開始、
-            院内の節電に取り組んでまいります。
-          </p>
+<h3>節電への取り組み</h3>
+<ul>
+<li>医師の階段利用は、業務や体調に支障のない範囲で促進します。</li>
+<li>使用していない部屋は、退室時にこまめに消灯します。</li>
+<li>受付・待合室の照明は、利用状況に応じて見直します。</li>
+</ul>
+<p>診療に必要な機器や避難経路の照明など、安全に必要な設備は維持します。患者さんへの階段利用の強制は行いません。</p>
+<p class="note">料金・経営状況・実施内容は創作設定です。実在する医療機関の情報ではありません。</p>
+</article>
+</div>
+</section>
 
-          <h3>1．入院費・特別室料金の改定</h3>
+<section class="section">
+<div class="container actions">
+<a class="button" href="index.html">ホームへ戻る</a>
+<a class="button secondary" href="gairai.html">外来診察予定表</a>
+<a class="button secondary" href="#top">ページ上部へ戻る</a>
+</div>
+</section>
+</main>
 
-          <p>
-            入院費および特別室の料金を、
-            以下のとおり改定いたします。
-          </p>
-
-          <div class="news-table-wrap">
-            <table class="news-table">
-              <caption>料金改定のご案内</caption>
-              <thead>
-                <tr>
-                  <th scope="col">区分</th>
-                  <th scope="col">旧価格／1日</th>
-                  <th scope="col">改定後／1日</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">入院費</th>
-                  <td>500円</td>
-                  <td><strong>3,000円</strong></td>
-                </tr>
-                <tr>
-                  <th scope="row">特別室</th>
-                  <td>1,600円</td>
-                  <td><strong>5,600円</strong></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <p>
-            患者さんやご家族の皆さまにはご負担をおかけしますが、
-            安定した病院運営を続けるため、
-            ご理解をお願い申し上げます。
-          </p>
-
-          <div class="news-note">
-            適用開始日、税込・税別の区分、料金に含まれる費用、
-            特別室料金と入院費を合算するかどうかは、
-            本ページでは未掲載です。
-            入院前に受付でご確認ください。
-            表示額だけで入院中の支払総額を示すものではありません。
-          </div>
-
-          <h3>2．自由診療の開始</h3>
-
-          <p>
-            各診療科で自由診療を開始いたします。
-            基本的な価格の目安は、
-            <strong>5,500円から100,000円程度</strong>です。
-          </p>
-
-          <ul>
-            <li>
-              料金は診療科や診療内容によって異なります。
-            </li>
-            <li>
-              各診療科の医師および責任者が、
-              内容に応じて価格を設定します。
-            </li>
-            <li>
-              ご希望の診療について、
-              <strong>必ず事前に医師または受付へ料金をお尋ねください。</strong>
-            </li>
-            <li>
-              上記は目安であり、すべての診療に一律に適用する
-              料金や上限額ではありません。
-            </li>
-          </ul>
-
-          <p>
-            診療内容、支払総額、追加費用の有無について、
-            実施前に説明を受け、ご確認ください。
-          </p>
-
-          <h3>3．節電への取り組み</h3>
-
-          <p>
-            医療の安全と必要な診療環境を確保しながら、
-            次の節電を進めます。
-          </p>
-
-          <ul>
-            <li>
-              <strong>医師の階段利用の促進：</strong>
-              業務や体調に支障のない範囲で、
-              エレベーターに代わる階段利用を促進します。
-            </li>
-            <li>
-              <strong>使用していない部屋の消灯：</strong>
-              空き部屋や医局などでは、
-              使用後・退室時にこまめに消灯します。
-            </li>
-            <li>
-              <strong>一部受付・待合室の節電：</strong>
-              利用状況に応じて、
-              照明などの使用を見直します。
-            </li>
-          </ul>
-
-          <p>
-            診療に必要な医療機器や、
-            避難経路の照明など安全確保に必要な設備は維持します。
-            患者さんやご家族に階段利用を強制するものではありません。
-          </p>
-
-          <h3>4．借入金完済後の病院運営について</h3>
-
-          <div class="news-message">
-            <p>
-              <strong>
-                借入金の完済を新たな出発点とし、
-                今後は新たな赤字を出さない病院運営を目指します。
-                必要な改善を継続し、最後までやり抜いてまいります。
-              </strong>
-            </p>
-          </div>
-
-          <p>
-            これからも診療を継続し、
-            安定した運営につなげるため、
-            皆さまのご理解とご協力をお願いいたします。
-          </p>
-
-          <h3>5．今後の変更について</h3>
-
-          <p>
-            運営状況や診療体制により、
-            料金・実施内容・運用方法を変更する場合があります。
-            変更内容は本ページなどでご案内いたします。
-            あらかじめご了承ください。
-          </p>
-
-          <p>
-            ご不明な点は、医師または受付へお尋ねください。
-          </p>
-
-          <p style="text-align:right;">
-            富良野希望未来病院
-          </p>
-
-          <div class="news-actions">
-            <a href="index.html" class="btn btn-secondary">
-              ホームへ戻る
-            </a>
-            <a href="gairai.html" class="btn btn-secondary">
-              外来診察予定表
-            </a>
-            <a href="#reservation-guide" class="btn btn-primary">
-              予約案内
-            </a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section
-      id="reservation-guide"
-      class="section"
-      aria-labelledby="reservation-title"
-    >
-      <div class="container">
-        <div class="section-head">
-          <h2 id="reservation-title">予約制外来のご案内</h2>
-          <p><a href="#top">ページ上部へ戻る</a></p>
-        </div>
-
-        <p>
-          予約対象診療科、電話予約、
-          Web予約フォームをご案内します。
-        </p>
-
-        <p class="fiction-note">
-          以下は創作上の予約案内です。
-          フォームに実際の病歴や健康情報を入力しないでください。
-        </p>
-
-        <div class="card-grid cols-2">
-          <article class="card">
-            <h3>電話予約</h3>
-            <div class="news-table-wrap">
-              <table class="news-table">
-                <tbody>
-                  <tr>
-                    <th scope="row">代表電話（創作設定）</th>
-                    <td>1155-2431-1177</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">お伝えいただく内容</th>
-                    <td>診療科名 / 氏名 / ご希望日 / 紹介状の有無</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">変更・取消</th>
-                    <td>できるだけ早めにご連絡ください</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </article>
-
-          <article class="card">
-            <h3>Web予約</h3>
-            <p>
-              以下のボタンから、
-              既存のGoogleフォームを開けます。
-            </p>
-            <p>
-              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSeExIc--O2srrXXBPToLxZVku8YZY6iQyUkYmHUPeajeuKQOw/viewform?usp=publish-editor"
-                class="btn btn-web"
-                target="_blank"
-                rel="noopener noreferrer"
-              >Web予約フォームを開く</a>
-            </p>
-            <p><a href="reservation.html">予約案内ページはこちら</a></p>
-          </article>
-
-          <article class="card">
-            <h3>原則予約制の主な診療科</h3>
-            <ul class="plain-list">
-              <li>外科</li>
-              <li>整形外科</li>
-              <li>脳神経内科</li>
-              <li>産婦人科</li>
-              <li>精神科・児童精神科・心療内科</li>
-              <li>皮膚科・眼科・耳鼻咽喉科</li>
-              <li>緩和ケア・遺伝カウンセリング</li>
-              <li>小児専門外来</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>予約なしで受診しやすい枠</h3>
-            <ul class="plain-list">
-              <li>内科：原則予約なし可</li>
-              <li>小児科：原則予約なし可</li>
-              <li>ただし月〜木午後は1名体制です</li>
-              <li>金曜日・土曜日は比較的受診しやすい体制です</li>
-            </ul>
-            <p>
-              診療科・担当医・曜日によって運用が異なります。
-              詳細は外来診察予定表をご確認ください。
-            </p>
-            <p>
-              <a href="gairai.html">外来診察予定表を見る</a>
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <ul class="link-list">
-        <li><a href="index.html">ホーム</a></li>
-        <li><a href="news.html">お知らせ</a></li>
-        <li><a href="reservation.html">予約案内</a></li>
-        <li><a href="#top">ページ上部へ戻る</a></li>
-      </ul>
-
-      <hr class="soft">
-
-      <p class="fiction-note">
-        本サイトは架空の病院を扱う創作サイトです。
-        実際の受診・医療相談には利用できません。
-      </p>
-
-      <p>
-        © 2026 富良野希望未来病院グループ /
-        Furano Hope Future Hospital Group
-      </p>
-    </div>
-  </footer>
+<footer>
+<div class="container">
+<p><strong>富良野希望未来病院グループ</strong><br>本院・トミカにじいろクリニック</p>
+<nav class="footer-links" aria-label="フッターメニュー">
+<a href="index.html">ホーム</a>
+<a href="news.html">お知らせ</a>
+<a href="gairai.html">外来診察予定表</a>
+<a href="doctors.html">医師紹介コメント</a>
+</nav>
+<p>本サイトは創作サイトです。人物・所属・資格・診療体制・料金・連絡先は架空の設定であり、実際の受診・医療相談・予約には利用できません。</p>
+<small>© 2026 富良野希望未来病院グループ</small>
+</div>
+</footer>
 </body>
 </html>
